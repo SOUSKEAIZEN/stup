@@ -15,9 +15,9 @@ export function PricingCard({ plan, className }: PricingCardProps) {
   return (
     <div
       className={cn(
-        'relative bg-white rounded-sm p-6 sm:p-7 flex flex-col justify-between transition-all duration-300',
+        'relative bg-white rounded-sm p-6 sm:p-7 flex flex-col justify-between h-full transition-all duration-300',
         isHighlighted
-          ? 'border-2 border-navy shadow-card -translate-y-1'
+          ? 'border-2 border-navy shadow-[0_12px_32px_-10px_rgba(16,26,50,0.18)] -translate-y-1'
           : 'border border-slate-200/90 shadow-sm hover:border-sunflower/80 hover:shadow-subtle',
         className
       )}

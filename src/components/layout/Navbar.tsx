@@ -16,7 +16,7 @@ export function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
+      setScrolled(window.scrollY > 15);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -40,57 +40,58 @@ export function Navbar() {
 
   return (
     <>
-      <header
-        className={cn(
-          'sticky top-0 z-50 w-full h-16 transition-all duration-300',
-          scrolled
-            ? 'bg-white/85 backdrop-blur-md border-b border-slate-200/70 shadow-[0_1px_4px_0_rgba(16,26,50,0.04)]'
-            : 'bg-white/75 backdrop-blur-sm border-b border-slate-200/40'
-        )}
-      >
-        <div className="max-w-site mx-auto px-4 sm:px-6 h-full flex items-center justify-between">
-          {/* Brand Wordmark Logo */}
-          <Logo isDark={false} />
-
-          {/* Desktop Navigation (All 5 pages, no duplicate CTA button) */}
-          <nav className="hidden md:flex items-center gap-2 lg:gap-3" aria-label="Main Navigation">
-            {navigationLinks.map((link) => {
-              const isActive =
-                link.href === '/' ? pathname === '/' : pathname.startsWith(link.href);
-
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={cn(
-                    'relative px-3.5 py-1.5 font-ui text-[13px] font-medium transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunflower',
-                    isActive
-                      ? 'text-navy font-semibold'
-                      : 'text-ink-body hover:text-navy hover:bg-powder-soft/40'
-                  )}
-                >
-                  <span>{link.name}</span>
-                  {isActive && (
-                    <span
-                      className="absolute bottom-0 left-3.5 right-3.5 h-[2px] bg-sunflower rounded-full shadow-2xs"
-                      aria-hidden="true"
-                    />
-                  )}
-                </Link>
-              );
-            })}
-          </nav>
-
-          {/* Mobile Hamburger Button */}
-          <button
-            type="button"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-sm text-navy hover:bg-slate-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunflower"
-            aria-expanded={mobileMenuOpen}
-            aria-label={mobileMenuOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
+      <header className="sticky top-0 z-50 w-full pt-3 sm:pt-4 pb-2 px-4 sm:px-6 pointer-events-none">
+        <div className="max-w-site mx-auto pointer-events-auto">
+          <div
+            className={cn(
+              'flex items-center justify-between px-5 sm:px-7 py-2.5 sm:py-3 rounded-full transition-all duration-300',
+              'bg-white/85 backdrop-blur-md border border-slate-200/80 shadow-[0_4px_24px_-4px_rgba(16,26,50,0.08)]',
+              scrolled && 'bg-white/95 shadow-[0_8px_30px_-6px_rgba(16,26,50,0.12)] border-powder/60'
+            )}
           >
-            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </button>
+            {/* Brand Wordmark Logo */}
+            <Logo isDark={false} />
+
+            {/* Desktop Navigation: Home | Services | Work | Plans | Contact */}
+            <nav className="hidden md:flex items-center gap-1 sm:gap-1.5" aria-label="Main Navigation">
+              {navigationLinks.map((link) => {
+                const isActive =
+                  link.href === '/' ? pathname === '/' : pathname.startsWith(link.href);
+
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={cn(
+                      'relative px-4 py-1.5 rounded-full font-ui text-[13px] font-medium transition-all duration-200 flex items-center gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunflower',
+                      isActive
+                        ? 'text-navy font-semibold bg-powder-soft/90 shadow-2xs'
+                        : 'text-ink-body hover:text-navy hover:bg-powder-soft/40'
+                    )}
+                  >
+                    <span>{link.name}</span>
+                    {isActive && (
+                      <span
+                        className="w-1.5 h-1.5 rounded-full bg-sunflower shrink-0"
+                        aria-hidden="true"
+                      />
+                    )}
+                  </Link>
+                );
+              })}
+            </nav>
+
+            {/* Mobile Hamburger Button */}
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden p-1.5 rounded-full text-navy hover:bg-powder-soft/60 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunflower"
+              aria-expanded={mobileMenuOpen}
+              aria-label={mobileMenuOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
+            >
+              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
+          </div>
         </div>
       </header>
 
@@ -117,13 +118,13 @@ export function Navbar() {
         <button
           type="button"
           onClick={() => setMobileMenuOpen(false)}
-          className="absolute top-4 right-4 p-2 rounded-sm text-navy hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunflower"
+          className="absolute top-4 right-4 p-2 rounded-full text-navy hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunflower"
           aria-label="Close menu"
         >
           <X className="w-5 h-5" />
         </button>
 
-        <div className="flex flex-col gap-1 mt-4">
+        <div className="flex flex-col gap-1.5 mt-4">
           <span className="font-ui text-[10px] font-bold uppercase tracking-[0.2em] text-ink-muted px-3 mb-2">
             Navigation
           </span>
@@ -136,7 +137,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  'flex items-center justify-between px-3.5 py-2.5 rounded-sm font-ui text-sm font-medium transition-colors',
+                  'flex items-center justify-between px-4 py-2.5 rounded-full font-ui text-sm font-medium transition-colors',
                   isActive
                     ? 'text-navy font-bold bg-sunflower/20'
                     : 'text-ink-body hover:text-navy hover:bg-powder-soft/50'

@@ -108,6 +108,33 @@ export default function ContactPage() {
                   </div>
                 )}
               </div>
+
+              {/* Consultation Cadence Micro-Card */}
+              <div className="bg-powder-soft/50 border border-powder/60 rounded-sm p-6 text-xs font-sans">
+                <span className="font-ui text-[11px] font-bold uppercase tracking-wider text-navy block mb-3">
+                  What Happens Next?
+                </span>
+                <ol className="space-y-2.5 text-ink-body">
+                  <li className="flex items-start gap-2">
+                    <span className="w-4 h-4 rounded-full bg-sunflower text-navy font-ui text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">
+                      1
+                    </span>
+                    <span><strong>Review:</strong> We review your project scope and feasibility within 24–48 business hours.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-4 h-4 rounded-full bg-sunflower text-navy font-ui text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">
+                      2
+                    </span>
+                    <span><strong>Scope Architecture:</strong> We produce a structured milestone outline with fixed deliverables.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-4 h-4 rounded-full bg-sunflower text-navy font-ui text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">
+                      3
+                    </span>
+                    <span><strong>Kickoff:</strong> Work begins immediately following milestone agreement.</span>
+                  </li>
+                </ol>
+              </div>
             </div>
           </div>
         </div>

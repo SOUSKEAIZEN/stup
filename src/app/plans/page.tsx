@@ -30,19 +30,6 @@ export default function PlansPage() {
             <p className="mt-3 font-sans text-sm sm:text-base text-ink-body leading-relaxed text-balance">
               Fixed introductory packages designed for individuals and growing businesses. Clear page scopes, defined revision rounds, and realistic delivery timelines.
             </p>
-
-            {/* Scope Clarification & Exclusions Note */}
-            <div className="mt-5 p-3.5 bg-powder-soft/70 border border-powder/60 rounded-sm flex items-start gap-2.5 max-w-2xl text-xs font-sans text-navy">
-              <span className="w-1.5 h-1.5 rounded-full bg-sunflower shrink-0 mt-1" />
-              <div className="leading-relaxed space-y-1">
-                <p>
-                  <strong>One-Time Development Fees:</strong> Quoted prices cover design, development, and handover for the stated page scope.
-                </p>
-                <p className="text-ink-body/90">
-                  <strong>Exclusions &amp; Additional Charges:</strong> Domain registration, third-party hosting subscriptions, and custom backend infrastructure (e.g. multi-vendor marketplaces, complex web apps) receive bespoke milestone estimates.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>

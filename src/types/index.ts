@@ -6,6 +6,7 @@ export interface ServiceItem {
   title: string;
   shortDescription: string;
   fullDescription: string;
+  businessValue: string;
   category: 'design' | 'web' | 'apps' | 'tech';
   iconName: string;
   deliverables: string[];

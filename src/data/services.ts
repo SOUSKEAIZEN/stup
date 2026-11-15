@@ -19,6 +19,8 @@ export const servicesData: ServiceItem[] = [
     shortDescription: 'Human-centered digital interfaces engineered for cognitive clarity and intuitive user journeys.',
     fullDescription:
       'We design digital products that solve complex user tasks through minimal friction. From deep wireframing and user-testing to responsive interface design and design token systems, our interfaces blend editorial refinement with flawless ergonomic efficiency.',
+    businessValue:
+      'Eliminates cognitive friction, shortens user task completion times, and elevates brand credibility to support higher pricing leverage.',
     deliverables: ['User Flow Maps', 'Wireframes & Interactive Prototypes', 'Figma Design Tokens', 'Design System Library', 'Accessibility Compliance (WCAG AA)'],
     technologies: ['Figma', 'FigJam', 'Tokens Studio', 'Framer', 'Zeroheight'],
   },
@@ -31,6 +33,8 @@ export const servicesData: ServiceItem[] = [
     shortDescription: 'Bespoke, art-directed websites that position your brand as an industry leader with poise.',
     fullDescription:
       'Our websites move beyond standard grid templates. We construct tailor-made editorial layouts, disciplined typographic hierarchies, and subtle micro-interactions that communicate craft, trust, and premium authority from the first fold.',
+    businessValue:
+      'Distinguishes your organization from template-dependent competitors, generating premium brand perception and higher customer inquiry conversion.',
     deliverables: ['Responsive Web Layouts', 'Custom Typography Styling', 'Art Direction Guides', 'Micro-interaction Specs', 'Asset Exports for Web'],
     technologies: ['Figma', 'Adobe Suite', 'Vector Graphics', 'Tailwind Guidelines'],
   },
@@ -43,6 +47,8 @@ export const servicesData: ServiceItem[] = [
     shortDescription: 'Timeless visual identities, bespoke marks, and comprehensive design systems built for digital scale.',
     fullDescription:
       'A digital brand requires more than a vector logo. We create unified design identities including typographic hierarchies, color theory rules, iconography standards, motion physics guidelines, and comprehensive digital brand books.',
+    businessValue:
+      'Provides unified multi-channel consistency that accelerates customer recall and prevents expensive design rework across future product iterations.',
     deliverables: ['Primary Mark & Logomarks', 'Typography Scale & Pairing', 'Color Harmonies & Neutrals', 'Digital Brand Guidelines PDF', 'Iconographic Set'],
     technologies: ['Illustrator', 'Figma', 'Typography Labs', 'Vector Formats (SVG)'],
   },
@@ -57,6 +63,8 @@ export const servicesData: ServiceItem[] = [
     shortDescription: 'High-performance Next.js and React applications architected for scalability, speed, and reliability.',
     fullDescription:
       'We engineer production-grade web applications utilizing Next.js App Router, TypeScript, and serverless backends. We focus on low latency, zero hydration flickers, state management simplicity, and rock-solid unit and integration testing.',
+    businessValue:
+      'Sub-second page rendering and strict type safety reduce bounce rates, boost user retention, and ensure stable performance during traffic surges.',
     deliverables: ['Production Next.js Codebase', 'Serverless API Routes', 'State Management Architecture', 'Role-based Access Control', 'Automated CI/CD Pipeline'],
     technologies: ['Next.js 14', 'TypeScript', 'Tailwind CSS', 'React Query', 'PostgreSQL', 'Prisma / Drizzle'],
   },
@@ -69,6 +77,8 @@ export const servicesData: ServiceItem[] = [
     shortDescription: 'High-conversion headless storefronts engineered for fast checkout, smooth catalog browsing, and sales.',
     fullDescription:
       'From custom Shopify headless integrations to custom commerce engines, we build shopping experiences that eliminate checkout friction and showcase products through high-resolution editorial presentation.',
+    businessValue:
+      'Streamlined checkout flows and instant catalog navigation increase average order values and reduce cart abandonment across mobile and desktop.',
     deliverables: ['Custom Storefront Layout', 'Stripe / Payment Gateway Setup', 'Inventory & Cart Management', 'Optimized Mobile Checkout', 'Order Notification Triggers'],
     technologies: ['Shopify Storefront API', 'Stripe', 'Next.js', 'Tailwind CSS', 'Redis Caching'],
   },
@@ -81,6 +91,8 @@ export const servicesData: ServiceItem[] = [
     shortDescription: 'Tailored digital tooling, bespoke internal workflow platforms, and specialized operational engines.',
     fullDescription:
       'Off-the-shelf software rarely fits proprietary business workflows. We design and build bespoke platforms that automate repetitive tasks, synchronize data between legacy silos, and provide executives with real-time operational transparency.',
+    businessValue:
+      'Replaces fractured manual spreadsheets with unified internal platforms, saving operational hours and mitigating human data errors.',
     deliverables: ['Custom Software Architecture', 'Internal Workflow Automation', 'Legacy Data Migration', 'API Integrations', 'Technical Documentation'],
     technologies: ['Node.js', 'Python', 'Go', 'Docker', 'GraphQL', 'REST'],
   },
@@ -95,6 +107,8 @@ export const servicesData: ServiceItem[] = [
     shortDescription: 'Native-feel iOS and Android applications crafted with React Native and modern mobile standards.',
     fullDescription:
       'We deliver cross-platform mobile apps that feel genuinely native. Smooth 60fps animations, intuitive gesture handling, offline-first data synchronization, and frictionless biometric authentication.',
+    businessValue:
+      'Direct smartphone accessibility with offline data capability drives daily active engagement, customer loyalty, and retention metrics.',
     deliverables: ['iOS & Android Builds', 'App Store & Play Store Submissions', 'Push Notification Service', 'Biometric Auth Integration', 'Offline Sync Engine'],
     technologies: ['React Native', 'Expo', 'Swift', 'Kotlin', 'Firebase / Supabase'],
   },
@@ -107,6 +121,8 @@ export const servicesData: ServiceItem[] = [
     shortDescription: 'Dense, scannable data visualization dashboards and control planes for operational precision.',
     fullDescription:
       'We specialize in building powerful administrative interfaces that simplify complex multi-tier data. Comprehensive filter systems, real-time analytics charts, batch editing tools, and audit logs.',
+    businessValue:
+      'Delivers real-time operational clarity for leadership, enabling data-informed business decisions without waiting for custom manual reports.',
     deliverables: ['Interactive Chart Modules', 'Data Table with Server Pagination', 'CSV / Excel Export Engines', 'Audit Trail & Event Logs', 'Granular Permission Matrix'],
     technologies: ['React', 'Tremor', 'Recharts', 'Tailwind CSS', 'PostgreSQL'],
   },
@@ -119,6 +135,8 @@ export const servicesData: ServiceItem[] = [
     shortDescription: 'Scalable relational data schemas, RESTful & GraphQL endpoints with enterprise security guarantees.',
     fullDescription:
       'A resilient frontend is only as dependable as its backend foundation. We construct schema migrations, caching layers, rate limiting, and defensive endpoint validation to safeguard your business intelligence.',
+    businessValue:
+      'Protects proprietary corporate data, prevents latency bottlenecks under peak loads, and lowers cloud infrastructure operational bills.',
     deliverables: ['Normalized SQL Schema', 'Swagger / OpenAPI Documentation', 'Rate Limiting & Threat Shielding', 'Automated Database Backups', 'Webhook Infrastructure'],
     technologies: ['PostgreSQL', 'Redis', 'Node.js', 'Zod', 'Docker', 'AWS / Vercel'],
   },
@@ -133,6 +151,8 @@ export const servicesData: ServiceItem[] = [
     shortDescription: 'Laser-focused technical SEO audits and code refactoring to achieve green 95+ Google Lighthouse scores.',
     fullDescription:
       'Speed and search engine discoverability go hand-in-hand. We optimize time-to-first-byte (TTFB), largest contentful paint (LCP), cumulative layout shift (CLS), semantic microdata schemas, and dynamic XML sitemaps.',
+    businessValue:
+      'Attains top Core Web Vitals rankings, driving compounding organic search traffic and dramatically lowering customer acquisition costs.',
     deliverables: ['Comprehensive Speed Audit', 'Bundle Size Minimization', 'Schema.org JSON-LD Markup', 'Image Modernization (AVIF/WebP)', 'Google Search Console Config'],
     technologies: ['Lighthouse', 'Next.js Analytics', 'PageSpeed Insights', 'Schema.org'],
   },
@@ -145,6 +165,8 @@ export const servicesData: ServiceItem[] = [
     shortDescription: 'Proactive monitoring, regular vulnerability patching, and dedicated continuous development retainers.',
     fullDescription:
       'Software requires steady stewardship. We provide round-the-clock uptime health checks, monthly package and security dependency upgrades, database tuning, and guaranteed SLA response times for any operational anomalies.',
+    businessValue:
+      'Guarantees business continuity, defends against security vulnerabilities, and frees internal teams to concentrate on commercial growth.',
     deliverables: ['24/7 Uptime Health Monitoring', 'Monthly Security & Dependency Patches', 'Disaster Recovery Backups', 'Dedicated Slack Channel SLA', 'Quarterly Growth Reviews'],
     technologies: ['Sentry', 'Datadog', 'GitHub Actions', 'Vercel Monitoring', 'AWS CloudWatch'],
   },
@@ -157,6 +179,8 @@ export const servicesData: ServiceItem[] = [
     shortDescription: 'Modern cloud infrastructure architecture, serverless configurations, and strategic tech guidance.',
     fullDescription:
       'We guide founders and tech executives through pivotal technology decisions. From choosing between microservices vs monoliths to setting up multi-region edge caching, our advice is grounded in pragmatic production experience.',
+    businessValue:
+      'Prevents costly architectural missteps, slashes unnecessary hosting expenditure, and establishes reliable automated release pipelines.',
     deliverables: ['Cloud Architecture Blueprint', 'Edge CDN & Caching Rules', 'Environment Staging Workflows', 'Cost Optimization Report', 'Executive Advisory Sessions'],
     technologies: ['Vercel', 'AWS', 'Cloudflare', 'Terraform', 'Docker'],
   },

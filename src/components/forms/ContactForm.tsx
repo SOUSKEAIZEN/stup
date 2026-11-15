@@ -11,7 +11,7 @@ import {
   timelineOptions,
 } from '@/lib/validations';
 import { Button } from '@/components/ui/Button';
-import { CheckCircle2, AlertCircle, Loader2, ArrowRight, Mail, RotateCcw } from 'lucide-react';
+import { CheckCircle2, AlertCircle, Loader2, ArrowRight, Mail, RotateCcw, ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { agencyConfig } from '@/data/agency';
 
@@ -236,25 +236,28 @@ ${data.projectDescription}`
               >
                 Service Required <span className="text-sunflower-dark font-bold">*</span>
               </label>
-              <select
-                id="serviceRequired"
-                disabled={submissionStatus === 'submitting'}
-                {...register('serviceRequired')}
-                className={cn(
-                  'w-full px-3.5 py-2.5 rounded-sm border bg-surface-bg font-sans text-sm text-navy focus:bg-white focus:outline-none focus:ring-2 transition-all appearance-none cursor-pointer',
-                  errors.serviceRequired
-                    ? 'border-red-400 focus:ring-red-400'
-                    : 'border-slate-200 focus:border-navy focus:ring-navy/20'
-                )}
-                aria-invalid={errors.serviceRequired ? 'true' : 'false'}
-              >
-                <option value="">Select a service category...</option>
-                {serviceOptions.map((opt) => (
-                  <option key={opt} value={opt}>
-                    {opt}
-                  </option>
-                ))}
-              </select>
+              <div className="relative">
+                <select
+                  id="serviceRequired"
+                  disabled={submissionStatus === 'submitting'}
+                  {...register('serviceRequired')}
+                  className={cn(
+                    'w-full px-3.5 py-2.5 pr-9 rounded-sm border bg-surface-bg font-sans text-sm text-navy focus:bg-white focus:outline-none focus:ring-2 focus:ring-sunflower/40 transition-all appearance-none cursor-pointer',
+                    errors.serviceRequired
+                      ? 'border-red-400 focus:ring-red-400'
+                      : 'border-slate-200 focus:border-navy'
+                  )}
+                  aria-invalid={errors.serviceRequired ? 'true' : 'false'}
+                >
+                  <option value="">Select a service category...</option>
+                  {serviceOptions.map((opt) => (
+                    <option key={opt} value={opt}>
+                      {opt}
+                    </option>
+                  ))}
+                </select>
+                <ChevronDown className="w-4 h-4 text-slate-400 pointer-events-none absolute right-3 top-1/2 -translate-y-1/2" />
+              </div>
               {errors.serviceRequired && (
                 <p className="mt-1 text-xs text-red-600 font-sans">
                   {errors.serviceRequired.message}
@@ -272,25 +275,28 @@ ${data.projectDescription}`
               >
                 Estimated Budget Range <span className="text-sunflower-dark font-bold">*</span>
               </label>
-              <select
-                id="estimatedBudget"
-                disabled={submissionStatus === 'submitting'}
-                {...register('estimatedBudget')}
-                className={cn(
-                  'w-full px-3.5 py-2.5 rounded-sm border bg-surface-bg font-sans text-sm text-navy focus:bg-white focus:outline-none focus:ring-2 transition-all appearance-none cursor-pointer',
-                  errors.estimatedBudget
-                    ? 'border-red-400 focus:ring-red-400'
-                    : 'border-slate-200 focus:border-navy focus:ring-navy/20'
-                )}
-                aria-invalid={errors.estimatedBudget ? 'true' : 'false'}
-              >
-                <option value="">Select budget range...</option>
-                {budgetOptions.map((opt) => (
-                  <option key={opt} value={opt}>
-                    {opt}
-                  </option>
-                ))}
-              </select>
+              <div className="relative">
+                <select
+                  id="estimatedBudget"
+                  disabled={submissionStatus === 'submitting'}
+                  {...register('estimatedBudget')}
+                  className={cn(
+                    'w-full px-3.5 py-2.5 pr-9 rounded-sm border bg-surface-bg font-sans text-sm text-navy focus:bg-white focus:outline-none focus:ring-2 focus:ring-sunflower/40 transition-all appearance-none cursor-pointer',
+                    errors.estimatedBudget
+                      ? 'border-red-400 focus:ring-red-400'
+                      : 'border-slate-200 focus:border-navy'
+                  )}
+                  aria-invalid={errors.estimatedBudget ? 'true' : 'false'}
+                >
+                  <option value="">Select budget range...</option>
+                  {budgetOptions.map((opt) => (
+                    <option key={opt} value={opt}>
+                      {opt}
+                    </option>
+                  ))}
+                </select>
+                <ChevronDown className="w-4 h-4 text-slate-400 pointer-events-none absolute right-3 top-1/2 -translate-y-1/2" />
+              </div>
               {errors.estimatedBudget && (
                 <p className="mt-1 text-xs text-red-600 font-sans">
                   {errors.estimatedBudget.message}
@@ -305,25 +311,28 @@ ${data.projectDescription}`
               >
                 Target Timeline <span className="text-sunflower-dark font-bold">*</span>
               </label>
-              <select
-                id="projectTimeline"
-                disabled={submissionStatus === 'submitting'}
-                {...register('projectTimeline')}
-                className={cn(
-                  'w-full px-3.5 py-2.5 rounded-sm border bg-surface-bg font-sans text-sm text-navy focus:bg-white focus:outline-none focus:ring-2 transition-all appearance-none cursor-pointer',
-                  errors.projectTimeline
-                    ? 'border-red-400 focus:ring-red-400'
-                    : 'border-slate-200 focus:border-navy focus:ring-navy/20'
-                )}
-                aria-invalid={errors.projectTimeline ? 'true' : 'false'}
-              >
-                <option value="">Select target timeline...</option>
-                {timelineOptions.map((opt) => (
-                  <option key={opt} value={opt}>
-                    {opt}
-                  </option>
-                ))}
-              </select>
+              <div className="relative">
+                <select
+                  id="projectTimeline"
+                  disabled={submissionStatus === 'submitting'}
+                  {...register('projectTimeline')}
+                  className={cn(
+                    'w-full px-3.5 py-2.5 pr-9 rounded-sm border bg-surface-bg font-sans text-sm text-navy focus:bg-white focus:outline-none focus:ring-2 focus:ring-sunflower/40 transition-all appearance-none cursor-pointer',
+                    errors.projectTimeline
+                      ? 'border-red-400 focus:ring-red-400'
+                      : 'border-slate-200 focus:border-navy'
+                  )}
+                  aria-invalid={errors.projectTimeline ? 'true' : 'false'}
+                >
+                  <option value="">Select target timeline...</option>
+                  {timelineOptions.map((opt) => (
+                    <option key={opt} value={opt}>
+                      {opt}
+                    </option>
+                  ))}
+                </select>
+                <ChevronDown className="w-4 h-4 text-slate-400 pointer-events-none absolute right-3 top-1/2 -translate-y-1/2" />
+              </div>
               {errors.projectTimeline && (
                 <p className="mt-1 text-xs text-red-600 font-sans">
                   {errors.projectTimeline.message}
