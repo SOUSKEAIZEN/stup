@@ -53,10 +53,10 @@ export function Navbar() {
         <div className="max-w-site mx-auto pointer-events-auto">
           <div
             className={cn(
-              'flex items-center justify-between px-5 sm:px-7 py-2.5 sm:py-3 rounded-full transition-all duration-300 ease-out',
+              'flex items-center justify-between px-5 sm:px-7 py-2.5 sm:py-3 rounded-full transition-all duration-300 ease-out bg-white',
               scrolled
-                ? 'bg-white/95 sm:bg-white/[0.96] backdrop-blur-xl border border-powder/80 shadow-[0_8px_32px_-6px_rgba(16,26,50,0.12)]'
-                : 'bg-white/85 backdrop-blur-md border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(16,26,50,0.06)]'
+                ? 'border border-slate-200/90 shadow-[0_4px_20px_-4px_rgba(16,26,50,0.08)]'
+                : 'border border-slate-200/70 shadow-sm'
             )}
           >
             {/* Brand Wordmark Logo */}
@@ -73,7 +73,7 @@ export function Navbar() {
                     key={link.href}
                     href={link.href}
                     className={cn(
-                      'relative px-3 sm:px-3.5 py-1.5 font-ui text-[13px] transition-colors duration-200 flex items-center gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunflower rounded-full',
+                      'relative px-3 sm:px-3.5 py-1.5 font-ui text-[13px] transition-colors duration-200 flex items-center gap-1.5 focus-visible:outline-none focus-visible:underline underline-offset-4',
                       isActive
                         ? 'text-navy font-semibold'
                         : 'text-ink-muted hover:text-navy font-medium'
@@ -95,7 +95,7 @@ export function Navbar() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-1.5 rounded-full text-navy hover:bg-powder-soft/60 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunflower"
+              className="md:hidden p-1.5 rounded-full text-navy hover:bg-powder-soft/60 transition-colors focus-visible:outline-none"
               aria-expanded={mobileMenuOpen}
               aria-label={mobileMenuOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
             >

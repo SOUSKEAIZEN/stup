@@ -73,7 +73,7 @@ ${data.projectDescription}`
   };
 
   return (
-    <div className="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-6 sm:p-8 shadow-[0_16px_40px_-12px_rgba(16,26,50,0.08)]">
+    <div className="bg-white border border-slate-200/90 rounded-2xl p-6 sm:p-8 shadow-card">
       {submissionStatus === 'staged' && stagedData ? (
         <div className="py-4 flex flex-col items-start space-y-5">
           <div className="flex items-center gap-3">
@@ -167,7 +167,7 @@ ${data.projectDescription}`
                 disabled={submissionStatus === 'submitting'}
                 {...register('fullName')}
                 className={cn(
-                  'w-full h-11 px-3.5 rounded-lg border bg-surface-bg font-sans text-sm text-navy placeholder:text-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sunflower/50 transition-all',
+                  'w-full h-11 px-3.5 rounded-xl border bg-surface-bg font-sans text-sm text-navy placeholder:text-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sunflower/50 transition-all',
                   errors.fullName
                     ? 'border-red-400 focus:ring-red-400'
                     : 'border-slate-200 focus:border-navy'
@@ -193,7 +193,7 @@ ${data.projectDescription}`
                 disabled={submissionStatus === 'submitting'}
                 {...register('email')}
                 className={cn(
-                  'w-full h-11 px-3.5 rounded-lg border bg-surface-bg font-sans text-sm text-navy placeholder:text-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sunflower/50 transition-all',
+                  'w-full h-11 px-3.5 rounded-xl border bg-surface-bg font-sans text-sm text-navy placeholder:text-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sunflower/50 transition-all',
                   errors.email
                     ? 'border-red-400 focus:ring-red-400'
                     : 'border-slate-200 focus:border-navy'
@@ -222,7 +222,7 @@ ${data.projectDescription}`
                 placeholder="Acme Systems"
                 disabled={submissionStatus === 'submitting'}
                 {...register('companyName')}
-                className="w-full h-11 px-3.5 rounded-lg border border-slate-200 bg-surface-bg font-sans text-sm text-navy placeholder:text-slate-400 focus:bg-white focus:border-navy focus:outline-none focus:ring-2 focus:ring-sunflower/50 transition-all"
+                className="w-full h-11 px-3.5 rounded-xl border border-slate-200 bg-surface-bg font-sans text-sm text-navy placeholder:text-slate-400 focus:bg-white focus:border-navy focus:outline-none focus:ring-2 focus:ring-sunflower/50 transition-all"
               />
             </div>
 
@@ -239,7 +239,7 @@ ${data.projectDescription}`
                   disabled={submissionStatus === 'submitting'}
                   {...register('serviceRequired')}
                   className={cn(
-                    'w-full h-11 px-3.5 pr-9 rounded-lg border bg-surface-bg font-sans text-sm text-navy focus:bg-white focus:outline-none focus:ring-2 focus:ring-sunflower/50 transition-all appearance-none cursor-pointer',
+                    'w-full h-11 px-3.5 pr-9 rounded-xl border bg-surface-bg font-sans text-sm text-navy focus:bg-white focus:outline-none focus:ring-2 focus:ring-sunflower/50 transition-all appearance-none cursor-pointer',
                     errors.serviceRequired
                       ? 'border-red-400 focus:ring-red-400'
                       : 'border-slate-200 focus:border-navy'
@@ -278,7 +278,7 @@ ${data.projectDescription}`
                   disabled={submissionStatus === 'submitting'}
                   {...register('estimatedBudget')}
                   className={cn(
-                    'w-full h-11 px-3.5 pr-9 rounded-lg border bg-surface-bg font-sans text-sm text-navy focus:bg-white focus:outline-none focus:ring-2 focus:ring-sunflower/50 transition-all appearance-none cursor-pointer',
+                    'w-full h-11 px-3.5 pr-9 rounded-xl border bg-surface-bg font-sans text-sm text-navy focus:bg-white focus:outline-none focus:ring-2 focus:ring-sunflower/50 transition-all appearance-none cursor-pointer',
                     errors.estimatedBudget
                       ? 'border-red-400 focus:ring-red-400'
                       : 'border-slate-200 focus:border-navy'
@@ -314,7 +314,7 @@ ${data.projectDescription}`
                   disabled={submissionStatus === 'submitting'}
                   {...register('projectTimeline')}
                   className={cn(
-                    'w-full h-11 px-3.5 pr-9 rounded-lg border bg-surface-bg font-sans text-sm text-navy focus:bg-white focus:outline-none focus:ring-2 focus:ring-sunflower/50 transition-all appearance-none cursor-pointer',
+                    'w-full h-11 px-3.5 pr-9 rounded-xl border bg-surface-bg font-sans text-sm text-navy focus:bg-white focus:outline-none focus:ring-2 focus:ring-sunflower/50 transition-all appearance-none cursor-pointer',
                     errors.projectTimeline
                       ? 'border-red-400 focus:ring-red-400'
                       : 'border-slate-200 focus:border-navy'
@@ -353,7 +353,7 @@ ${data.projectDescription}`
               disabled={submissionStatus === 'submitting'}
               {...register('projectDescription')}
               className={cn(
-                'w-full p-3.5 rounded-lg border bg-surface-bg font-sans text-sm text-navy placeholder:text-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sunflower/50 transition-all resize-y min-h-[110px]',
+                'w-full p-3.5 rounded-xl border bg-surface-bg font-sans text-sm text-navy placeholder:text-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sunflower/50 transition-all resize-y min-h-[110px]',
                 errors.projectDescription
                   ? 'border-red-400 focus:ring-red-400'
                   : 'border-slate-200 focus:border-navy'

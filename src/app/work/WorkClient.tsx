@@ -34,7 +34,7 @@ export function WorkClient({ initialProjects }: WorkClientProps) {
             >
               <Link
                 href={`/work/${project.slug}`}
-                className="block w-full h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunflower"
+                className="block w-full h-full focus-visible:outline-none"
                 tabIndex={-1}
                 aria-hidden="true"
               >

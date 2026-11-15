@@ -60,7 +60,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
       <div className="max-w-site mx-auto px-4 sm:px-6 w-full mb-6">
         <Link
           href="/work"
-          className="inline-flex items-center gap-2 font-ui text-xs font-semibold uppercase tracking-wider text-ink-muted hover:text-navy transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunflower rounded-sm"
+          className="inline-flex items-center gap-2 font-ui text-xs font-semibold uppercase tracking-wider text-ink-muted hover:text-navy transition-colors focus-visible:outline-none focus-visible:underline underline-offset-4"
         >
           <ArrowLeft className="w-3.5 h-3.5" />
           <span>Back to All Work</span>

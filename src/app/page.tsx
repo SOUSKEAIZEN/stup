@@ -1,16 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import { ArrowRight, ArrowUpRight, Check, Layout, Code2, Smartphone, Cpu } from 'lucide-react';
+import { ArrowRight, Check, Layout, Code2, Smartphone, Cpu } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { HeroVisual } from '@/components/sections/HeroVisual';
-import { FinalCTA } from '@/components/sections/FinalCTA';
 import { agencyConfig } from '@/data/agency';
-import { projectsData } from '@/data/projects';
 
 export default function HomePage() {
-  const fourFlagshipProjects = projectsData.slice(0, 4);
-
   const capabilityPillars = [
     {
       id: 'design',
@@ -195,94 +190,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. SELECTED WORK (Exactly Four Flagship Projects) */}
+      {/* 4. CONCISE WORKING APPROACH */}
       <section className="py-8 sm:py-12 bg-white border-b border-slate-200/60">
-        <div className="max-w-site mx-auto px-4 sm:px-6">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-6 gap-2">
-            <div>
-              <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy mb-1">
-                <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
-                SELECTED WORK
-              </span>
-              <h2 className="font-display text-2xl sm:text-3xl font-bold text-navy">
-                Featured client executions.
-              </h2>
-            </div>
-            <Link
-              href="/work"
-              className="inline-flex items-center gap-1.5 text-xs font-ui font-semibold uppercase tracking-wider text-navy hover:text-navy-deep group shrink-0"
-            >
-              <span>View All 4 Projects</span>
-              <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
-            {fourFlagshipProjects.map((project, idx) => (
-              <div
-                key={project.id}
-                className="bg-surface-bg border border-slate-200/90 rounded-2xl p-5 flex flex-col justify-between transition-all hover:border-powder hover:shadow-card group"
-              >
-                <div>
-                  {/* Thumbnail */}
-                  <div className="relative aspect-[16/10] w-full rounded-xl overflow-hidden bg-slate-100 border border-slate-200/80 mb-4">
-                    <Link href={`/work/${project.slug}`} tabIndex={-1} aria-hidden="true">
-                      <Image
-                        src={project.thumbnail}
-                        alt={`${project.title} - ${project.categoryLabel}`}
-                        fill
-                        sizes="(max-width: 768px) 100vw, 560px"
-                        priority={idx < 2}
-                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                      />
-                    </Link>
-                  </div>
-
-                  <div className="flex items-center gap-2 text-xs font-ui mb-1.5">
-                    <span className="font-bold uppercase tracking-wider text-navy">
-                      {project.categoryLabel}
-                    </span>
-                    <span className="text-slate-300">/</span>
-                    <span className="text-ink-muted text-[11px]">{project.industry}</span>
-                  </div>
-
-                  <h3 className="font-display text-xl font-bold text-navy group-hover:text-navy-deep transition-colors">
-                    <Link href={`/work/${project.slug}`}>{project.title}</Link>
-                  </h3>
-
-                  <p className="font-sans text-xs text-ink-body mt-1.5 leading-relaxed">
-                    {project.summary}
-                  </p>
-                </div>
-
-                <div className="mt-4 pt-3 border-t border-slate-200/70 flex items-center justify-between">
-                  <div className="flex flex-wrap gap-1">
-                    {project.techStack.slice(0, 3).map((tech, tIdx) => (
-                      <span
-                        key={tIdx}
-                        className="px-2 py-0.5 rounded-md bg-white text-ink-muted font-ui text-[10px] font-semibold border border-slate-200"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-
-                  <Link
-                    href={`/work/${project.slug}`}
-                    className="inline-flex items-center gap-1 font-ui text-xs font-bold uppercase tracking-wider text-navy group-hover:text-sunflower-dark transition-colors"
-                  >
-                    <span>View Case Study</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 stroke-[2.2]" />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 5. CONCISE WORKING APPROACH (Horizontal Timeline on Desktop, Vertical on Mobile) */}
-      <section className="py-8 sm:py-12 bg-surface-bg border-b border-slate-200/60">
         <div className="max-w-site mx-auto px-4 sm:px-6">
           <div className="max-w-2xl mb-6">
             <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy mb-1">
@@ -298,7 +207,7 @@ export default function HomePage() {
             {agencyConfig.processSteps.map((step) => (
               <div
                 key={step.step}
-                className="bg-white border border-slate-200/80 rounded-2xl p-5 flex flex-col justify-between shadow-2xs"
+                className="bg-surface-bg border border-slate-200/80 rounded-2xl p-5 flex flex-col justify-between shadow-2xs"
               >
                 <div>
                   <div className="flex items-center justify-between mb-2">
@@ -319,12 +228,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* 6. STRONG CONTACT CTA */}
-      <FinalCTA
-        title="Ready to engineer your digital presence?"
-        subtitle="Share your project goals with our lead practitioners. We evaluate every inquiry with clear scopes, transparent pricing, and structured next steps."
-      />
     </div>
   );
 }
