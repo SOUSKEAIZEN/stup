@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUpRight, MessageSquare } from 'lucide-react';
+import { ArrowUpRight, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { agencyConfig } from '@/data/agency';
 
@@ -9,61 +9,60 @@ export interface FinalCTAProps {
 }
 
 export function FinalCTA({
-  title = 'Have an idea worth building?',
-  subtitle = 'Whether you are launching a transformative venture or re-engineering an existing digital product, our studio is ready to collaborate.',
+  title = 'Have a project in mind?',
+  subtitle = 'Whether you are launching a new brand or redesigning an existing website, we are ready to discuss your requirements.',
 }: FinalCTAProps) {
   return (
-    <section className="py-24 bg-navy text-white relative overflow-hidden">
-      {/* Background ambient lighting */}
+    <section className="py-16 sm:py-20 bg-gradient-to-br from-navy via-navy-deep to-[#1b2b4c] text-white relative overflow-hidden border-t border-navy-deep">
+      {/* Visible brand gradient glow: Midnight Navy into Powder Blue */}
       <div
-        className="absolute -top-24 right-1/4 w-96 h-96 bg-powder/10 rounded-full blur-3xl pointer-events-none"
+        className="absolute top-0 right-1/4 w-80 h-80 bg-powder/10 rounded-full blur-3xl pointer-events-none"
         aria-hidden="true"
       />
       <div
-        className="absolute -bottom-24 left-1/4 w-96 h-96 bg-sunflower/15 rounded-full blur-3xl pointer-events-none"
+        className="absolute bottom-0 left-1/4 w-72 h-72 bg-sunflower/10 rounded-full blur-3xl pointer-events-none"
         aria-hidden="true"
       />
 
-      <div className="max-w-site mx-auto px-5 sm:px-8 relative z-10 text-center">
-        <span className="inline-flex items-center gap-2 font-ui text-xs font-bold uppercase tracking-[0.22em] text-sunflower mb-4 select-none">
+      <div className="max-w-site mx-auto px-4 sm:px-6 relative z-10 text-center">
+        <span className="inline-flex items-center gap-1.5 font-ui text-[11px] font-bold uppercase tracking-[0.22em] text-sunflower mb-3 select-none">
           <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
-          <span>NEXT STEPS</span>
+          <span>START A CONVERSATION</span>
         </span>
 
-        <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white max-w-3xl mx-auto leading-[1.12]">
+        <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white max-w-2xl mx-auto leading-tight">
           {title}
         </h2>
 
-        <p className="mt-5 font-sans text-base sm:text-lg text-powder/80 max-w-2xl mx-auto leading-relaxed">
+        <p className="mt-3.5 font-sans text-sm sm:text-base text-powder/80 max-w-xl mx-auto leading-relaxed">
           {subtitle}
         </p>
 
         {/* CTA Button Group */}
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
           <Button
             href="/contact"
             variant="sunflower"
-            size="lg"
+            size="md"
             icon={<ArrowUpRight className="w-4 h-4 stroke-[2.2]" />}
-            className="w-full sm:w-auto text-sm tracking-wider uppercase font-bold text-navy"
+            className="w-full sm:w-auto text-xs tracking-wider uppercase font-bold text-navy shadow-xs"
           >
             Start a Project
           </Button>
           <Button
             href={`mailto:${agencyConfig.email}`}
             variant="secondary"
-            size="lg"
+            size="md"
             external
-            icon={<MessageSquare className="w-4 h-4" />}
-            className="w-full sm:w-auto text-sm"
+            icon={<Mail className="w-4 h-4" />}
+            className="w-full sm:w-auto text-xs"
           >
-            Direct Inquiry
+            Email Studio Directly
           </Button>
         </div>
 
-        {/* Studio SLA Note */}
-        <p className="mt-8 font-ui text-xs text-powder/60">
-          Typical response time: {agencyConfig.responseTime} · NDA guaranteed upon request
+        <p className="mt-6 font-ui text-[11px] text-powder/60">
+          Typical response time: {agencyConfig.responseTime} · Scope-limited transparent pricing
         </p>
       </div>
     </section>

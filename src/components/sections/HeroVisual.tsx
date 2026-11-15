@@ -1,113 +1,74 @@
 import React from 'react';
-import { Shield, Sparkles } from 'lucide-react';
+import Image from 'next/image';
 
 export function HeroVisual() {
   return (
-    <div className="relative w-full max-w-lg lg:max-w-none mx-auto">
-      {/* Restrained subtle ambient glow */}
-      <div
-        className="absolute -top-8 -right-8 w-64 h-64 bg-powder/30 rounded-full blur-3xl pointer-events-none"
-        aria-hidden="true"
-      />
-      <div
-        className="absolute -bottom-8 -left-8 w-60 h-60 bg-sunflower/10 rounded-full blur-3xl pointer-events-none"
-        aria-hidden="true"
-      />
+    <div className="relative w-full max-w-lg lg:max-w-none mx-auto select-none">
+      {/* Sophisticated Navy-to-Powder-Blue gradient card frame */}
+      <div className="relative rounded-md p-3 sm:p-4 bg-gradient-to-br from-navy via-navy-deep to-[#1c2c4e] border border-powder/20 shadow-card overflow-hidden">
+        {/* Subtle interior glow */}
+        <div
+          className="absolute -top-16 -right-16 w-48 h-48 bg-powder/15 rounded-full blur-2xl pointer-events-none"
+          aria-hidden="true"
+        />
+        <div
+          className="absolute -bottom-16 -left-16 w-40 h-40 bg-sunflower/10 rounded-full blur-2xl pointer-events-none"
+          aria-hidden="true"
+        />
 
-      {/* Main Layered Browser Interface Mockup */}
-      <div className="relative bg-white border border-slate-200/90 rounded-sm shadow-card overflow-hidden">
-        {/* Browser Top Bar */}
-        <div className="bg-surface-bg border-b border-slate-200/80 px-4 py-2.5 flex items-center justify-between">
-          <div className="flex items-center gap-1.5">
-            <span className="w-2.5 h-2.5 rounded-full bg-slate-300" />
-            <span className="w-2.5 h-2.5 rounded-full bg-slate-300" />
-            <span className="w-2.5 h-2.5 rounded-full bg-slate-300" />
+        {/* Primary Desktop Website Mockup Frame */}
+        <div className="relative bg-white rounded-sm overflow-hidden border border-slate-200/90 shadow-sm">
+          {/* Minimalist Browser Chrome */}
+          <div className="bg-surface-bg border-b border-slate-200/80 px-3 py-1.5 flex items-center justify-between">
+            <div className="flex items-center gap-1">
+              <span className="w-2 h-2 rounded-full bg-slate-300" />
+              <span className="w-2 h-2 rounded-full bg-slate-300" />
+              <span className="w-2 h-2 rounded-full bg-slate-300" />
+            </div>
+            <div className="px-2.5 py-0.5 bg-white border border-slate-200/70 rounded-xs text-[10px] font-ui text-ink-muted">
+              stupstudio.com/work/preview
+            </div>
+            <div className="w-2 h-2 rounded-full bg-sunflower" />
           </div>
-          <div className="flex items-center gap-2 px-3 py-0.5 bg-white border border-slate-200/80 rounded-sm text-[11px] font-ui text-ink-muted">
-            <Shield className="w-3 h-3 text-navy" />
-            <span>stupstudio.com/architecture/preview</span>
-          </div>
-          <div className="flex items-center gap-1.5 text-[11px] font-ui font-semibold text-navy">
-            <span className="w-1.5 h-1.5 rounded-full bg-sunflower animate-pulse" />
-            <span>PROD 60FPS</span>
+
+          {/* Desktop Web Preview Image */}
+          <div className="relative aspect-[16/10] w-full bg-slate-100 overflow-hidden">
+            <Image
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80"
+              alt="Digital Interface Preview"
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 550px"
+              className="object-cover"
+            />
           </div>
         </div>
 
-        {/* Browser Canvas Content */}
-        <div className="p-5 sm:p-6 space-y-5">
-          {/* Header Preview */}
-          <div className="flex items-start justify-between border-b border-slate-100 pb-4">
-            <div>
-              <span className="text-[10px] font-ui font-bold uppercase tracking-[0.2em] text-navy block mb-0.5">
-                Architecture Standard
-              </span>
-              <h4 className="font-display text-xl sm:text-2xl font-bold text-navy">
-                Finora Intelligence Prototype
-              </h4>
-              <p className="font-sans text-xs text-ink-muted mt-0.5">
-                Multi-Currency Wealth Analytics & Real-Time DOM Virtualization
-              </p>
-            </div>
-            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-sm bg-sunflower/20 text-navy font-ui text-[11px] font-bold border border-sunflower/40 shrink-0">
-              <Sparkles className="w-3 h-3 text-navy" />
-              Next.js 14
-            </span>
+        {/* Secondary Overlapping Mobile Showcase Frame */}
+        <div className="absolute -bottom-2 right-4 sm:right-6 w-32 sm:w-36 bg-white rounded-sm overflow-hidden border-2 border-navy-deep shadow-float">
+          {/* Mobile Phone Top Bar */}
+          <div className="bg-navy px-2 py-1 flex items-center justify-between">
+            <div className="w-6 h-1 rounded-full bg-powder/40 mx-auto" />
           </div>
+          {/* Mobile Preview Image */}
+          <div className="relative aspect-[9/16] w-full bg-slate-100 overflow-hidden">
+            <Image
+              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=80"
+              alt="Mobile Responsive Interface Preview"
+              fill
+              sizes="150px"
+              className="object-cover"
+            />
+          </div>
+        </div>
 
-          {/* Interactive Metric Tiles */}
-          <div className="grid grid-cols-3 gap-2.5">
-            <div className="p-2.5 bg-surface-bg rounded-sm border border-slate-100">
-              <span className="font-ui text-[10px] text-ink-muted uppercase tracking-wider block">
-                Paint (FCP)
-              </span>
-              <span className="font-ui text-base sm:text-lg font-bold text-navy mt-0.5 block">
-                0.62s
-              </span>
-              <span className="font-sans text-[10px] text-emerald-600 font-medium">Sub-second</span>
-            </div>
-            <div className="p-2.5 bg-surface-bg rounded-sm border border-slate-100">
-              <span className="font-ui text-[10px] text-ink-muted uppercase tracking-wider block">
-                Core Vitals
-              </span>
-              <span className="font-ui text-base sm:text-lg font-bold text-navy mt-0.5 block">
-                99/100
-              </span>
-              <span className="font-sans text-[10px] text-emerald-600 font-medium">All green</span>
-            </div>
-            <div className="p-2.5 bg-surface-bg rounded-sm border border-slate-100">
-              <span className="font-ui text-[10px] text-ink-muted uppercase tracking-wider block">
-                Type Safety
-              </span>
-              <span className="font-ui text-base sm:text-lg font-bold text-navy mt-0.5 block">
-                100%
-              </span>
-              <span className="font-sans text-[10px] text-sunflower-dark font-bold">Strict TS</span>
-            </div>
+        {/* Bottom Studio Capability Pill */}
+        <div className="mt-3 pt-2.5 border-t border-navy-light/60 flex items-center justify-between text-[11px] font-ui text-powder/80">
+          <div className="flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
+            <span className="text-white font-medium">Bespoke Digital Platforms</span>
           </div>
-
-          {/* Code Architecture Preview */}
-          <div className="bg-navy p-3.5 rounded-sm text-slate-200 font-mono text-[11px] leading-relaxed overflow-hidden">
-            <div className="flex items-center justify-between text-[10px] text-powder mb-2 font-ui uppercase tracking-wider border-b border-navy-deep pb-1">
-              <span>TypeScript Component Interface</span>
-              <span className="text-sunflower font-mono font-bold">type-safe</span>
-            </div>
-            <p className="text-powder/80">
-              <span className="text-sunflower font-semibold">export interface</span> DigitalArchitecture &#123;
-            </p>
-            <p className="pl-3.5 text-slate-300">
-              framework: <span className="text-powder">&apos;Next.js 14 App Router&apos;</span>;
-            </p>
-            <p className="pl-3.5 text-slate-300">
-              designTokens: <span className="text-powder">&apos;4px Modular Baseline&apos;</span>;
-            </p>
-            <p className="pl-3.5 text-slate-300">
-              accessibility: <span className="text-powder">&apos;WCAG Level AA&apos;</span>;
-            </p>
-            <p className="pl-3.5 text-slate-300">
-              clientCodeOwnership: <span className="text-emerald-400">true</span>;
-            </p>
-            <p className="text-powder/80">&#125;</p>
-          </div>
+          <span className="text-powder/60 text-[10px]">Responsive Web & Mobile</span>
         </div>
       </div>
     </div>

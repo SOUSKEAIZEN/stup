@@ -50,23 +50,23 @@ const iconMap: Record<string, LucideIcon> = {
 
 export default function ServicesPage() {
   return (
-    <div className="flex flex-col pt-28 sm:pt-36">
+    <div className="flex flex-col pt-24 sm:pt-28">
       {/* HERO SECTION */}
-      <section className="pb-12 sm:pb-16 border-b border-slate-200/70">
-        <div className="max-w-site mx-auto px-5 sm:px-8">
+      <section className="pb-10 sm:pb-12 border-b border-slate-200/70 bg-gradient-to-b from-powder-soft/40 via-white to-white">
+        <div className="max-w-site mx-auto px-4 sm:px-6">
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy mb-3">
+            <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy mb-2.5">
               <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
               END-TO-END CAPABILITIES
             </span>
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-[62px] leading-[1.1] tracking-[-0.025em] text-navy font-bold text-balance">
+            <h1 className="font-display text-3xl sm:text-4xl lg:text-[50px] leading-[1.14] tracking-[-0.025em] text-navy font-bold text-balance">
               Digital services designed around your next big move.
             </h1>
-            <p className="mt-4 font-sans text-base sm:text-lg text-ink-body leading-relaxed text-balance">
+            <p className="mt-3 font-sans text-sm sm:text-base text-ink-body leading-relaxed text-balance">
               From first concept to final product, we bring strategy, design and engineering together. We partner with leaders to craft digital ecosystems that scale gracefully.
             </p>
 
-            <div className="mt-6 flex flex-wrap gap-3">
+            <div className="mt-5 flex flex-wrap gap-3">
               <Button
                 href="/contact"
                 variant="sunflower"
@@ -91,8 +91,8 @@ export default function ServicesPage() {
       </section>
 
       {/* QUICK CATEGORY JUMP NAV */}
-      <section className="bg-white border-b border-slate-200/70 sticky top-[65px] z-30 shadow-xs">
-        <div className="max-w-site mx-auto px-5 sm:px-8 overflow-x-auto py-2.5">
+      <section className="bg-white border-b border-slate-200/70 sticky top-[60px] z-30 shadow-xs">
+        <div className="max-w-site mx-auto px-4 sm:px-6 overflow-x-auto py-2.5">
           <div className="flex items-center gap-6 min-w-max text-xs font-ui font-semibold uppercase tracking-wider text-ink-muted">
             <span className="text-navy font-bold">Jump to Domain:</span>
             {serviceCategories.map((cat) => (
@@ -109,27 +109,27 @@ export default function ServicesPage() {
       </section>
 
       {/* CATEGORY SECTIONS */}
-      <div className="space-y-16 py-14 sm:py-20">
+      <div className="space-y-12 py-10 sm:py-14 bg-surface-bg">
         {serviceCategories.map((category) => (
           <section
             key={category.id}
             id={category.id}
-            className="scroll-mt-32 max-w-site mx-auto px-5 sm:px-8"
+            className="scroll-mt-28 max-w-site mx-auto px-4 sm:px-6"
           >
             {/* Category Header */}
-            <div className="border-b border-slate-200 pb-5 mb-8">
+            <div className="border-b border-slate-200 pb-4 mb-6">
               <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.25em] text-navy block mb-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
                 {category.eyebrow}
               </span>
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-end">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 items-end">
                 <div className="lg:col-span-6">
                   <h2 className="font-display text-2xl sm:text-3xl font-bold text-navy">
                     {category.title}
                   </h2>
                 </div>
                 <div className="lg:col-span-6">
-                  <p className="font-sans text-sm text-ink-body leading-relaxed">
+                  <p className="font-sans text-xs sm:text-sm text-ink-body leading-relaxed">
                     {category.description}
                   </p>
                 </div>
@@ -137,7 +137,7 @@ export default function ServicesPage() {
             </div>
 
             {/* Service Detailed Cards */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
               {category.items.map((service) => {
                 const IconComponent = iconMap[service.iconName] || Globe;
 
@@ -208,27 +208,27 @@ export default function ServicesPage() {
       </div>
 
       {/* WORKING PROCESS SECTION */}
-      <section className="py-14 sm:py-20 bg-white border-t border-slate-200/70">
-        <div className="max-w-site mx-auto px-5 sm:px-8">
+      <section className="py-12 sm:py-16 bg-white border-t border-slate-200/70">
+        <div className="max-w-site mx-auto px-4 sm:px-6">
           <SectionHeading
             eyebrow="EXECUTION CADENCE"
             title="How we work alongside your team."
             description="Our engagement model emphasizes continuous feedback loops, complete code ownership, and transparent engineering velocity."
-            className="mb-10"
+            className="mb-8"
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {agencyConfig.processSteps.map((step) => (
               <div
                 key={step.step}
-                className="p-6 rounded-sm bg-surface-bg border border-slate-200/80 flex flex-col justify-between"
+                className="p-5 rounded-sm bg-surface-bg border border-slate-200/80 flex flex-col justify-between"
               >
                 <div>
                   <span className="font-mono text-xs font-bold text-navy block mb-2 flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
                     STAGE {step.step}
                   </span>
-                  <h3 className="font-display text-lg font-bold text-navy mb-1.5">
+                  <h3 className="font-display text-base font-bold text-navy mb-1">
                     {step.name}
                   </h3>
                   <p className="font-sans text-xs text-ink-body leading-relaxed mt-1">
@@ -242,14 +242,14 @@ export default function ServicesPage() {
       </section>
 
       {/* FREQUENTLY ASKED QUESTIONS */}
-      <section className="py-14 sm:py-20 bg-surface-bg border-t border-slate-200/70">
-        <div className="max-w-site mx-auto px-5 sm:px-8">
+      <section className="py-12 sm:py-16 bg-surface-bg border-t border-slate-200/70">
+        <div className="max-w-site mx-auto px-4 sm:px-6">
           <div className="max-w-3xl mx-auto">
             <SectionHeading
               eyebrow="COMMON QUESTIONS"
               title="Frequently asked questions about our services."
               align="center"
-              className="mb-10 text-center"
+              className="mb-8 text-center"
             />
             <Accordion items={generalFaqs} />
           </div>

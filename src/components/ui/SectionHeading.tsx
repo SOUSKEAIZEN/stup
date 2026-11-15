@@ -31,9 +31,9 @@ export function SectionHeading({
   };
 
   const titleSizes = {
-    hero: 'text-4xl sm:text-6xl lg:text-7xl xl:text-[80px] leading-[1.08] tracking-[-0.025em]',
-    section: 'text-3xl sm:text-4xl lg:text-[46px] leading-[1.15] tracking-[-0.015em]',
-    sub: 'text-2xl sm:text-3xl lg:text-4xl leading-[1.2] tracking-[-0.01em]',
+    hero: 'text-3xl sm:text-4xl lg:text-[54px] leading-[1.12] tracking-[-0.025em]',
+    section: 'text-2xl sm:text-3xl lg:text-[36px] leading-[1.18] tracking-[-0.02em]',
+    sub: 'text-xl sm:text-2xl lg:text-3xl leading-[1.2] tracking-[-0.01em]',
   };
 
   return (
@@ -61,7 +61,7 @@ export function SectionHeading({
       {description && (
         <p
           className={cn(
-            'mt-4 font-sans text-base sm:text-lg leading-relaxed text-balance',
+            'mt-2.5 font-sans text-xs sm:text-sm text-ink-body leading-relaxed text-balance',
             theme === 'dark' ? 'text-powder/80' : 'text-ink-body',
             align === 'center' ? 'max-w-2xl' : 'max-w-2xl'
           )}

@@ -50,9 +50,9 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
   const nextProject = projectsData[(projectIndex + 1) % projectsData.length];
 
   return (
-    <div className="flex flex-col pt-28 sm:pt-36">
+    <div className="flex flex-col pt-24 sm:pt-28">
       {/* BACK NAVIGATION */}
-      <div className="max-w-site mx-auto px-5 sm:px-8 w-full mb-6">
+      <div className="max-w-site mx-auto px-4 sm:px-6 w-full mb-6">
         <Link
           href="/work"
           className="inline-flex items-center gap-2 font-ui text-xs font-semibold uppercase tracking-wider text-ink-muted hover:text-navy transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunflower rounded-sm"
@@ -63,8 +63,8 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
       </div>
 
       {/* CASE STUDY HEADER */}
-      <section className="pb-10 sm:pb-14 border-b border-slate-200/70">
-        <div className="max-w-site mx-auto px-5 sm:px-8">
+      <section className="pb-8 sm:pb-12 border-b border-slate-200/70 bg-gradient-to-b from-powder-soft/40 via-white to-white">
+        <div className="max-w-site mx-auto px-4 sm:px-6">
           <div className="flex flex-wrap items-center gap-3 text-xs font-ui mb-3">
             <span className="font-bold uppercase tracking-widest text-navy flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-sunflower" />
@@ -76,11 +76,11 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
             <span className="text-ink-muted">{project.year}</span>
           </div>
 
-          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-navy tracking-tight max-w-4xl text-balance">
+          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-navy tracking-tight max-w-3xl text-balance">
             {project.title}
           </h1>
 
-          <p className="mt-4 font-sans text-base sm:text-lg text-ink-body max-w-3xl leading-relaxed text-balance">
+          <p className="mt-3 font-sans text-sm sm:text-base text-ink-body max-w-2xl leading-relaxed text-balance">
             {project.summary}
           </p>
 
@@ -115,7 +115,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
       </section>
 
       {/* FULL-BLEED HERO IMAGE */}
-      <section className="py-8 max-w-site mx-auto px-5 sm:px-8 w-full">
+      <section className="py-8 max-w-site mx-auto px-4 sm:px-6 w-full">
         <div className="relative aspect-[16/9] w-full rounded-sm overflow-hidden border border-slate-200/90 shadow-card">
           <Image
             src={project.heroImage}
@@ -130,7 +130,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
 
       {/* CASE STUDY CONTENT SECTIONS */}
       <section className="py-12 sm:py-16">
-        <div className="max-w-site mx-auto px-5 sm:px-8">
+        <div className="max-w-site mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
             {/* Left Column: Deep Narrative */}
             <div className="lg:col-span-8 space-y-12">
@@ -313,7 +313,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
 
       {/* NEXT PROJECT NAVIGATION BAR */}
       <section className="py-10 bg-white border-y border-slate-200/70">
-        <div className="max-w-site mx-auto px-5 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="max-w-site mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <Link
             href="/work"
             className="font-ui text-xs font-semibold uppercase tracking-wider text-ink-muted hover:text-navy transition-colors"

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'Next.js Development',
     'UI/UX Design',
     'Web Applications',
-    'Bangalore Tech Studio',
+    'Boutique Software Agency',
     'Custom Software',
   ],
   authors: [{ name: agencyConfig.name }],

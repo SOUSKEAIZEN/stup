@@ -41,7 +41,7 @@ The visual identity is designed with restraint, generous whitespace, and discipl
 | `/services` | **Services & Capabilities** | Categorized into 4 domains: Design & Creative, Web Development, Application Development, and Technology & Growth. Features deliverables, tech stacks, and FAQs. |
 | `/work` | **Portfolio & Case Studies** | Filterable by project category (All, Websites, Applications, UI/UX, E-commerce, Branding). Features 8 realistic demonstration case studies. |
 | `/work/[slug]` | **Case Study Details** | Dynamic detail routes (`/work/finora`, `/work/forma`, `/work/nourish`, etc.) detailing client background, technical bottlenecks, architectural approaches, feature breakdowns, and conceptual performance benchmarks. |
-| `/plans` | **Plans & Pricing** | 4 transparent tiers: Starter (₹14,999), Professional (₹29,999, highlighted), Business Pro (₹59,999), and Enterprise / Custom. Complete side-by-side feature comparison table and pricing FAQs. |
+| `/plans` | **Plans & Pricing** | 4 transparent introductory tiers: Essential (₹4,999), Starter (₹9,999), Professional (₹14,999, recommended), and Business Plus (₹24,999). Complete comparison table and pricing FAQs. |
 | `/contact` | **Contact & Inquiries** | Type-safe inquiry form with React Hook Form + Zod validation, budget/service selectors, direct email/phone/address placeholders, expected response times, and mutual NDA notice. |
 | `/sitemap.xml` | **Dynamic XML Sitemap** | Programmatic search engine index mapping all static and dynamic case study routes. |
 | `/robots.txt` | **Robots Configuration** | Search crawler instructions and sitemap link. |
@@ -52,7 +52,7 @@ The visual identity is designed with restraint, generous whitespace, and discipl
 
 All content, pricing, services, and branding are decoupled from components into structured data files for effortless client customization:
 
-- `src/data/agency.ts` — Brand identity, contact details, Bangalore studio address, response SLAs, agency values, and 4-step process.
+- `src/data/agency.ts` — Brand identity, contact details, remote studio delivery, response SLAs, agency values, and 4-step process.
 - `src/data/services.ts` — All service definitions, category groupings, deliverables, and tech tags.
 - `src/data/projects.ts` — Case study narratives, high-resolution imagery, technical stacks, and metrics.
 - `src/data/pricing.ts` — Package pricing, feature lists, and detailed comparison matrix.

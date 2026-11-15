@@ -38,10 +38,10 @@ export function ProjectCard({ project, priority = false, className }: ProjectCar
       </Link>
 
       {/* Project Meta & Details */}
-      <div className="p-6 sm:p-7 flex flex-col flex-grow justify-between">
+      <div className="p-5 sm:p-6 flex flex-col flex-grow justify-between">
         <div>
           {/* Metadata Row */}
-          <div className="flex items-center justify-between text-xs font-ui mb-3">
+          <div className="flex items-center justify-between text-xs font-ui mb-2">
             <span className="font-semibold uppercase tracking-wider text-navy flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-sunflower shrink-0" />
               <span>{project.categoryLabel}</span>
@@ -50,7 +50,7 @@ export function ProjectCard({ project, priority = false, className }: ProjectCar
           </div>
 
           {/* Project Title */}
-          <h3 className="font-display text-2xl font-bold text-navy group-hover:text-navy-deep transition-colors duration-200">
+          <h3 className="font-display text-xl sm:text-2xl font-bold text-navy group-hover:text-navy-deep transition-colors duration-200">
             <Link
               href={`/work/${project.slug}`}
               className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunflower rounded-sm"
@@ -59,17 +59,17 @@ export function ProjectCard({ project, priority = false, className }: ProjectCar
             </Link>
           </h3>
 
-          <p className="font-ui text-xs text-ink-muted mt-1 uppercase tracking-wider">
+          <p className="font-ui text-xs text-ink-muted mt-0.5 uppercase tracking-wider">
             {project.industry}
           </p>
 
-          <p className="font-sans text-sm text-ink-body mt-3 line-clamp-2 leading-relaxed">
+          <p className="font-sans text-xs sm:text-sm text-ink-body mt-2.5 line-clamp-2 leading-relaxed">
             {project.summary}
           </p>
         </div>
 
         {/* Action Link */}
-        <div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
+        <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
           <div className="flex flex-wrap gap-1.5">
             {project.techStack.slice(0, 3).map((tech, i) => (
               <span

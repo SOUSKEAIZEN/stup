@@ -99,7 +99,7 @@ ${data.projectDescription}`
               Your inquiry has successfully passed all field validations. In this development deployment, live SMTP or API dispatch (e.g. Resend, SendGrid) is not active.
             </p>
             <p className="leading-relaxed text-ink-muted">
-              To send this exact message directly to our Bangalore studio inbox, use the instant mail client action below.
+              To send this exact message directly to our studio inbox, use the instant mail client action below.
             </p>
           </div>
 
