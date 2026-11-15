@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ArrowLeft, ArrowRight, ArrowUpRight, Check, Sparkles, AlertCircle } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ArrowUpRight, Check, AlertCircle } from 'lucide-react';
 import { projectsData } from '@/data/projects';
 import { Button } from '@/components/ui/Button';
 import { FinalCTA } from '@/components/sections/FinalCTA';
@@ -55,7 +55,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
       <div className="max-w-site mx-auto px-5 sm:px-8 w-full mb-8">
         <Link
           href="/work"
-          className="inline-flex items-center gap-2 font-ui text-xs font-semibold uppercase tracking-wider text-ink-muted hover:text-navy transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy rounded-sm"
+          className="inline-flex items-center gap-2 font-ui text-xs font-semibold uppercase tracking-wider text-ink-muted hover:text-navy transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunflower rounded-sm"
         >
           <ArrowLeft className="w-3.5 h-3.5" />
           <span>Back to All Work</span>
@@ -66,7 +66,8 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
       <section className="pb-12 sm:pb-16 border-b border-slate-200/70">
         <div className="max-w-site mx-auto px-5 sm:px-8">
           <div className="flex flex-wrap items-center gap-3 text-xs font-ui mb-4">
-            <span className="font-bold uppercase tracking-widest text-cherry">
+            <span className="font-bold uppercase tracking-widest text-navy flex items-center gap-1.5">
+              <span className="w-2 h-2 rounded-full bg-sunflower" />
               {project.categoryLabel}
             </span>
             <span className="text-slate-300">/</span>
@@ -135,7 +136,8 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
             <div className="lg:col-span-8 space-y-16">
               {/* 1. Project Overview */}
               <div>
-                <span className="font-ui text-xs font-bold uppercase tracking-[0.2em] text-cherry block mb-3">
+                <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy block mb-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
                   01 / CONTEXT & VISION
                 </span>
                 <h2 className="font-display text-3xl font-bold text-navy mb-4">
@@ -148,7 +150,8 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
 
               {/* 2. Challenge */}
               <div>
-                <span className="font-ui text-xs font-bold uppercase tracking-[0.2em] text-cherry block mb-3">
+                <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy block mb-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
                   02 / THE BOTTLENECK
                 </span>
                 <h2 className="font-display text-3xl font-bold text-navy mb-4">
@@ -172,7 +175,8 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
 
               {/* 3. Our Approach */}
               <div>
-                <span className="font-ui text-xs font-bold uppercase tracking-[0.2em] text-cherry block mb-3">
+                <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy block mb-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
                   03 / STRATEGY & EXECUTION
                 </span>
                 <h2 className="font-display text-3xl font-bold text-navy mb-4">
@@ -188,7 +192,8 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
 
               {/* 4. Key Delivered Features */}
               <div>
-                <span className="font-ui text-xs font-bold uppercase tracking-[0.2em] text-cherry block mb-3">
+                <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy block mb-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
                   04 / DELIVERED CAPABILITIES
                 </span>
                 <h2 className="font-display text-3xl font-bold text-navy mb-6">
@@ -200,8 +205,8 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
                       key={idx}
                       className="p-4 bg-white border border-slate-200/90 rounded-sm flex items-start gap-3"
                     >
-                      <span className="mt-1 p-0.5 rounded-full bg-powder-soft text-navy shrink-0">
-                        <Check className="w-4 h-4 text-cherry" />
+                      <span className="mt-1 p-0.5 rounded-full bg-sunflower/25 text-navy shrink-0">
+                        <Check className="w-4 h-4 stroke-[2.5]" />
                       </span>
                       <p className="font-sans text-sm sm:text-base text-ink-body leading-relaxed">
                         {feature}
@@ -215,17 +220,18 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
               {project.testimonial && (
                 <div className="p-8 sm:p-10 rounded-sm bg-navy text-white relative overflow-hidden">
                   <div
-                    className="absolute top-0 right-0 w-64 h-64 bg-powder/10 rounded-full blur-2xl pointer-events-none"
+                    className="absolute top-0 right-0 w-64 h-64 bg-sunflower/10 rounded-full blur-2xl pointer-events-none"
                     aria-hidden="true"
                   />
-                  <span className="font-ui text-xs font-semibold uppercase tracking-[0.2em] text-cherry block mb-4">
+                  <span className="inline-flex items-center gap-2 font-ui text-xs font-bold uppercase tracking-[0.2em] text-sunflower block mb-4">
+                    <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
                     CLIENT REFLECTION
                   </span>
                   <blockquote className="font-display text-xl sm:text-2xl text-white italic leading-relaxed">
                     &ldquo;{project.testimonial.quote}&rdquo;
                   </blockquote>
                   <div className="mt-6 pt-6 border-t border-navy-deep flex flex-col">
-                    <span className="font-ui text-sm font-bold text-powder">
+                    <span className="font-ui text-sm font-bold text-sunflower">
                       {project.testimonial.author}
                     </span>
                     <span className="font-sans text-xs text-slate-400">
@@ -258,7 +264,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
 
                 {/* Conceptual Disclaimer Note as required */}
                 <div className="mt-6 pt-5 border-t border-slate-100 flex items-start gap-2.5 text-ink-muted">
-                  <AlertCircle className="w-4 h-4 text-cherry shrink-0 mt-0.5" />
+                  <AlertCircle className="w-4 h-4 text-navy shrink-0 mt-0.5" />
                   <p className="font-sans text-[11px] leading-relaxed">
                     <strong>Conceptual Portfolio Case Study:</strong> Metrics displayed are simulated demonstration benchmarks recorded under staging test conditions to illustrate performance capabilities.
                   </p>
@@ -292,10 +298,10 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
                 </p>
                 <Button
                   href="/contact"
-                  variant="cherry"
+                  variant="sunflower"
                   size="md"
-                  icon={<ArrowUpRight className="w-4 h-4" />}
-                  className="w-full justify-center text-xs tracking-wider uppercase font-semibold"
+                  icon={<ArrowUpRight className="w-4 h-4 stroke-[2.2]" />}
+                  className="w-full justify-center text-xs tracking-wider uppercase font-bold text-navy"
                 >
                   Start a Consultation
                 </Button>
@@ -320,15 +326,15 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
             className="group flex items-center gap-4 text-right"
           >
             <div>
-              <span className="font-ui text-[11px] font-semibold uppercase tracking-wider text-cherry block">
+              <span className="font-ui text-[11px] font-bold uppercase tracking-wider text-navy block">
                 Next Case Study
               </span>
-              <span className="font-display text-xl font-bold text-navy group-hover:text-cherry transition-colors">
+              <span className="font-display text-xl font-bold text-navy group-hover:text-navy-deep transition-colors">
                 {nextProject.title} — {nextProject.industry}
               </span>
             </div>
-            <div className="p-3 rounded-full bg-powder-soft text-navy group-hover:bg-cherry group-hover:text-white transition-colors">
-              <ArrowRight className="w-4 h-4" />
+            <div className="p-3 rounded-full bg-powder-soft text-navy group-hover:bg-sunflower group-hover:text-navy transition-colors">
+              <ArrowRight className="w-4 h-4 stroke-[2.2]" />
             </div>
           </Link>
         </div>

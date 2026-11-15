@@ -17,7 +17,8 @@ export default function WorkPage() {
       <section className="pb-12 sm:pb-16">
         <div className="max-w-site mx-auto px-5 sm:px-8">
           <div className="max-w-3xl">
-            <span className="inline-block font-ui text-xs font-semibold uppercase tracking-[0.2em] text-cherry mb-3">
+            <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy mb-3">
+              <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
               SELECTED PORTFOLIO
             </span>
             <h1 className="font-display text-4xl sm:text-6xl lg:text-[68px] leading-[1.08] tracking-[-0.025em] text-navy font-bold text-balance">

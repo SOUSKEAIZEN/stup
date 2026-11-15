@@ -29,8 +29,8 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             {/* Left Column: Hero Text */}
             <div className="lg:col-span-7 flex flex-col items-start">
-              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-powder-soft border border-powder/50 font-ui text-[11px] font-bold uppercase tracking-[0.22em] text-navy mb-6">
-                <span className="w-1.5 h-1.5 rounded-full bg-cherry" />
+              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-powder-soft border border-powder/50 font-ui text-[11px] font-bold uppercase tracking-[0.22em] text-navy mb-6">
+                <span className="w-2 h-2 rounded-full bg-sunflower" />
                 INDEPENDENT DIGITAL STUDIO
               </span>
 
@@ -55,10 +55,10 @@ export default function HomePage() {
                 </Button>
                 <Button
                   href="/contact"
-                  variant="secondary"
+                  variant="sunflower"
                   size="lg"
-                  icon={<ArrowRight className="w-4 h-4" />}
-                  className="text-xs"
+                  icon={<ArrowRight className="w-4 h-4 stroke-[2.2]" />}
+                  className="text-xs font-bold text-navy shadow-xs"
                 >
                   Start a Project
                 </Button>
@@ -66,17 +66,23 @@ export default function HomePage() {
 
               {/* Trust Signal Bar */}
               <div className="mt-12 pt-8 border-t border-slate-200/80 w-full flex flex-wrap items-center gap-6 text-xs font-ui text-ink-muted">
-                <div className="flex items-center gap-1.5">
-                  <Check className="w-4 h-4 text-cherry" />
-                  <span>Next.js 14 & React Architecture</span>
+                <div className="flex items-center gap-2">
+                  <span className="p-0.5 rounded-full bg-sunflower/20 text-navy">
+                    <Check className="w-3.5 h-3.5 stroke-[2.5]" />
+                  </span>
+                  <span className="font-medium text-navy">Next.js 14 & React Architecture</span>
                 </div>
-                <div className="flex items-center gap-1.5">
-                  <Check className="w-4 h-4 text-cherry" />
-                  <span>Sub-second Core Web Vitals</span>
+                <div className="flex items-center gap-2">
+                  <span className="p-0.5 rounded-full bg-sunflower/20 text-navy">
+                    <Check className="w-3.5 h-3.5 stroke-[2.5]" />
+                  </span>
+                  <span className="font-medium text-navy">Sub-second Core Web Vitals</span>
                 </div>
-                <div className="flex items-center gap-1.5">
-                  <Check className="w-4 h-4 text-cherry" />
-                  <span>Direct Senior Partner Collaboration</span>
+                <div className="flex items-center gap-2">
+                  <span className="p-0.5 rounded-full bg-sunflower/20 text-navy">
+                    <Check className="w-3.5 h-3.5 stroke-[2.5]" />
+                  </span>
+                  <span className="font-medium text-navy">Direct Senior Partner Collaboration</span>
                 </div>
               </div>
             </div>
@@ -94,7 +100,8 @@ export default function HomePage() {
         <div className="max-w-site mx-auto px-5 sm:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
             <div className="lg:col-span-4">
-              <span className="font-ui text-xs font-semibold uppercase tracking-[0.2em] text-cherry block mb-2">
+              <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy mb-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
                 OUR PHILOSOPHY
               </span>
               <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy leading-tight">
@@ -195,11 +202,12 @@ export default function HomePage() {
             {agencyConfig.processSteps.map((step) => (
               <div
                 key={step.step}
-                className="bg-white border border-slate-200/90 rounded-sm p-7 flex flex-col justify-between transition-all hover:border-powder hover:shadow-subtle"
+                className="bg-white border border-slate-200/90 rounded-sm p-7 flex flex-col justify-between transition-all hover:border-sunflower/80 hover:shadow-subtle"
               >
                 <div>
-                  <span className="font-display text-3xl font-bold text-cherry/80 block mb-4">
-                    {step.step}
+                  <span className="font-display text-3xl font-bold text-navy block mb-4 flex items-center justify-between">
+                    <span>{step.step}</span>
+                    <span className="w-2 h-2 rounded-full bg-sunflower" />
                   </span>
                   <h3 className="font-display text-xl font-bold text-navy mb-2">
                     {step.name}
@@ -222,7 +230,8 @@ export default function HomePage() {
         <div className="max-w-site mx-auto px-5 sm:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             <div className="lg:col-span-5">
-              <span className="font-ui text-xs font-semibold uppercase tracking-[0.2em] text-cherry block mb-2">
+              <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy mb-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
                 THE STUP STANDARD
               </span>
               <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy leading-tight">
@@ -233,7 +242,7 @@ export default function HomePage() {
               </p>
               <div className="mt-8 p-6 bg-powder-soft/50 rounded-sm border border-powder/40">
                 <div className="flex items-center gap-2 text-navy font-ui text-sm font-bold">
-                  <ShieldCheck className="w-5 h-5 text-cherry" />
+                  <ShieldCheck className="w-5 h-5 text-navy stroke-[2.2]" />
                   <span>Direct Principal Oversight</span>
                 </div>
                 <p className="font-sans text-xs text-ink-body mt-2 leading-relaxed">
@@ -246,10 +255,11 @@ export default function HomePage() {
               {agencyConfig.differentiators.map((diff, idx) => (
                 <div
                   key={idx}
-                  className="p-6 rounded-sm bg-surface-bg border border-slate-200/80 hover:border-slate-300 transition-colors"
+                  className="p-6 rounded-sm bg-surface-bg border border-slate-200/80 hover:border-sunflower/80 transition-colors"
                 >
-                  <h3 className="font-ui text-base font-bold text-navy mb-2">
-                    {diff.title}
+                  <h3 className="font-ui text-base font-bold text-navy mb-2 flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-sunflower shrink-0" />
+                    <span>{diff.title}</span>
                   </h3>
                   <p className="font-sans text-xs sm:text-sm text-ink-body leading-relaxed">
                     {diff.description}

@@ -46,7 +46,7 @@ export function Navbar() {
         className={cn(
           'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
           scrolled
-            ? 'bg-white/90 backdrop-blur-md border-b border-slate-200/70 shadow-sm py-3.5'
+            ? 'bg-white/92 backdrop-blur-md border-b border-slate-200/70 shadow-sm py-3.5'
             : 'bg-transparent py-5'
         )}
       >
@@ -54,12 +54,12 @@ export function Navbar() {
           {/* Brand Logo */}
           <Link
             href="/"
-            className="group flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cherry rounded-sm"
+            className="group flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunflower rounded-sm"
             aria-label={`${agencyConfig.name} - Home`}
           >
             <div className="flex flex-col">
               <span className="font-display text-2xl font-bold tracking-tight text-navy flex items-center">
-                STUP<span className="text-cherry inline-block ml-0.5">.</span>
+                STUP<span className="text-sunflower inline-block ml-0.5">.</span>
               </span>
               <span className="font-ui text-[9px] uppercase tracking-[0.22em] text-ink-muted -mt-1 group-hover:text-navy transition-colors">
                 Studio
@@ -87,7 +87,7 @@ export function Navbar() {
                   {link.name}
                   {isActive && (
                     <span
-                      className="absolute bottom-0 left-3.5 right-3.5 h-[2px] bg-cherry rounded-full"
+                      className="absolute bottom-0 left-3.5 right-3.5 h-[2px] bg-sunflower rounded-full"
                       aria-hidden="true"
                     />
                   )}
@@ -100,10 +100,10 @@ export function Navbar() {
           <div className="hidden md:flex items-center gap-3">
             <Button
               href="/contact"
-              variant="cherry"
+              variant="sunflower"
               size="sm"
-              icon={<ArrowUpRight className="w-3.5 h-3.5" />}
-              className="shadow-sm tracking-wider uppercase font-semibold text-xs"
+              icon={<ArrowUpRight className="w-3.5 h-3.5 stroke-[2.2]" />}
+              className="tracking-wider uppercase font-semibold text-xs shadow-xs"
             >
               Let&apos;s Talk
             </Button>
@@ -113,7 +113,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-sm text-navy hover:text-cherry hover:bg-powder-soft/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cherry"
+            className="md:hidden p-2 rounded-sm text-navy hover:text-navy hover:bg-powder-soft/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunflower"
             aria-expanded={mobileMenuOpen}
             aria-label={mobileMenuOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
           >
@@ -144,7 +144,7 @@ export function Navbar() {
         <button
           type="button"
           onClick={() => setMobileMenuOpen(false)}
-          className="absolute top-5 right-5 p-2 rounded-sm text-navy hover:text-cherry focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cherry"
+          className="absolute top-5 right-5 p-2 rounded-sm text-navy hover:text-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunflower"
           aria-label="Close menu"
         >
           <X className="w-6 h-6" />
@@ -165,12 +165,12 @@ export function Navbar() {
                 className={cn(
                   'flex items-center justify-between px-3 py-3 rounded-md font-ui text-lg font-medium transition-colors',
                   isActive
-                    ? 'text-navy font-semibold bg-powder-soft text-cherry'
+                    ? 'text-navy font-bold bg-sunflower/20'
                     : 'text-ink-body hover:text-navy hover:bg-powder-soft/40'
                 )}
               >
                 <span>{link.name}</span>
-                {isActive && <span className="w-2 h-2 rounded-full bg-cherry" />}
+                {isActive && <span className="w-2 h-2 rounded-full bg-sunflower" />}
               </Link>
             );
           })}
@@ -187,9 +187,9 @@ export function Navbar() {
           </div>
           <Button
             href="/contact"
-            variant="cherry"
+            variant="sunflower"
             size="md"
-            icon={<ArrowUpRight className="w-4 h-4" />}
+            icon={<ArrowUpRight className="w-4 h-4 stroke-[2.2]" />}
             className="w-full justify-center"
           >
             Start a Project

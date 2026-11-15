@@ -21,11 +21,12 @@ const config: Config = {
           light: '#F2F6FB',
           dark: '#9bb9d6',
         },
-        cherry: {
-          DEFAULT: '#BE3658',
-          deep: '#962B48',
-          light: '#d2496d',
-          subtle: '#faeef2',
+        sunflower: {
+          DEFAULT: '#F5C542',
+          deep: '#EAB52B',
+          dark: '#C69208',
+          light: '#F9D66E',
+          subtle: '#FEF8E7',
         },
         surface: {
           bg: '#F7F8FA',
@@ -51,6 +52,7 @@ const config: Config = {
         'subtle': '0 1px 3px rgba(16, 26, 50, 0.05), 0 10px 24px -10px rgba(16, 26, 50, 0.08)',
         'card': '0 2px 8px -2px rgba(16, 26, 50, 0.06), 0 16px 32px -8px rgba(16, 26, 50, 0.08)',
         'float': '0 20px 40px -15px rgba(16, 26, 50, 0.15)',
+        'sunflower': '0 4px 14px 0 rgba(245, 197, 66, 0.35)',
       },
       keyframes: {
         fadeIn: {

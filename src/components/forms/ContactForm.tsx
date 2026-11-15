@@ -76,8 +76,8 @@ export function ContactForm({ initialService }: ContactFormProps) {
     <div className="bg-white border border-slate-200/90 rounded-sm p-6 sm:p-10 shadow-card">
       {submissionStatus === 'success' ? (
         <div className="py-12 text-center flex flex-col items-center">
-          <div className="w-16 h-16 rounded-full bg-powder-soft text-navy flex items-center justify-center mb-6">
-            <CheckCircle2 className="w-8 h-8 text-cherry" />
+          <div className="w-16 h-16 rounded-full bg-sunflower/20 text-navy flex items-center justify-center mb-6 border border-sunflower/50">
+            <CheckCircle2 className="w-8 h-8 text-navy" />
           </div>
           <h3 className="font-display text-2xl sm:text-3xl font-bold text-navy">
             Inquiry Successfully Transmitted
@@ -118,7 +118,7 @@ export function ContactForm({ initialService }: ContactFormProps) {
                 htmlFor="fullName"
                 className="block font-ui text-xs font-semibold uppercase tracking-wider text-navy mb-2"
               >
-                Full Name <span className="text-cherry">*</span>
+                Full Name <span className="text-sunflower-dark font-bold">*</span>
               </label>
               <input
                 id="fullName"
@@ -144,7 +144,7 @@ export function ContactForm({ initialService }: ContactFormProps) {
                 htmlFor="email"
                 className="block font-ui text-xs font-semibold uppercase tracking-wider text-navy mb-2"
               >
-                Work Email <span className="text-cherry">*</span>
+                Work Email <span className="text-sunflower-dark font-bold">*</span>
               </label>
               <input
                 id="email"
@@ -191,7 +191,7 @@ export function ContactForm({ initialService }: ContactFormProps) {
                 htmlFor="serviceRequired"
                 className="block font-ui text-xs font-semibold uppercase tracking-wider text-navy mb-2"
               >
-                Service Required <span className="text-cherry">*</span>
+                Service Required <span className="text-sunflower-dark font-bold">*</span>
               </label>
               <select
                 id="serviceRequired"
@@ -227,7 +227,7 @@ export function ContactForm({ initialService }: ContactFormProps) {
                 htmlFor="estimatedBudget"
                 className="block font-ui text-xs font-semibold uppercase tracking-wider text-navy mb-2"
               >
-                Estimated Budget Range <span className="text-cherry">*</span>
+                Estimated Budget Range <span className="text-sunflower-dark font-bold">*</span>
               </label>
               <select
                 id="estimatedBudget"
@@ -260,7 +260,7 @@ export function ContactForm({ initialService }: ContactFormProps) {
                 htmlFor="projectTimeline"
                 className="block font-ui text-xs font-semibold uppercase tracking-wider text-navy mb-2"
               >
-                Target Timeline <span className="text-cherry">*</span>
+                Target Timeline <span className="text-sunflower-dark font-bold">*</span>
               </label>
               <select
                 id="projectTimeline"
@@ -295,7 +295,7 @@ export function ContactForm({ initialService }: ContactFormProps) {
               htmlFor="projectDescription"
               className="block font-ui text-xs font-semibold uppercase tracking-wider text-navy mb-2"
             >
-              Project Overview & Objectives <span className="text-cherry">*</span>
+              Project Overview & Objectives <span className="text-sunflower-dark font-bold">*</span>
             </label>
             <textarea
               id="projectDescription"
@@ -322,17 +322,17 @@ export function ContactForm({ initialService }: ContactFormProps) {
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
             <Button
               type="submit"
-              variant="cherry"
+              variant="sunflower"
               size="lg"
               disabled={submissionStatus === 'submitting'}
               icon={
                 submissionStatus === 'submitting' ? (
-                  <Loader2 className="w-4 h-4 animate-spin" />
+                  <Loader2 className="w-4 h-4 animate-spin text-navy" />
                 ) : (
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4 stroke-[2.2] text-navy" />
                 )
               }
-              className="w-full sm:w-auto tracking-wider uppercase font-semibold text-xs"
+              className="w-full sm:w-auto tracking-wider uppercase font-bold text-xs text-navy"
             >
               {submissionStatus === 'submitting' ? 'Transmitting Inquiry...' : 'Submit Inquiry'}
             </Button>

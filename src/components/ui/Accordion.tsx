@@ -40,16 +40,16 @@ export function Accordion({ items, allowMultiple = false, className }: Accordion
                 aria-expanded={isOpen}
                 aria-controls={panelId}
                 onClick={() => toggleIndex(idx)}
-                className="w-full flex items-center justify-between gap-4 text-left font-ui text-lg font-medium text-navy hover:text-cherry transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cherry rounded-sm"
+                className="w-full flex items-center justify-between gap-4 text-left font-ui text-lg font-medium text-navy hover:text-navy-deep transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunflower rounded-sm"
               >
                 <span className="pr-2">{item.question}</span>
                 <span
                   className={cn(
-                    'p-1.5 rounded-full bg-powder-soft text-navy shrink-0 transition-transform duration-200',
-                    isOpen && 'rotate-180 bg-cherry text-white'
+                    'p-1.5 rounded-full bg-powder-soft text-navy shrink-0 transition-all duration-200',
+                    isOpen && 'rotate-180 bg-sunflower text-navy font-bold shadow-xs'
                   )}
                 >
-                  <ChevronDown className="w-4 h-4" />
+                  <ChevronDown className="w-4 h-4 stroke-[2.2]" />
                 </span>
               </button>
             </h3>

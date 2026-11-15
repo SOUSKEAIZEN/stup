@@ -43,7 +43,7 @@ export function WorkClient({ initialProjects }: WorkClientProps) {
               type="button"
               onClick={() => setActiveCategory(filter.value)}
               className={cn(
-                'px-4 py-2 rounded-sm font-ui text-xs font-semibold uppercase tracking-wider transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy',
+                'px-4 py-2 rounded-sm font-ui text-xs font-semibold uppercase tracking-wider transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunflower',
                 isActive
                   ? 'bg-navy text-white shadow-sm'
                   : 'bg-white border border-slate-200 text-ink-body hover:border-slate-300 hover:text-navy'
@@ -77,7 +77,7 @@ export function WorkClient({ initialProjects }: WorkClientProps) {
           <button
             type="button"
             onClick={() => setActiveCategory('all')}
-            className="mt-4 text-xs font-ui uppercase font-semibold text-cherry hover:underline"
+            className="mt-4 text-xs font-ui uppercase font-bold text-navy hover:underline"
           >
             Reset Filters
           </button>

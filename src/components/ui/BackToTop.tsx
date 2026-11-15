@@ -33,11 +33,11 @@ export function BackToTop() {
       onClick={scrollToTop}
       aria-label="Back to top"
       className={cn(
-        'fixed bottom-6 right-6 z-40 p-3 rounded-full bg-navy text-white shadow-float border border-powder/20 transition-all duration-300 hover:bg-cherry hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cherry',
+        'fixed bottom-6 right-6 z-40 p-3 rounded-full bg-navy text-white shadow-float border border-powder/20 transition-all duration-300 hover:bg-sunflower hover:text-navy hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunflower',
         isVisible ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-4 pointer-events-none'
       )}
     >
-      <ArrowUp className="w-4 h-4" />
+      <ArrowUp className="w-4 h-4 stroke-[2.2]" />
     </button>
   );
 }

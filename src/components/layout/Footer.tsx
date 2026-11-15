@@ -15,7 +15,7 @@ export function Footer() {
         aria-hidden="true"
       />
       <div
-        className="absolute bottom-0 left-10 w-80 h-80 bg-cherry/5 rounded-full blur-3xl pointer-events-none"
+        className="absolute bottom-0 left-10 w-80 h-80 bg-sunflower/10 rounded-full blur-3xl pointer-events-none"
         aria-hidden="true"
       />
 
@@ -25,9 +25,9 @@ export function Footer() {
           {/* Agency Brand & Mission Column */}
           <div className="lg:col-span-4 flex flex-col justify-between">
             <div>
-              <Link href="/" className="inline-block group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cherry rounded-sm">
+              <Link href="/" className="inline-block group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunflower rounded-sm">
                 <span className="font-display text-3xl font-bold tracking-tight text-white flex items-center">
-                  STUP<span className="text-cherry inline-block ml-0.5">.</span>
+                  STUP<span className="text-sunflower inline-block ml-0.5">.</span>
                 </span>
                 <span className="font-ui text-[10px] uppercase tracking-[0.24em] text-powder block -mt-1">
                   Studio
@@ -43,7 +43,7 @@ export function Footer() {
                 href={agencyConfig.social.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 rounded-sm bg-navy-deep text-powder hover:text-white hover:bg-cherry transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cherry"
+                className="p-2.5 rounded-sm bg-navy-deep text-powder hover:text-navy hover:bg-sunflower transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunflower"
                 aria-label="GitHub Repository"
               >
                 <Github className="w-4 h-4" />
@@ -52,7 +52,7 @@ export function Footer() {
                 href={agencyConfig.social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 rounded-sm bg-navy-deep text-powder hover:text-white hover:bg-cherry transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cherry"
+                className="p-2.5 rounded-sm bg-navy-deep text-powder hover:text-navy hover:bg-sunflower transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunflower"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-4 h-4" />
@@ -61,7 +61,7 @@ export function Footer() {
                 href={agencyConfig.social.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 rounded-sm bg-navy-deep text-powder hover:text-white hover:bg-cherry transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cherry"
+                className="p-2.5 rounded-sm bg-navy-deep text-powder hover:text-navy hover:bg-sunflower transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunflower"
                 aria-label="Twitter"
               >
                 <Twitter className="w-4 h-4" />
@@ -70,7 +70,7 @@ export function Footer() {
                 href={agencyConfig.social.dribbble}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 rounded-sm bg-navy-deep text-powder hover:text-white hover:bg-cherry transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cherry"
+                className="p-2.5 rounded-sm bg-navy-deep text-powder hover:text-navy hover:bg-sunflower transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunflower"
                 aria-label="Dribbble"
               >
                 <Dribbble className="w-4 h-4" />
@@ -88,7 +88,7 @@ export function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-slate-300 hover:text-white hover:translate-x-0.5 inline-block transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-powder"
+                    className="text-slate-300 hover:text-sunflower hover:translate-x-0.5 inline-block transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-powder"
                   >
                     {item.name}
                   </Link>
@@ -107,7 +107,7 @@ export function Footer() {
                 <li key={idx}>
                   <Link
                     href={item.href}
-                    className="text-slate-300 hover:text-white hover:translate-x-0.5 inline-block transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-powder"
+                    className="text-slate-300 hover:text-sunflower hover:translate-x-0.5 inline-block transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-powder"
                   >
                     {item.name}
                   </Link>
@@ -126,7 +126,7 @@ export function Footer() {
                 <span className="text-[11px] font-ui uppercase tracking-wider text-powder block">Direct Email</span>
                 <a
                   href={`mailto:${agencyConfig.email}`}
-                  className="hover:text-cherry transition-colors underline decoration-powder/30 underline-offset-4"
+                  className="hover:text-sunflower transition-colors underline decoration-powder/30 underline-offset-4"
                 >
                   {agencyConfig.email}
                 </a>
@@ -135,7 +135,7 @@ export function Footer() {
                 <span className="text-[11px] font-ui uppercase tracking-wider text-powder block">Phone</span>
                 <a
                   href={`tel:${agencyConfig.phone.replace(/[^0-9+]/g, '')}`}
-                  className="hover:text-cherry transition-colors"
+                  className="hover:text-sunflower transition-colors"
                 >
                   {agencyConfig.phoneDisplay}
                 </a>
@@ -147,7 +147,7 @@ export function Footer() {
               <div className="pt-2">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-1.5 text-xs font-ui font-semibold uppercase tracking-wider text-cherry hover:text-cherry-light transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-ui font-semibold uppercase tracking-wider text-sunflower hover:text-sunflower-light transition-colors"
                 >
                   <span>Schedule Consultation</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
@@ -162,7 +162,7 @@ export function Footer() {
           <p>© {currentYear} {agencyConfig.legalName}. All rights reserved.</p>
           <div className="flex items-center gap-6 font-ui">
             <span className="text-slate-400">Bangalore · Worldwide Remote</span>
-            <span className="w-1 h-1 rounded-full bg-cherry" aria-hidden="true" />
+            <span className="w-1.5 h-1.5 rounded-full bg-sunflower" aria-hidden="true" />
             <span className="text-slate-400">Crafted with Next.js & TypeScript</span>
           </div>
         </div>

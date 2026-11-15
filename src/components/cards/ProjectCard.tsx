@@ -15,14 +15,14 @@ export function ProjectCard({ project, priority = false, className }: ProjectCar
   return (
     <article
       className={cn(
-        'group bg-white border border-slate-200/90 rounded-sm overflow-hidden flex flex-col transition-all duration-300 hover:border-powder/90 hover:shadow-card hover:-translate-y-1',
+        'group bg-white border border-slate-200/90 rounded-sm overflow-hidden flex flex-col transition-all duration-300 hover:border-sunflower/80 hover:shadow-card hover:-translate-y-1',
         className
       )}
     >
       {/* Project Image Container */}
       <Link
         href={`/work/${project.slug}`}
-        className="relative block aspect-[16/10] overflow-hidden bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cherry"
+        className="relative block aspect-[16/10] overflow-hidden bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunflower"
         tabIndex={-1}
         aria-hidden="true"
       >
@@ -42,17 +42,18 @@ export function ProjectCard({ project, priority = false, className }: ProjectCar
         <div>
           {/* Metadata Row */}
           <div className="flex items-center justify-between text-xs font-ui mb-3">
-            <span className="font-semibold uppercase tracking-wider text-cherry">
-              {project.categoryLabel}
+            <span className="font-semibold uppercase tracking-wider text-navy flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-sunflower shrink-0" />
+              <span>{project.categoryLabel}</span>
             </span>
             <span className="text-ink-muted">{project.year}</span>
           </div>
 
           {/* Project Title */}
-          <h3 className="font-display text-2xl font-bold text-navy group-hover:text-cherry transition-colors duration-200">
+          <h3 className="font-display text-2xl font-bold text-navy group-hover:text-navy-deep transition-colors duration-200">
             <Link
               href={`/work/${project.slug}`}
-              className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cherry rounded-sm"
+              className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunflower rounded-sm"
             >
               {project.title}
             </Link>
@@ -81,7 +82,7 @@ export function ProjectCard({ project, priority = false, className }: ProjectCar
           </div>
           <Link
             href={`/work/${project.slug}`}
-            className="inline-flex items-center gap-1 font-ui text-xs font-semibold uppercase tracking-wider text-navy group-hover:text-cherry transition-colors shrink-0 ml-2"
+            className="inline-flex items-center gap-1 font-ui text-xs font-semibold uppercase tracking-wider text-navy group-hover:text-sunflower-dark transition-colors shrink-0 ml-2"
           >
             <span>Case Study</span>
             <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

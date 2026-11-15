@@ -253,7 +253,7 @@ export const projectsData: CaseStudy[] = [
     challenge:
       'Creating an unforgettable visual identity that honors Japanese minimalist design principles of Ma (negative space) while maintaining strict web accessibility and mobile usability.',
     approach:
-      'We composed a monochrome canvas punctuated by deep cherry highlights, bespoke vertical typography treatments, smooth fluid page transitions, and tactile hover states.',
+      'We composed a monochrome canvas punctuated by warm sunflower-yellow highlights, bespoke vertical typography treatments, smooth fluid page transitions, and tactile hover states.',
     designAndDev:
       'Custom CSS grid layouts with dynamic aspect ratio preservation, custom audio cues for gallery interactions (with user mute toggle), and ultra-smooth barba-style Next.js navigation transitions.',
     keyFeatures: [

@@ -55,7 +55,8 @@ export default function ServicesPage() {
       <section className="pb-16 sm:pb-24 border-b border-slate-200/70">
         <div className="max-w-site mx-auto px-5 sm:px-8">
           <div className="max-w-3xl">
-            <span className="inline-block font-ui text-xs font-semibold uppercase tracking-[0.2em] text-cherry mb-3">
+            <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy mb-3">
+              <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
               END-TO-END CAPABILITIES
             </span>
             <h1 className="font-display text-4xl sm:text-6xl lg:text-[68px] leading-[1.08] tracking-[-0.025em] text-navy font-bold text-balance">
@@ -68,10 +69,10 @@ export default function ServicesPage() {
             <div className="mt-8 flex flex-wrap gap-4">
               <Button
                 href="/contact"
-                variant="cherry"
+                variant="sunflower"
                 size="md"
-                icon={<ArrowUpRight className="w-4 h-4" />}
-                className="tracking-wider uppercase font-semibold text-xs"
+                icon={<ArrowUpRight className="w-4 h-4 stroke-[2.2]" />}
+                className="tracking-wider uppercase font-bold text-xs text-navy shadow-xs"
               >
                 Inquire About a Service
               </Button>
@@ -92,12 +93,12 @@ export default function ServicesPage() {
       <section className="bg-white border-b border-slate-200/70 sticky top-[65px] z-30 shadow-xs">
         <div className="max-w-site mx-auto px-5 sm:px-8 overflow-x-auto py-3">
           <div className="flex items-center gap-6 min-w-max text-xs font-ui font-semibold uppercase tracking-wider text-ink-muted">
-            <span className="text-navy">Jump to Section:</span>
+            <span className="text-navy font-bold">Jump to Section:</span>
             {serviceCategories.map((cat) => (
               <a
                 key={cat.id}
                 href={`#${cat.id}`}
-                className="hover:text-cherry transition-colors"
+                className="hover:text-navy hover:underline transition-colors"
               >
                 {cat.title}
               </a>
@@ -108,7 +109,7 @@ export default function ServicesPage() {
 
       {/* CATEGORY SECTIONS */}
       <div className="space-y-24 py-20">
-        {serviceCategories.map((category, catIdx) => (
+        {serviceCategories.map((category) => (
           <section
             key={category.id}
             id={category.id}
@@ -116,7 +117,8 @@ export default function ServicesPage() {
           >
             {/* Category Header */}
             <div className="border-b border-slate-200 pb-8 mb-12">
-              <span className="font-ui text-xs font-bold uppercase tracking-[0.25em] text-cherry block mb-2">
+              <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.25em] text-navy block mb-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
                 {category.eyebrow}
               </span>
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end">
@@ -141,15 +143,15 @@ export default function ServicesPage() {
                 return (
                   <div
                     key={service.id}
-                    className="bg-white border border-slate-200/90 rounded-sm p-8 flex flex-col justify-between transition-all duration-300 hover:border-powder hover:shadow-card group"
+                    className="bg-white border border-slate-200/90 rounded-sm p-8 flex flex-col justify-between transition-all duration-300 hover:border-sunflower/80 hover:shadow-card group"
                   >
                     <div>
                       {/* Icon */}
-                      <div className="w-12 h-12 rounded-sm bg-powder-soft flex items-center justify-center text-navy mb-6 group-hover:bg-navy group-hover:text-powder transition-colors">
+                      <div className="w-12 h-12 rounded-sm bg-powder-soft flex items-center justify-center text-navy mb-6 group-hover:bg-navy group-hover:text-sunflower transition-colors">
                         <IconComponent className="w-6 h-6 stroke-[1.75]" />
                       </div>
 
-                      <h3 className="font-display text-2xl font-bold text-navy group-hover:text-cherry transition-colors">
+                      <h3 className="font-display text-2xl font-bold text-navy group-hover:text-navy-deep transition-colors">
                         {service.title}
                       </h3>
 
@@ -165,7 +167,9 @@ export default function ServicesPage() {
                         <ul className="space-y-2 text-xs font-sans text-ink-body">
                           {service.deliverables.map((item, dIdx) => (
                             <li key={dIdx} className="flex items-center gap-2">
-                              <Check className="w-3.5 h-3.5 text-cherry shrink-0" />
+                              <span className="p-0.5 rounded-full bg-sunflower/25 text-navy shrink-0">
+                                <Check className="w-3 h-3 stroke-[2.5]" />
+                              </span>
                               <span>{item}</span>
                             </li>
                           ))}
@@ -188,7 +192,7 @@ export default function ServicesPage() {
 
                       <Link
                         href={`/contact?service=${encodeURIComponent(service.title)}`}
-                        className="inline-flex items-center gap-1.5 font-ui text-xs font-semibold uppercase tracking-wider text-navy group-hover:text-cherry transition-colors"
+                        className="inline-flex items-center gap-1.5 font-ui text-xs font-semibold uppercase tracking-wider text-navy group-hover:text-sunflower-dark transition-colors"
                       >
                         <span>Start With This Service</span>
                         <ArrowUpRight className="w-3.5 h-3.5" />
@@ -219,7 +223,8 @@ export default function ServicesPage() {
                 className="p-7 rounded-sm bg-surface-bg border border-slate-200/80 flex flex-col justify-between"
               >
                 <div>
-                  <span className="font-mono text-xs font-bold text-cherry block mb-3">
+                  <span className="font-mono text-xs font-bold text-navy block mb-3 flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
                     STAGE {step.step}
                   </span>
                   <h3 className="font-display text-xl font-bold text-navy mb-2">

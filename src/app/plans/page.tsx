@@ -1,14 +1,12 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import { Check, X, ArrowUpRight, HelpCircle } from 'lucide-react';
+import { Check, X } from 'lucide-react';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { PricingCard } from '@/components/cards/PricingCard';
-import { Button } from '@/components/ui/Button';
 import { Accordion } from '@/components/ui/Accordion';
 import { FinalCTA } from '@/components/sections/FinalCTA';
 import { pricingPlans, pricingComparisonData } from '@/data/pricing';
 import { pricingFaqs } from '@/data/faqs';
-import { agencyConfig } from '@/data/agency';
 
 export const metadata: Metadata = {
   title: 'Pricing Packages & Engagement Plans',
@@ -23,7 +21,8 @@ export default function PlansPage() {
       <section className="pb-16 sm:pb-20 border-b border-slate-200/70">
         <div className="max-w-site mx-auto px-5 sm:px-8">
           <div className="max-w-3xl">
-            <span className="inline-block font-ui text-xs font-semibold uppercase tracking-[0.2em] text-cherry mb-3">
+            <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy mb-3">
+              <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
               PREDICTABLE INVESTMENT
             </span>
             <h1 className="font-display text-4xl sm:text-6xl lg:text-[68px] leading-[1.08] tracking-[-0.025em] text-navy font-bold text-balance">
@@ -35,7 +34,7 @@ export default function PlansPage() {
 
             {/* Clarification banner */}
             <div className="mt-8 p-4 bg-powder-soft/60 border border-powder/60 rounded-sm flex items-center gap-3 max-w-2xl">
-              <span className="w-2 h-2 rounded-full bg-cherry shrink-0" />
+              <span className="w-2 h-2 rounded-full bg-sunflower shrink-0" />
               <p className="font-sans text-xs text-navy leading-relaxed">
                 <strong>Investment Structure:</strong> All quoted package rates are one-time project investments tied to milestone deliverables. Ongoing maintenance retainers are optional and billed monthly.
               </p>
@@ -82,7 +81,7 @@ export default function PlansPage() {
                   <th className="py-4 px-4 font-ui text-xs font-bold uppercase tracking-wider text-center w-1/6">
                     Starter
                   </th>
-                  <th className="py-4 px-4 font-ui text-xs font-bold uppercase tracking-wider text-center w-1/6 bg-navy-deep text-powder">
+                  <th className="py-4 px-4 font-ui text-xs font-bold uppercase tracking-wider text-center w-1/6 bg-navy-deep text-sunflower">
                     Professional
                   </th>
                   <th className="py-4 px-4 font-ui text-xs font-bold uppercase tracking-wider text-center w-1/6">
@@ -97,8 +96,9 @@ export default function PlansPage() {
                 {pricingComparisonData.map((category, catIdx) => (
                   <React.Fragment key={catIdx}>
                     <tr className="bg-powder-soft/40 font-ui text-xs font-bold uppercase tracking-wider text-navy">
-                      <td colSpan={5} className="py-3 px-6 text-cherry">
-                        {category.category}
+                      <td colSpan={5} className="py-3 px-6 text-navy flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
+                        <span>{category.category}</span>
                       </td>
                     </tr>
                     {category.features.map((feature, fIdx) => (
@@ -155,7 +155,7 @@ export default function PlansPage() {
 function renderComparisonValue(val: string | boolean) {
   if (typeof val === 'boolean') {
     return val ? (
-      <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-emerald-50 text-emerald-600 mx-auto">
+      <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-sunflower/25 text-navy mx-auto font-bold">
         <Check className="w-4 h-4 stroke-[2.5]" />
       </span>
     ) : (

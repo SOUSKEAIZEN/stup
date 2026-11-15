@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { cn } from '@/lib/utils';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'cherry' | 'ghost' | 'outline';
+  variant?: 'primary' | 'secondary' | 'sunflower' | 'ghost' | 'outline';
   size?: 'sm' | 'md' | 'lg';
   href?: string;
   external?: boolean;
@@ -42,8 +42,8 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         'bg-navy text-white hover:bg-navy-deep active:bg-navy-900 focus-visible:ring-navy shadow-sm hover:shadow-subtle',
       secondary:
         'bg-powder-soft text-navy hover:bg-powder/40 active:bg-powder/60 border border-powder/50 focus-visible:ring-navy',
-      cherry:
-        'bg-cherry text-white hover:bg-cherry-deep active:bg-[#7e243c] focus-visible:ring-cherry shadow-sm hover:shadow-subtle',
+      sunflower:
+        'bg-sunflower text-navy hover:bg-sunflower-deep active:bg-[#d8a21f] focus-visible:ring-sunflower shadow-sm hover:shadow-sunflower font-semibold',
       ghost:
         'bg-transparent text-navy hover:bg-powder-soft/70 active:bg-powder-soft focus-visible:ring-navy',
       outline:

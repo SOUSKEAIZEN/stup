@@ -20,13 +20,14 @@ export function FinalCTA({
         aria-hidden="true"
       />
       <div
-        className="absolute -bottom-24 left-1/4 w-96 h-96 bg-cherry/15 rounded-full blur-3xl pointer-events-none"
+        className="absolute -bottom-24 left-1/4 w-96 h-96 bg-sunflower/15 rounded-full blur-3xl pointer-events-none"
         aria-hidden="true"
       />
 
       <div className="max-w-site mx-auto px-5 sm:px-8 relative z-10 text-center">
-        <span className="inline-block font-ui text-xs font-semibold uppercase tracking-[0.22em] text-cherry mb-4 select-none">
-          NEXT STEPS
+        <span className="inline-flex items-center gap-2 font-ui text-xs font-bold uppercase tracking-[0.22em] text-sunflower mb-4 select-none">
+          <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
+          <span>NEXT STEPS</span>
         </span>
 
         <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white max-w-3xl mx-auto leading-[1.12]">
@@ -41,10 +42,10 @@ export function FinalCTA({
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button
             href="/contact"
-            variant="cherry"
+            variant="sunflower"
             size="lg"
-            icon={<ArrowUpRight className="w-4 h-4" />}
-            className="w-full sm:w-auto text-sm tracking-wider uppercase font-semibold"
+            icon={<ArrowUpRight className="w-4 h-4 stroke-[2.2]" />}
+            className="w-full sm:w-auto text-sm tracking-wider uppercase font-bold text-navy"
           >
             Start a Project
           </Button>

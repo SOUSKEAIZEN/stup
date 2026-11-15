@@ -10,8 +10,9 @@
     --navy-deep: #182643;
     --powder: #B9D0E8;
     --powder-soft: #E8EFF7;
-    --cherry: #BE3658;
-    --cherry-deep: #962B48;
+    --sunflower: #F5C542;
+    --sunflower-deep: #EAB52B;
+    --sunflower-dark: #C69208;
     --bg-page: #F7F8FA;
     --surface-white: #FFFFFF;
     --ink-body: #343D4D;
@@ -45,8 +46,8 @@
   }
 
   ::selection {
-    background-color: #BE3658;
-    color: #FFFFFF;
+    background-color: #F5C542;
+    color: #101A32;
   }
 
   /* Custom subtle scrollbar */

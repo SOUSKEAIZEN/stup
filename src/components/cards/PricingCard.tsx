@@ -18,7 +18,7 @@ export function PricingCard({ plan, className }: PricingCardProps) {
         'relative bg-white rounded-sm p-7 sm:p-8 flex flex-col justify-between transition-all duration-300',
         isHighlighted
           ? 'border-2 border-navy shadow-card -translate-y-1'
-          : 'border border-slate-200/90 shadow-sm hover:border-powder/90 hover:shadow-subtle',
+          : 'border border-slate-200/90 shadow-sm hover:border-sunflower/80 hover:shadow-subtle',
         className
       )}
     >
@@ -27,9 +27,9 @@ export function PricingCard({ plan, className }: PricingCardProps) {
         <div className="absolute -top-3.5 left-7">
           <span
             className={cn(
-              'inline-block px-3 py-0.5 rounded-full text-[11px] font-ui font-semibold uppercase tracking-wider',
+              'inline-block px-3 py-0.5 rounded-full text-[11px] font-ui font-bold uppercase tracking-wider',
               isHighlighted
-                ? 'bg-cherry text-white shadow-sm'
+                ? 'bg-sunflower text-navy shadow-xs border border-sunflower-deep'
                 : 'bg-powder-soft text-navy border border-powder/50'
             )}
           >
@@ -67,7 +67,7 @@ export function PricingCard({ plan, className }: PricingCardProps) {
           <ul className="space-y-3 font-sans text-sm text-ink-body">
             {plan.features.map((feature, idx) => (
               <li key={idx} className="flex items-start gap-2.5">
-                <span className="mt-0.5 rounded-full p-0.5 bg-powder-soft text-navy shrink-0">
+                <span className="mt-0.5 rounded-full p-0.5 bg-sunflower/25 text-navy shrink-0">
                   <Check className="w-3.5 h-3.5 stroke-[2.5]" />
                 </span>
                 <span className="leading-snug">{feature}</span>
@@ -81,10 +81,10 @@ export function PricingCard({ plan, className }: PricingCardProps) {
       <div className="pt-4 border-t border-slate-100">
         <Button
           href={`/contact?plan=${plan.id}`}
-          variant={isHighlighted ? 'cherry' : 'primary'}
+          variant={isHighlighted ? 'sunflower' : 'primary'}
           size="md"
           className="w-full justify-center"
-          icon={<ArrowRight className="w-4 h-4" />}
+          icon={<ArrowRight className="w-4 h-4 stroke-[2.2]" />}
         >
           {plan.ctaLabel}
         </Button>

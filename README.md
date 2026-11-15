@@ -21,7 +21,7 @@ The visual identity is designed with restraint, generous whitespace, and discipl
 ### 2.1. The 60–30–10 Colour Hierarchy
 - **60% Primary Surface**: Midnight Navy (`#101A32`) and Deep Navy (`#182643`), paired with clean crisp neutrals (`#F7F8FA`, `#FFFFFF`).
 - **30% Secondary Elements**: Powder Blue (`#B9D0E8`) and Soft Powder (`#E8EFF7`) used across cards, badges, subtle borders, and structural framing.
-- **10% Accent Energy**: Cherry (`#BE3658`) and Deep Cherry (`#962B48`) reserved strictly for high-priority CTAs, interactive hover states, active indicators, and status badges.
+- **10% Accent Energy**: Sunflower Yellow (`#F5C542`) and Deep Sunflower (`#EAB52B`) reserved strictly for high-priority CTAs, interactive hover states, active indicators, and status badges. High-contrast Midnight Navy text is paired with yellow surfaces for flawless WCAG AAA/AA readability.
 
 ### 2.2. The Three-Font Typographic Hierarchy
 1. **Display Typography — Playfair Display**:

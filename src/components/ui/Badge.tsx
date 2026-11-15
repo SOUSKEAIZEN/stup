@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils';
 
 export interface BadgeProps {
   children: React.ReactNode;
-  variant?: 'powder' | 'navy' | 'cherry' | 'neutral';
+  variant?: 'powder' | 'navy' | 'sunflower' | 'neutral';
   className?: string;
 }
 
@@ -11,7 +11,7 @@ export function Badge({ children, variant = 'powder', className }: BadgeProps) {
   const variantStyles = {
     powder: 'bg-powder-soft text-navy border-powder/60',
     navy: 'bg-navy/10 text-navy border-navy/20',
-    cherry: 'bg-cherry-subtle text-cherry-deep border-cherry/20',
+    sunflower: 'bg-sunflower-subtle text-navy border-sunflower/50 font-semibold',
     neutral: 'bg-white text-ink-muted border-slate-200',
   };
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import { Mail, Phone, MapPin, Clock, Github, Linkedin, Twitter, Dribbble, ArrowUpRight, ShieldCheck } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Github, Linkedin, Twitter, Dribbble, ShieldCheck } from 'lucide-react';
 import { ContactFormWrapper } from '@/components/forms/ContactFormWrapper';
 import { Accordion } from '@/components/ui/Accordion';
 import { agencyConfig } from '@/data/agency';
@@ -21,7 +21,8 @@ export default function ContactPage() {
       <section className="pb-12 sm:pb-16 border-b border-slate-200/70">
         <div className="max-w-site mx-auto px-5 sm:px-8">
           <div className="max-w-3xl">
-            <span className="inline-block font-ui text-xs font-semibold uppercase tracking-[0.2em] text-cherry mb-3">
+            <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy mb-3">
+              <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
               START A CONVERSATION
             </span>
             <h1 className="font-display text-4xl sm:text-6xl lg:text-[68px] leading-[1.08] tracking-[-0.025em] text-navy font-bold text-balance">
@@ -47,15 +48,16 @@ export default function ContactPage() {
             <div className="lg:col-span-5 space-y-8">
               {/* Studio Info Card */}
               <div className="bg-white border border-slate-200/90 rounded-sm p-7 sm:p-8 shadow-sm">
-                <span className="font-ui text-xs font-bold uppercase tracking-wider text-cherry block mb-5 border-b border-slate-100 pb-3">
-                  Direct Inquiries & Office
+                <span className="inline-flex items-center gap-2 font-ui text-xs font-bold uppercase tracking-wider text-navy block mb-5 border-b border-slate-100 pb-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
+                  <span>Direct Inquiries & Office</span>
                 </span>
 
                 <div className="space-y-6 font-sans text-sm">
                   {/* Email */}
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-sm bg-powder-soft text-navy flex items-center justify-center shrink-0">
-                      <Mail className="w-4 h-4 text-cherry" />
+                    <div className="w-10 h-10 rounded-sm bg-sunflower/20 text-navy flex items-center justify-center shrink-0 border border-sunflower/40">
+                      <Mail className="w-4 h-4 text-navy stroke-[2.2]" />
                     </div>
                     <div>
                       <span className="font-ui text-xs uppercase tracking-wider text-ink-muted block">
@@ -63,7 +65,7 @@ export default function ContactPage() {
                       </span>
                       <a
                         href={`mailto:${agencyConfig.email}`}
-                        className="font-medium text-navy hover:text-cherry transition-colors underline decoration-slate-300 underline-offset-4"
+                        className="font-medium text-navy hover:text-navy-deep transition-colors underline decoration-slate-300 underline-offset-4"
                       >
                         {agencyConfig.email}
                       </a>
@@ -72,8 +74,8 @@ export default function ContactPage() {
 
                   {/* Phone */}
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-sm bg-powder-soft text-navy flex items-center justify-center shrink-0">
-                      <Phone className="w-4 h-4 text-cherry" />
+                    <div className="w-10 h-10 rounded-sm bg-sunflower/20 text-navy flex items-center justify-center shrink-0 border border-sunflower/40">
+                      <Phone className="w-4 h-4 text-navy stroke-[2.2]" />
                     </div>
                     <div>
                       <span className="font-ui text-xs uppercase tracking-wider text-ink-muted block">
@@ -81,7 +83,7 @@ export default function ContactPage() {
                       </span>
                       <a
                         href={`tel:${agencyConfig.phone.replace(/[^0-9+]/g, '')}`}
-                        className="font-medium text-navy hover:text-cherry transition-colors"
+                        className="font-medium text-navy hover:text-navy-deep transition-colors"
                       >
                         {agencyConfig.phoneDisplay}
                       </a>
@@ -90,8 +92,8 @@ export default function ContactPage() {
 
                   {/* Location */}
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-sm bg-powder-soft text-navy flex items-center justify-center shrink-0">
-                      <MapPin className="w-4 h-4 text-cherry" />
+                    <div className="w-10 h-10 rounded-sm bg-sunflower/20 text-navy flex items-center justify-center shrink-0 border border-sunflower/40">
+                      <MapPin className="w-4 h-4 text-navy stroke-[2.2]" />
                     </div>
                     <div>
                       <span className="font-ui text-xs uppercase tracking-wider text-ink-muted block">
@@ -105,8 +107,8 @@ export default function ContactPage() {
 
                   {/* Response Time & Working Hours */}
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-sm bg-powder-soft text-navy flex items-center justify-center shrink-0">
-                      <Clock className="w-4 h-4 text-cherry" />
+                    <div className="w-10 h-10 rounded-sm bg-sunflower/20 text-navy flex items-center justify-center shrink-0 border border-sunflower/40">
+                      <Clock className="w-4 h-4 text-navy stroke-[2.2]" />
                     </div>
                     <div>
                       <span className="font-ui text-xs uppercase tracking-wider text-ink-muted block">
@@ -132,7 +134,7 @@ export default function ContactPage() {
                       href={agencyConfig.social.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2.5 rounded-sm bg-surface-bg text-navy hover:text-white hover:bg-navy transition-all"
+                      className="p-2.5 rounded-sm bg-surface-bg text-navy hover:text-navy hover:bg-sunflower transition-all"
                       aria-label="GitHub Repository"
                     >
                       <Github className="w-4 h-4" />
@@ -141,7 +143,7 @@ export default function ContactPage() {
                       href={agencyConfig.social.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2.5 rounded-sm bg-surface-bg text-navy hover:text-white hover:bg-navy transition-all"
+                      className="p-2.5 rounded-sm bg-surface-bg text-navy hover:text-navy hover:bg-sunflower transition-all"
                       aria-label="LinkedIn"
                     >
                       <Linkedin className="w-4 h-4" />
@@ -150,7 +152,7 @@ export default function ContactPage() {
                       href={agencyConfig.social.twitter}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2.5 rounded-sm bg-surface-bg text-navy hover:text-white hover:bg-navy transition-all"
+                      className="p-2.5 rounded-sm bg-surface-bg text-navy hover:text-navy hover:bg-sunflower transition-all"
                       aria-label="Twitter"
                     >
                       <Twitter className="w-4 h-4" />
@@ -159,7 +161,7 @@ export default function ContactPage() {
                       href={agencyConfig.social.dribbble}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2.5 rounded-sm bg-surface-bg text-navy hover:text-white hover:bg-navy transition-all"
+                      className="p-2.5 rounded-sm bg-surface-bg text-navy hover:text-navy hover:bg-sunflower transition-all"
                       aria-label="Dribbble"
                     >
                       <Dribbble className="w-4 h-4" />
@@ -170,7 +172,9 @@ export default function ContactPage() {
 
               {/* NDA & Security Card */}
               <div className="p-6 rounded-sm bg-white border border-slate-200/90 shadow-sm flex items-start gap-3">
-                <ShieldCheck className="w-6 h-6 text-cherry shrink-0 mt-0.5" />
+                <div className="w-10 h-10 rounded-sm bg-sunflower/20 text-navy flex items-center justify-center shrink-0 border border-sunflower/40">
+                  <ShieldCheck className="w-5 h-5 text-navy stroke-[2.2]" />
+                </div>
                 <div>
                   <h4 className="font-ui text-sm font-bold text-navy">
                     Mutual NDA Available
@@ -189,7 +193,8 @@ export default function ContactPage() {
       <section className="py-20 bg-white border-t border-slate-200/70">
         <div className="max-w-site mx-auto px-5 sm:px-8">
           <div className="max-w-3xl mx-auto">
-            <span className="font-ui text-xs font-semibold uppercase tracking-[0.2em] text-cherry block text-center mb-2">
+            <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy block text-center justify-center mb-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
               INQUIRY QUESTIONS
             </span>
             <h2 className="font-display text-3xl font-bold text-navy text-center mb-10">
