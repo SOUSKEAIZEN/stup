@@ -17,18 +17,18 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col">
-      {/* SECTION 1: HERO (Compact, fits within initial viewport alongside navbar) */}
-      <section className="relative pt-24 pb-12 sm:pt-28 sm:pb-16 border-b border-slate-200/70 overflow-hidden bg-gradient-to-b from-powder-soft/50 via-white to-white">
+      {/* SECTION 1: HERO (Compact, fits comfortably in initial viewport below sticky navbar) */}
+      <section className="relative pt-8 pb-10 sm:pt-12 sm:pb-14 border-b border-slate-200/70 overflow-hidden bg-gradient-to-b from-powder-soft/50 via-white to-white">
         <div className="max-w-site mx-auto px-4 sm:px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
             {/* Left Column: Hero Text */}
             <div className="lg:col-span-7 flex flex-col items-start">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-powder-soft border border-powder/50 font-ui text-[11px] font-bold uppercase tracking-[0.2em] text-navy mb-3.5">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-powder-soft border border-powder/50 font-ui text-[11px] font-bold uppercase tracking-[0.2em] text-navy mb-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
                 INDEPENDENT DIGITAL STUDIO
               </span>
 
-              <h1 className="font-display text-3xl sm:text-4xl lg:text-[54px] leading-[1.12] tracking-[-0.025em] text-navy font-bold text-balance">
+              <h1 className="font-display text-3xl sm:text-4xl lg:text-[48px] leading-[1.14] tracking-[-0.025em] text-navy font-bold text-balance">
                 Thoughtful design. Powerful digital experiences.
               </h1>
 

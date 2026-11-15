@@ -12,16 +12,16 @@ export const metadata: Metadata = {
 
 export default function WorkPage() {
   return (
-    <div className="flex flex-col pt-24 sm:pt-28">
+    <div className="flex flex-col">
       {/* HERO SECTION */}
-      <section className="pb-10 sm:pb-12 border-b border-slate-200/70 bg-gradient-to-b from-powder-soft/40 via-white to-white">
+      <section className="pt-8 sm:pt-12 pb-8 sm:pb-10 border-b border-slate-200/70 bg-gradient-to-b from-powder-soft/40 to-surface-bg">
         <div className="max-w-site mx-auto px-4 sm:px-6">
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy mb-2.5">
               <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
               DEMONSTRATION PORTFOLIO
             </span>
-            <h1 className="font-display text-3xl sm:text-4xl lg:text-[50px] leading-[1.14] tracking-[-0.025em] text-navy font-bold text-balance">
+            <h1 className="font-display text-3xl sm:text-4xl lg:text-[46px] leading-[1.14] tracking-[-0.025em] text-navy font-bold text-balance">
               Selected work. Thoughtful execution. Meaningful results.
             </h1>
             <p className="mt-3 font-sans text-sm sm:text-base text-ink-body leading-relaxed text-balance">

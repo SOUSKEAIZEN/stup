@@ -7,16 +7,8 @@ export const agencyConfig = {
     'Independent digital studio specializing in websites, web applications, and thoughtful digital experiences for ambitious businesses.',
   email: 'hello@stupstudio.com',
   inquiriesEmail: 'projects@stupstudio.com',
-  phone: '+91 (0) 800-000-0000',
-  phoneDisplay: '+91 (Placeholder)',
-  location: 'Distributed Studio · Remote Delivery',
-  workingHours: 'Monday – Friday, 9:00 AM – 6:00 PM',
-  responseTime: 'Within 24 business hours',
   social: {
     github: 'https://github.com/SOUSKEAIZEN/stup.git',
-    twitter: 'https://twitter.com/stupstudio',
-    linkedin: 'https://linkedin.com/company/stupstudio',
-    dribbble: 'https://dribbble.com/stupstudio',
   },
   // Authentic technical focus areas
   coreCapabilities: [

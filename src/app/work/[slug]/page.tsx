@@ -50,7 +50,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
   const nextProject = projectsData[(projectIndex + 1) % projectsData.length];
 
   return (
-    <div className="flex flex-col pt-24 sm:pt-28">
+    <div className="flex flex-col pt-6 sm:pt-8">
       {/* BACK NAVIGATION */}
       <div className="max-w-site mx-auto px-4 sm:px-6 w-full mb-6">
         <Link

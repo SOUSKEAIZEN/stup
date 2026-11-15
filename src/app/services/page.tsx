@@ -50,16 +50,16 @@ const iconMap: Record<string, LucideIcon> = {
 
 export default function ServicesPage() {
   return (
-    <div className="flex flex-col pt-24 sm:pt-28">
+    <div className="flex flex-col">
       {/* HERO SECTION */}
-      <section className="pb-10 sm:pb-12 border-b border-slate-200/70 bg-gradient-to-b from-powder-soft/40 via-white to-white">
+      <section className="pt-8 sm:pt-12 pb-8 sm:pb-10 border-b border-slate-200/70 bg-gradient-to-b from-powder-soft/40 to-surface-bg">
         <div className="max-w-site mx-auto px-4 sm:px-6">
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy mb-2.5">
               <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
               END-TO-END CAPABILITIES
             </span>
-            <h1 className="font-display text-3xl sm:text-4xl lg:text-[50px] leading-[1.14] tracking-[-0.025em] text-navy font-bold text-balance">
+            <h1 className="font-display text-3xl sm:text-4xl lg:text-[46px] leading-[1.14] tracking-[-0.025em] text-navy font-bold text-balance">
               Digital services designed around your next big move.
             </h1>
             <p className="mt-3 font-sans text-sm sm:text-base text-ink-body leading-relaxed text-balance">
@@ -86,24 +86,22 @@ export default function ServicesPage() {
                 View Case Studies
               </Button>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* QUICK CATEGORY JUMP NAV */}
-      <section className="bg-white border-b border-slate-200/70 sticky top-[60px] z-30 shadow-xs">
-        <div className="max-w-site mx-auto px-4 sm:px-6 overflow-x-auto py-2.5">
-          <div className="flex items-center gap-6 min-w-max text-xs font-ui font-semibold uppercase tracking-wider text-ink-muted">
-            <span className="text-navy font-bold">Jump to Domain:</span>
-            {serviceCategories.map((cat) => (
-              <a
-                key={cat.id}
-                href={`#${cat.id}`}
-                className="hover:text-navy hover:underline transition-colors"
-              >
-                {cat.title}
-              </a>
-            ))}
+            {/* In-page Domain Filter Jump Pills (Non-sticky, clean flow) */}
+            <div className="mt-7 pt-5 border-t border-slate-200/70 flex flex-wrap items-center gap-2">
+              <span className="font-ui text-xs font-bold uppercase tracking-wider text-navy mr-1">
+                Explore Domains:
+              </span>
+              {serviceCategories.map((cat) => (
+                <a
+                  key={cat.id}
+                  href={`#${cat.id}`}
+                  className="px-3 py-1 rounded-sm bg-white border border-slate-200 text-xs font-ui font-semibold text-navy hover:bg-sunflower hover:border-sunflower/80 transition-all shadow-2xs"
+                >
+                  {cat.title}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -114,7 +112,7 @@ export default function ServicesPage() {
           <section
             key={category.id}
             id={category.id}
-            className="scroll-mt-28 max-w-site mx-auto px-4 sm:px-6"
+            className="scroll-mt-20 max-w-site mx-auto px-4 sm:px-6"
           >
             {/* Category Header */}
             <div className="border-b border-slate-200 pb-4 mb-6">

@@ -42,13 +42,11 @@ export function Navbar() {
     <>
       <header
         className={cn(
-          'fixed top-0 left-0 right-0 z-50 transition-all duration-200',
-          scrolled
-            ? 'bg-white/95 backdrop-blur-sm border-b border-slate-200/80 shadow-xs py-2.5'
-            : 'bg-white/90 backdrop-blur-xs py-3 border-b border-slate-200/40'
+          'sticky top-0 z-50 w-full h-16 transition-colors duration-200',
+          'bg-white/90 backdrop-blur-md border-b border-slate-200/70 shadow-[0_1px_3px_0_rgba(16,26,50,0.03)]'
         )}
       >
-        <div className="max-w-site mx-auto px-4 sm:px-6 flex items-center justify-between">
+        <div className="max-w-site mx-auto px-4 sm:px-6 h-full flex items-center justify-between">
           {/* Brand Logo */}
           <Logo isDark={false} />
 

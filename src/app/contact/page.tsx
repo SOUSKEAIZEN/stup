@@ -16,16 +16,16 @@ export default function ContactPage() {
   const contactFaqs = generalFaqs.slice(0, 3);
 
   return (
-    <div className="flex flex-col pt-24 sm:pt-28">
+    <div className="flex flex-col">
       {/* HERO SECTION */}
-      <section className="pb-8 sm:pb-10 border-b border-slate-200/70 bg-gradient-to-b from-powder-soft/40 via-white to-white">
+      <section className="pt-8 sm:pt-12 pb-8 sm:pb-10 border-b border-slate-200/70 bg-gradient-to-b from-powder-soft/40 via-white to-white">
         <div className="max-w-site mx-auto px-4 sm:px-6">
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy mb-2">
               <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
               START A CONVERSATION
             </span>
-            <h1 className="font-display text-3xl sm:text-4xl lg:text-[52px] leading-[1.12] tracking-[-0.025em] text-navy font-bold text-balance">
+            <h1 className="font-display text-3xl sm:text-4xl lg:text-[46px] leading-[1.12] tracking-[-0.025em] text-navy font-bold text-balance">
               Let&apos;s build something meaningful.
             </h1>
             <p className="mt-3 font-sans text-sm sm:text-base text-ink-body leading-relaxed text-balance">
@@ -72,99 +72,45 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  {/* Delivery Model */}
-                  <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-sm bg-sunflower/20 text-navy flex items-center justify-center shrink-0 border border-sunflower/40">
-                      <Globe className="w-3.5 h-3.5 text-navy stroke-[2.2]" />
-                    </div>
-                    <div>
-                      <span className="font-ui text-[10px] font-bold uppercase tracking-wider text-ink-muted block">
-                        Delivery Model
-                      </span>
-                      <p className="font-medium text-navy">
-                        {agencyConfig.location}
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Response Time & Working Hours */}
+                  {/* Consultation Model */}
                   <div className="flex items-start gap-3">
                     <div className="w-8 h-8 rounded-sm bg-sunflower/20 text-navy flex items-center justify-center shrink-0 border border-sunflower/40">
                       <Clock className="w-3.5 h-3.5 text-navy stroke-[2.2]" />
                     </div>
                     <div>
                       <span className="font-ui text-[10px] font-bold uppercase tracking-wider text-ink-muted block">
-                        Response Window
+                        Project Consultation
                       </span>
                       <p className="font-medium text-navy">
-                        {agencyConfig.responseTime}
+                        Scope-limited, fixed-timeline packages
                       </p>
                       <p className="text-[11px] text-ink-muted mt-0.5">
-                        {agencyConfig.workingHours}
+                        Direct collaboration with lead developers & designers
                       </p>
                     </div>
                   </div>
                 </div>
 
-                {/* Social Channels */}
-                <div className="mt-6 pt-4 border-t border-slate-100">
-                  <span className="font-ui text-[10px] font-bold uppercase tracking-wider text-ink-muted block mb-2.5">
-                    Studio Profiles
-                  </span>
-                  <div className="flex items-center gap-2">
-                    <a
-                      href={agencyConfig.social.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2 rounded-sm bg-surface-bg text-navy hover:text-navy hover:bg-sunflower transition-all"
-                      aria-label="GitHub Repository"
-                    >
-                      <Github className="w-3.5 h-3.5" />
-                    </a>
-                    <a
-                      href={agencyConfig.social.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2 rounded-sm bg-surface-bg text-navy hover:text-navy hover:bg-sunflower transition-all"
-                      aria-label="LinkedIn"
-                    >
-                      <Linkedin className="w-3.5 h-3.5" />
-                    </a>
-                    <a
-                      href={agencyConfig.social.twitter}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2 rounded-sm bg-surface-bg text-navy hover:text-navy hover:bg-sunflower transition-all"
-                      aria-label="Twitter"
-                    >
-                      <Twitter className="w-3.5 h-3.5" />
-                    </a>
-                    <a
-                      href={agencyConfig.social.dribbble}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2 rounded-sm bg-surface-bg text-navy hover:text-navy hover:bg-sunflower transition-all"
-                      aria-label="Dribbble"
-                    >
-                      <Dribbble className="w-3.5 h-3.5" />
-                    </a>
+                {/* Studio Repository */}
+                {agencyConfig.social.github && (
+                  <div className="mt-6 pt-4 border-t border-slate-100">
+                    <span className="font-ui text-[10px] font-bold uppercase tracking-wider text-ink-muted block mb-2.5">
+                      Open Source & Repository
+                    </span>
+                    <div className="flex items-center gap-2">
+                      <a
+                        href={agencyConfig.social.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-3 py-1.5 rounded-sm bg-surface-bg text-navy hover:bg-sunflower transition-all text-xs font-ui font-semibold"
+                        aria-label="GitHub Repository"
+                      >
+                        <Github className="w-3.5 h-3.5" />
+                        <span>View Repository</span>
+                      </a>
+                    </div>
                   </div>
-                </div>
-              </div>
-
-              {/* NDA Notice */}
-              <div className="p-4 rounded-sm bg-white border border-slate-200/90 shadow-sm flex items-start gap-3">
-                <div className="w-8 h-8 rounded-sm bg-sunflower/20 text-navy flex items-center justify-center shrink-0 border border-sunflower/40">
-                  <ShieldCheck className="w-4 h-4 text-navy stroke-[2.2]" />
-                </div>
-                <div>
-                  <h4 className="font-ui text-xs font-bold text-navy">
-                    Mutual NDA Available
-                  </h4>
-                  <p className="font-sans text-xs text-ink-body mt-0.5 leading-relaxed">
-                    Working on proprietary concepts? We are pleased to execute a standard mutual Non-Disclosure Agreement prior to in-depth project briefings.
-                  </p>
-                </div>
+                )}
               </div>
             </div>
           </div>
