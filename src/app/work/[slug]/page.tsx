@@ -40,14 +40,19 @@ export function generateMetadata({ params }: CaseStudyPageProps): Metadata {
 }
 
 export default function CaseStudyPage({ params }: CaseStudyPageProps) {
-  const projectIndex = projectsData.findIndex((p) => p.slug === params.slug);
-  const project = projectsData[projectIndex];
+  const flagshipProjects = projectsData.slice(0, 4);
+  const project = projectsData.find((p) => p.slug === params.slug);
 
   if (!project) {
     notFound();
   }
 
-  const nextProject = projectsData[(projectIndex + 1) % projectsData.length];
+  // Next Case Study strictly cycles across the 4 flagship projects
+  const flagshipIndex = flagshipProjects.findIndex((p) => p.slug === params.slug);
+  const nextProject =
+    flagshipIndex !== -1
+      ? flagshipProjects[(flagshipIndex + 1) % flagshipProjects.length]
+      : flagshipProjects[0];
 
   return (
     <div className="flex flex-col pt-6 sm:pt-8">
@@ -116,7 +121,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
 
       {/* FULL-BLEED HERO IMAGE */}
       <section className="py-8 max-w-site mx-auto px-4 sm:px-6 w-full">
-        <div className="relative aspect-[16/9] w-full rounded-sm overflow-hidden border border-slate-200/90 shadow-card">
+        <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden border border-slate-200/90 shadow-card">
           <Image
             src={project.heroImage}
             alt={`${project.title} preview hero image`}
@@ -169,7 +174,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
               </div>
 
               {/* Secondary Image */}
-              <div className="relative aspect-[16/10] w-full rounded-sm overflow-hidden border border-slate-200/90 shadow-subtle">
+              <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden border border-slate-200/90 shadow-subtle">
                 <Image
                   src={project.secondaryImage}
                   alt={`${project.title} detailed interface execution`}
@@ -206,7 +211,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
                   {project.keyFeatures.map((feature, idx) => (
                     <div
                       key={idx}
-                      className="p-3.5 bg-white border border-slate-200/90 rounded-sm flex items-start gap-3"
+                      className="p-3.5 bg-white border border-slate-200/90 rounded-xl flex items-start gap-3"
                     >
                       <span className="mt-0.5 p-0.5 rounded-full bg-sunflower/25 text-navy shrink-0">
                         <Check className="w-3.5 h-3.5 stroke-[2.5]" />
@@ -232,7 +237,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
                   {project.deliverables.map((del, idx) => (
                     <div
                       key={idx}
-                      className="p-3 bg-surface-bg border border-slate-200 rounded-sm flex items-center gap-2.5 text-xs font-ui font-semibold text-navy"
+                      className="p-3 bg-surface-bg border border-slate-200 rounded-xl flex items-center gap-2.5 text-xs font-ui font-semibold text-navy"
                     >
                       <Sparkles className="w-3.5 h-3.5 text-sunflower shrink-0" />
                       <span>{del}</span>
@@ -245,7 +250,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
             {/* Right Column: Sticky Sidebar with Benchmarks & Tech Stack */}
             <div className="lg:col-span-4 space-y-6">
               {/* Performance Benchmarks */}
-              <div className="bg-white border border-slate-200/90 rounded-sm p-6 shadow-sm">
+              <div className="bg-white border border-slate-200/90 rounded-2xl p-6 shadow-sm">
                 <span className="font-ui text-xs font-bold uppercase tracking-wider text-navy block mb-4 border-b border-slate-100 pb-2.5">
                   Controlled Benchmarks
                 </span>
@@ -272,7 +277,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
               </div>
 
               {/* Technologies Applied */}
-              <div className="bg-white border border-slate-200/90 rounded-sm p-6 shadow-sm">
+              <div className="bg-white border border-slate-200/90 rounded-2xl p-6 shadow-sm">
                 <span className="font-ui text-xs font-bold uppercase tracking-wider text-navy block mb-3 border-b border-slate-100 pb-2.5">
                   Technology Stack
                 </span>
@@ -280,7 +285,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
                   {project.techStack.map((tech, idx) => (
                     <span
                       key={idx}
-                      className="px-2.5 py-1 bg-surface-bg rounded-sm font-ui text-xs font-medium text-navy border border-slate-200"
+                      className="px-2.5 py-1 bg-surface-bg rounded-lg font-ui text-xs font-medium text-navy border border-slate-200"
                     >
                       {tech}
                     </span>
@@ -289,7 +294,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
               </div>
 
               {/* Sidebar Action CTA */}
-              <div className="bg-powder-soft/50 border border-powder/50 rounded-sm p-5">
+              <div className="bg-powder-soft/50 border border-powder/50 rounded-2xl p-5">
                 <h4 className="font-display text-lg font-bold text-navy mb-1.5">
                   Require Similar Architecture?
                 </h4>
