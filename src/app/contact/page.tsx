@@ -32,44 +32,44 @@ export default function ContactPage() {
   return (
     <div className="flex flex-col bg-surface-bg">
       {/* COHESIVE SPLIT-LAYOUT CONTACT SECTION */}
-      <section className="pt-8 sm:pt-12 pb-14 sm:pb-20 border-b border-slate-200/60 bg-gradient-to-b from-powder-soft/50 via-white to-surface-bg">
+      <section className="pt-6 sm:pt-10 pb-10 sm:pb-14 border-b border-slate-200/60 bg-gradient-to-b from-powder-soft/50 via-white to-surface-bg">
         <div className="max-w-site mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             
             {/* LEFT SECTION: Editorial Narrative, Direct Contact & Visual Timeline */}
-            <div className="lg:col-span-5 flex flex-col justify-between space-y-8">
+            <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
               <div>
-                <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy mb-3">
+                <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy mb-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
                   PROJECT CONSULTATION
                 </span>
                 
-                <h1 className="font-display text-3xl sm:text-4xl lg:text-[46px] leading-[1.12] tracking-[-0.025em] text-navy font-bold text-balance">
+                <h1 className="font-display text-3xl sm:text-4xl lg:text-[44px] leading-[1.12] tracking-[-0.025em] text-navy font-bold text-balance">
                   Let&apos;s build something enduring.
                 </h1>
 
-                <p className="mt-3.5 font-sans text-sm sm:text-base text-ink-body leading-relaxed text-balance">
-                  Whether launching a new digital product, designing an editorial web platform, or engineering bespoke software, we collaborate from first principles with full source code ownership.
+                <p className="mt-2.5 font-sans text-sm sm:text-base text-ink-body leading-relaxed text-balance">
+                  Direct senior collaboration from day one. Tell us about your objectives, timeline, and scope.
                 </p>
 
                 {/* Brand Graphic / Studio Seal */}
-                <div className="mt-6 p-4 rounded-xl bg-gradient-to-br from-powder-soft/80 to-white border border-powder/60 shadow-2xs flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-navy flex items-center justify-center text-sunflower shrink-0 shadow-xs">
-                    <Sparkles className="w-6 h-6 stroke-[1.8]" />
+                <div className="mt-5 p-3.5 rounded-xl bg-gradient-to-br from-powder-soft/80 to-white border border-powder/60 shadow-2xs flex items-center gap-3.5">
+                  <div className="w-10 h-10 rounded-xl bg-navy flex items-center justify-center text-sunflower shrink-0 shadow-xs">
+                    <Sparkles className="w-5 h-5 stroke-[1.8]" />
                   </div>
                   <div>
                     <span className="font-ui text-xs font-bold text-navy block">
                       Direct Senior Collaboration
                     </span>
                     <span className="font-sans text-[11px] text-ink-muted leading-snug block mt-0.5">
-                      No intermediary account managers. You work directly with technical leads.
+                      No intermediary account managers. You work directly with lead engineers.
                     </span>
                   </div>
                 </div>
               </div>
 
               {/* Direct Communication Channels */}
-              <div className="space-y-4 pt-2 border-t border-slate-200/70">
+              <div className="space-y-3 pt-2 border-t border-slate-200/70">
                 <div>
                   <span className="font-ui text-[10px] font-bold uppercase tracking-wider text-ink-muted block mb-1">
                     Direct Studio Email
@@ -89,12 +89,12 @@ export default function ContactPage() {
               </div>
 
               {/* Compact Visual 3-Step Inquiry Timeline */}
-              <div className="pt-4 border-t border-slate-200/70">
-                <span className="font-ui text-[11px] font-bold uppercase tracking-wider text-navy block mb-4">
+              <div className="pt-3 border-t border-slate-200/70">
+                <span className="font-ui text-[11px] font-bold uppercase tracking-wider text-navy block mb-3">
                   Consultation Cadence
                 </span>
                 
-                <div className="relative pl-6 space-y-5 before:absolute before:left-2 before:top-2 before:bottom-2 before:w-[1.5px] before:bg-powder">
+                <div className="relative pl-6 space-y-4 before:absolute before:left-2 before:top-2 before:bottom-2 before:w-[1.5px] before:bg-powder">
                   {steps.map((step) => (
                     <div key={step.num} className="relative">
                       <span className="absolute -left-6 top-0.5 w-4 h-4 rounded-full bg-sunflower text-navy font-ui text-[9px] font-extrabold flex items-center justify-center shadow-2xs ring-4 ring-white">

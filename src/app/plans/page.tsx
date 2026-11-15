@@ -17,25 +17,25 @@ export default function PlansPage() {
   return (
     <div className="flex flex-col">
       {/* HERO SECTION */}
-      <section className="pt-8 sm:pt-12 pb-8 sm:pb-10 border-b border-slate-200/60 bg-gradient-to-b from-powder-soft/50 via-white to-surface-bg">
+      <section className="pt-6 sm:pt-10 pb-6 sm:pb-8 border-b border-slate-200/60 bg-gradient-to-b from-powder-soft/50 via-white to-surface-bg">
         <div className="max-w-site mx-auto px-4 sm:px-6">
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy mb-2.5">
+            <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy mb-2">
               <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
               TRANSPARENT PRICING
             </span>
-            <h1 className="font-display text-3xl sm:text-4xl lg:text-[46px] leading-[1.12] tracking-[-0.025em] text-navy font-bold text-balance">
+            <h1 className="font-display text-3xl sm:text-4xl lg:text-[44px] leading-[1.12] tracking-[-0.025em] text-navy font-bold text-balance">
               Straightforward website packages.
             </h1>
-            <p className="mt-3 font-sans text-sm sm:text-base text-ink-body leading-relaxed text-balance">
-              Fixed introductory packages designed for individuals and growing businesses. Clear page scopes, defined revision rounds, and realistic delivery timelines.
+            <p className="mt-2.5 font-sans text-sm sm:text-base text-ink-body leading-relaxed text-balance">
+              Fixed introductory packages designed for individuals and growing businesses. Clear scopes, defined revisions, and predictable turnarounds.
             </p>
           </div>
         </div>
       </section>
 
       {/* FOUR BALANCED PRICING CARDS */}
-      <section className="py-10 sm:py-14 bg-surface-bg">
+      <section className="py-8 sm:py-12 bg-surface-bg">
         <div className="max-w-site mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {pricingPlans.map((plan) => (
@@ -44,14 +44,14 @@ export default function PlansPage() {
           </div>
 
           {/* Custom Scope Callout */}
-          <div className="mt-8 p-5 bg-white border border-slate-200/90 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs font-sans text-ink-body shadow-sm">
+          <div className="mt-7 p-4 sm:p-5 bg-white border border-slate-200/90 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs font-sans text-ink-body shadow-sm">
             <div>
               <span className="font-bold font-ui text-navy block text-sm">Need custom e-commerce or a complex web application?</span>
               <p className="text-ink-muted mt-0.5">Relational databases, client portals, and bespoke payment gateways are scoped separately.</p>
             </div>
             <Link
               href="/contact?plan=custom"
-              className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-wider text-navy hover:text-navy-deep px-4 py-2.5 rounded-lg bg-sunflower shadow-xs shrink-0 transition-colors"
+              className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-wider text-navy hover:text-navy-deep px-4 py-2 rounded-lg bg-sunflower shadow-xs shrink-0 transition-colors"
             >
               <span>Request Custom Estimate</span>
               <ArrowUpRight className="w-3.5 h-3.5 stroke-[2.2]" />
@@ -61,7 +61,7 @@ export default function PlansPage() {
       </section>
 
       {/* FEATURE COMPARISON TABLE (No redundant FAQs) */}
-      <section className="py-10 sm:py-14 bg-white border-y border-slate-200/70">
+      <section className="py-8 sm:py-12 bg-white border-y border-slate-200/70">
         <div className="max-w-site mx-auto px-4 sm:px-6">
           <div className="mb-6">
             <SectionHeading

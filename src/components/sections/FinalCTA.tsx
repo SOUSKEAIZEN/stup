@@ -13,7 +13,7 @@ export function FinalCTA({
   subtitle = 'Whether you are launching a new brand or redesigning an existing website, we are ready to discuss your requirements.',
 }: FinalCTAProps) {
   return (
-    <section className="py-12 sm:py-16 bg-gradient-to-br from-navy via-navy-deep to-[#1b2b4c] text-white relative overflow-hidden border-t border-navy-deep">
+    <section className="py-10 sm:py-14 bg-gradient-to-br from-navy via-navy-deep to-[#1b2b4c] text-white relative overflow-hidden border-t border-navy-deep">
       {/* Visible brand gradient glow: Midnight Navy into Powder Blue */}
       <div
         className="absolute top-0 right-1/4 w-80 h-80 bg-powder/10 rounded-full blur-3xl pointer-events-none"
