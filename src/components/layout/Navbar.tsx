@@ -16,7 +16,7 @@ export function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 15);
+      setScrolled(window.scrollY > 10);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -40,13 +40,14 @@ export function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 w-full pt-3 sm:pt-4 pb-2 px-4 sm:px-6 pointer-events-none">
+      <header className="sticky top-0 z-50 w-full pt-2.5 sm:pt-3.5 pb-2 px-4 sm:px-6 pointer-events-none isolate">
         <div className="max-w-site mx-auto pointer-events-auto">
           <div
             className={cn(
-              'flex items-center justify-between px-5 sm:px-7 py-2.5 sm:py-3 rounded-full transition-all duration-300',
-              'bg-white/75 backdrop-blur-md border border-slate-200/60 shadow-[0_4px_20px_-4px_rgba(16,26,50,0.06)]',
-              scrolled && 'bg-white/92 backdrop-blur-lg border-powder/50 shadow-[0_8px_30px_-6px_rgba(16,26,50,0.1)]'
+              'flex items-center justify-between px-5 sm:px-7 py-2.5 sm:py-3 rounded-full transition-all duration-300 ease-out',
+              scrolled
+                ? 'bg-white/95 sm:bg-white/[0.96] backdrop-blur-xl border border-powder/80 shadow-[0_8px_32px_-6px_rgba(16,26,50,0.12)]'
+                : 'bg-white/85 backdrop-blur-md border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(16,26,50,0.06)]'
             )}
           >
             {/* Brand Wordmark Logo */}

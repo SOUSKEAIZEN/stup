@@ -4,7 +4,6 @@ export const pricingPlans: PricingPlan[] = [
   {
     id: 'essential',
     name: 'Essential',
-    badge: 'Single Page',
     priceINR: 4999,
     priceDisplay: '₹4,999',
     billingPeriod: 'one-time development fee',
@@ -38,7 +37,6 @@ export const pricingPlans: PricingPlan[] = [
   {
     id: 'starter',
     name: 'Starter',
-    badge: '3 Pages',
     priceINR: 9999,
     priceDisplay: '₹9,999',
     billingPeriod: 'one-time development fee',
@@ -108,7 +106,6 @@ export const pricingPlans: PricingPlan[] = [
   {
     id: 'business-plus',
     name: 'Business Plus',
-    badge: 'Up to 7 Pages',
     priceINR: 24999,
     priceDisplay: '₹24,999',
     billingPeriod: 'one-time development fee',
@@ -202,27 +199,6 @@ export const pricingComparisonData: FeatureComparisonRow[] = [
         starter: 'Basic Setup',
         professional: 'Complete Setup',
         businessPlus: 'Complete + Sitemaps',
-      },
-      {
-        name: 'Analytics Integration',
-        essential: false,
-        starter: false,
-        professional: 'Basic Setup',
-        businessPlus: 'Full Setup',
-      },
-      {
-        name: 'CMS / Dynamic Content',
-        essential: false,
-        starter: false,
-        professional: false,
-        businessPlus: 'CMS / MDX Ready',
-      },
-      {
-        name: 'Post-Launch Warranty',
-        essential: '7 Days',
-        starter: '14 Days',
-        professional: '30 Days',
-        businessPlus: '45 Days',
       },
     ],
   },

@@ -53,18 +53,13 @@ export function PricingCard({ plan, className }: PricingCardProps) {
 
       {/* Main Content */}
       <div className="flex flex-col flex-1">
-        {/* Header Block */}
+        {/* Header Block: 1. Package name, 2. Price, 3. One concise description */}
         <div className="border-b border-slate-100 pb-4 mb-4">
-          <div className="flex items-center justify-between">
-            <h3 className="font-display text-2xl font-bold text-navy">{plan.name}</h3>
-            <span className="font-ui text-[11px] font-bold text-navy bg-surface-bg px-2.5 py-1 rounded-md border border-slate-200">
-              {plan.pageScope}
-            </span>
-          </div>
+          <h3 className="font-display text-2xl sm:text-3xl font-bold text-navy">{plan.name}</h3>
 
           {/* Price */}
           <div className="mt-2.5 flex items-baseline gap-2">
-            <span className="font-ui text-3xl font-extrabold text-navy tracking-tight">
+            <span className="font-ui text-3xl sm:text-4xl font-extrabold text-navy tracking-tight">
               {plan.priceDisplay}
             </span>
             <span className="font-sans text-xs text-ink-muted">one-time fee</span>
