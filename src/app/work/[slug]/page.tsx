@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ArrowLeft, ArrowRight, ArrowUpRight, Check, AlertCircle } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ArrowUpRight, Check, AlertCircle, Sparkles } from 'lucide-react';
 import { projectsData } from '@/data/projects';
 import { Button } from '@/components/ui/Button';
 import { FinalCTA } from '@/components/sections/FinalCTA';
@@ -29,7 +29,7 @@ export function generateMetadata({ params }: CaseStudyPageProps): Metadata {
   }
 
   return {
-    title: `${project.title} — ${project.industry} Case Study`,
+    title: `${project.title} — ${project.typology} | STUP Studio`,
     description: project.summary,
     openGraph: {
       title: `${project.title} | STUP Studio`,
@@ -52,7 +52,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
   return (
     <div className="flex flex-col pt-28 sm:pt-36">
       {/* BACK NAVIGATION */}
-      <div className="max-w-site mx-auto px-5 sm:px-8 w-full mb-8">
+      <div className="max-w-site mx-auto px-5 sm:px-8 w-full mb-6">
         <Link
           href="/work"
           className="inline-flex items-center gap-2 font-ui text-xs font-semibold uppercase tracking-wider text-ink-muted hover:text-navy transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunflower rounded-sm"
@@ -63,9 +63,9 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
       </div>
 
       {/* CASE STUDY HEADER */}
-      <section className="pb-12 sm:pb-16 border-b border-slate-200/70">
+      <section className="pb-10 sm:pb-14 border-b border-slate-200/70">
         <div className="max-w-site mx-auto px-5 sm:px-8">
-          <div className="flex flex-wrap items-center gap-3 text-xs font-ui mb-4">
+          <div className="flex flex-wrap items-center gap-3 text-xs font-ui mb-3">
             <span className="font-bold uppercase tracking-widest text-navy flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-sunflower" />
               {project.categoryLabel}
@@ -76,46 +76,46 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
             <span className="text-ink-muted">{project.year}</span>
           </div>
 
-          <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold text-navy tracking-tight max-w-4xl text-balance">
+          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-navy tracking-tight max-w-4xl text-balance">
             {project.title}
           </h1>
 
-          <p className="mt-6 font-sans text-lg sm:text-xl text-ink-body max-w-3xl leading-relaxed text-balance">
+          <p className="mt-4 font-sans text-base sm:text-lg text-ink-body max-w-3xl leading-relaxed text-balance">
             {project.summary}
           </p>
 
           {/* Quick Meta Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-12 pt-8 border-t border-slate-200/70">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 pt-6 border-t border-slate-200/70">
             <div>
-              <span className="font-ui text-xs font-semibold uppercase tracking-wider text-ink-muted block">
-                Client Entity
+              <span className="font-ui text-[11px] font-bold uppercase tracking-wider text-ink-muted block">
+                Project Typology
               </span>
-              <p className="font-ui text-sm font-bold text-navy mt-1">{project.client}</p>
+              <p className="font-ui text-xs sm:text-sm font-bold text-navy mt-1">{project.typology}</p>
             </div>
             <div>
-              <span className="font-ui text-xs font-semibold uppercase tracking-wider text-ink-muted block">
-                Delivery Timeline
+              <span className="font-ui text-[11px] font-bold uppercase tracking-wider text-ink-muted block">
+                Project Status
               </span>
-              <p className="font-ui text-sm font-bold text-navy mt-1">6-Week Sprint</p>
+              <p className="font-ui text-xs sm:text-sm font-bold text-navy mt-1">Conceptual Studio Demo</p>
             </div>
             <div>
-              <span className="font-ui text-xs font-semibold uppercase tracking-wider text-ink-muted block">
-                Primary Stack
+              <span className="font-ui text-[11px] font-bold uppercase tracking-wider text-ink-muted block">
+                Framework Core
               </span>
-              <p className="font-ui text-sm font-bold text-navy mt-1">Next.js & TypeScript</p>
+              <p className="font-ui text-xs sm:text-sm font-bold text-navy mt-1">Next.js 14 App Router</p>
             </div>
             <div>
-              <span className="font-ui text-xs font-semibold uppercase tracking-wider text-ink-muted block">
-                Design System
+              <span className="font-ui text-[11px] font-bold uppercase tracking-wider text-ink-muted block">
+                Type Safety
               </span>
-              <p className="font-ui text-sm font-bold text-navy mt-1">Tailwind + Figma Tokens</p>
+              <p className="font-ui text-xs sm:text-sm font-bold text-navy mt-1">Strict TypeScript</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* FULL-BLEED HERO IMAGE */}
-      <section className="py-12 max-w-site mx-auto px-5 sm:px-8 w-full">
+      <section className="py-8 max-w-site mx-auto px-5 sm:px-8 w-full">
         <div className="relative aspect-[16/9] w-full rounded-sm overflow-hidden border border-slate-200/90 shadow-card">
           <Image
             src={project.heroImage}
@@ -129,36 +129,42 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
       </section>
 
       {/* CASE STUDY CONTENT SECTIONS */}
-      <section className="py-16 sm:py-20">
+      <section className="py-12 sm:py-16">
         <div className="max-w-site mx-auto px-5 sm:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
             {/* Left Column: Deep Narrative */}
-            <div className="lg:col-span-8 space-y-16">
-              {/* 1. Project Overview */}
+            <div className="lg:col-span-8 space-y-12">
+              {/* 1. Context & Objectives */}
               <div>
-                <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy block mb-3">
+                <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy block mb-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
-                  01 / CONTEXT & VISION
+                  01 / CONTEXT & OBJECTIVES
                 </span>
-                <h2 className="font-display text-3xl font-bold text-navy mb-4">
-                  Project Overview
+                <h2 className="font-display text-2xl sm:text-3xl font-bold text-navy mb-3">
+                  Prototype Objectives
                 </h2>
-                <p className="font-sans text-base sm:text-lg text-ink-body leading-relaxed">
+                <p className="font-sans text-sm sm:text-base text-ink-body leading-relaxed">
                   {project.overview}
+                </p>
+                <p className="font-sans text-sm sm:text-base text-ink-body leading-relaxed mt-3">
+                  <strong>Target Objective:</strong> {project.objectives}
                 </p>
               </div>
 
-              {/* 2. Challenge */}
+              {/* 2. Challenge & Design Decisions */}
               <div>
-                <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy block mb-3">
+                <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy block mb-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
-                  02 / THE BOTTLENECK
+                  02 / ARCHITECTURAL CHALLENGE & DESIGN
                 </span>
-                <h2 className="font-display text-3xl font-bold text-navy mb-4">
-                  The Core Architectural Challenge
+                <h2 className="font-display text-2xl sm:text-3xl font-bold text-navy mb-3">
+                  Design & Ergonomic Decisions
                 </h2>
-                <p className="font-sans text-base sm:text-lg text-ink-body leading-relaxed">
+                <p className="font-sans text-sm sm:text-base text-ink-body leading-relaxed">
                   {project.challenge}
+                </p>
+                <p className="font-sans text-sm sm:text-base text-ink-body leading-relaxed mt-3">
+                  {project.designDecisions}
                 </p>
               </div>
 
@@ -173,42 +179,39 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
                 />
               </div>
 
-              {/* 3. Our Approach */}
+              {/* 3. Engineering Strategy */}
               <div>
-                <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy block mb-3">
+                <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy block mb-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
-                  03 / STRATEGY & EXECUTION
+                  03 / ENGINEERING EXECUTION
                 </span>
-                <h2 className="font-display text-3xl font-bold text-navy mb-4">
-                  Our Engineering & Design Approach
+                <h2 className="font-display text-2xl sm:text-3xl font-bold text-navy mb-3">
+                  Technical Architecture
                 </h2>
-                <p className="font-sans text-base sm:text-lg text-ink-body leading-relaxed">
-                  {project.approach}
-                </p>
-                <p className="font-sans text-base sm:text-lg text-ink-body leading-relaxed mt-4">
-                  {project.designAndDev}
+                <p className="font-sans text-sm sm:text-base text-ink-body leading-relaxed">
+                  {project.engineeringApproach}
                 </p>
               </div>
 
-              {/* 4. Key Delivered Features */}
+              {/* 4. Delivered Features */}
               <div>
-                <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy block mb-3">
+                <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy block mb-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
-                  04 / DELIVERED CAPABILITIES
+                  04 / KEY CAPABILITIES
                 </span>
-                <h2 className="font-display text-3xl font-bold text-navy mb-6">
-                  Key Architectural Features
+                <h2 className="font-display text-2xl sm:text-3xl font-bold text-navy mb-4">
+                  Implemented Features
                 </h2>
-                <div className="space-y-4">
+                <div className="space-y-3">
                   {project.keyFeatures.map((feature, idx) => (
                     <div
                       key={idx}
-                      className="p-4 bg-white border border-slate-200/90 rounded-sm flex items-start gap-3"
+                      className="p-3.5 bg-white border border-slate-200/90 rounded-sm flex items-start gap-3"
                     >
-                      <span className="mt-1 p-0.5 rounded-full bg-sunflower/25 text-navy shrink-0">
-                        <Check className="w-4 h-4 stroke-[2.5]" />
+                      <span className="mt-0.5 p-0.5 rounded-full bg-sunflower/25 text-navy shrink-0">
+                        <Check className="w-3.5 h-3.5 stroke-[2.5]" />
                       </span>
-                      <p className="font-sans text-sm sm:text-base text-ink-body leading-relaxed">
+                      <p className="font-sans text-xs sm:text-sm text-ink-body leading-relaxed">
                         {feature}
                       </p>
                     </div>
@@ -216,71 +219,68 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
                 </div>
               </div>
 
-              {/* Client Testimonial (if available) */}
-              {project.testimonial && (
-                <div className="p-8 sm:p-10 rounded-sm bg-navy text-white relative overflow-hidden">
-                  <div
-                    className="absolute top-0 right-0 w-64 h-64 bg-sunflower/10 rounded-full blur-2xl pointer-events-none"
-                    aria-hidden="true"
-                  />
-                  <span className="inline-flex items-center gap-2 font-ui text-xs font-bold uppercase tracking-[0.2em] text-sunflower block mb-4">
-                    <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
-                    CLIENT REFLECTION
-                  </span>
-                  <blockquote className="font-display text-xl sm:text-2xl text-white italic leading-relaxed">
-                    &ldquo;{project.testimonial.quote}&rdquo;
-                  </blockquote>
-                  <div className="mt-6 pt-6 border-t border-navy-deep flex flex-col">
-                    <span className="font-ui text-sm font-bold text-sunflower">
-                      {project.testimonial.author}
-                    </span>
-                    <span className="font-sans text-xs text-slate-400">
-                      {project.testimonial.title}
-                    </span>
-                  </div>
+              {/* 5. Architectural Deliverables */}
+              <div>
+                <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy block mb-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
+                  05 / DELIVERABLES PACKAGE
+                </span>
+                <h2 className="font-display text-2xl sm:text-3xl font-bold text-navy mb-4">
+                  Delivered Artifacts
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {project.deliverables.map((del, idx) => (
+                    <div
+                      key={idx}
+                      className="p-3 bg-surface-bg border border-slate-200 rounded-sm flex items-center gap-2.5 text-xs font-ui font-semibold text-navy"
+                    >
+                      <Sparkles className="w-3.5 h-3.5 text-sunflower shrink-0" />
+                      <span>{del}</span>
+                    </div>
+                  ))}
                 </div>
-              )}
+              </div>
             </div>
 
-            {/* Right Column: Sticky Sidebar with Metrics, Tech Stack & Conceptual Disclaimer */}
-            <div className="lg:col-span-4 space-y-8">
-              {/* Performance Metrics */}
-              <div className="bg-white border border-slate-200/90 rounded-sm p-6 sm:p-7 shadow-sm">
-                <span className="font-ui text-xs font-bold uppercase tracking-wider text-navy block mb-5 border-b border-slate-100 pb-3">
-                  Impact & Benchmarks
+            {/* Right Column: Sticky Sidebar with Benchmarks & Tech Stack */}
+            <div className="lg:col-span-4 space-y-6">
+              {/* Performance Benchmarks */}
+              <div className="bg-white border border-slate-200/90 rounded-sm p-6 shadow-sm">
+                <span className="font-ui text-xs font-bold uppercase tracking-wider text-navy block mb-4 border-b border-slate-100 pb-2.5">
+                  Controlled Benchmarks
                 </span>
-                <div className="space-y-6">
-                  {project.metrics.map((metric, idx) => (
+                <div className="space-y-4">
+                  {project.benchmarks.map((metric, idx) => (
                     <div key={idx}>
-                      <span className="font-display text-3xl sm:text-4xl font-bold text-navy block">
+                      <span className="font-display text-2xl sm:text-3xl font-bold text-navy block">
                         {metric.value}
                       </span>
-                      <span className="font-ui text-xs text-ink-muted uppercase tracking-wider block mt-1">
+                      <span className="font-ui text-[11px] text-ink-muted uppercase tracking-wider block mt-0.5">
                         {metric.label}
                       </span>
                     </div>
                   ))}
                 </div>
 
-                {/* Conceptual Disclaimer Note as required */}
-                <div className="mt-6 pt-5 border-t border-slate-100 flex items-start gap-2.5 text-ink-muted">
+                {/* Conceptual Notice */}
+                <div className="mt-5 pt-4 border-t border-slate-100 flex items-start gap-2 text-ink-muted">
                   <AlertCircle className="w-4 h-4 text-navy shrink-0 mt-0.5" />
                   <p className="font-sans text-[11px] leading-relaxed">
-                    <strong>Conceptual Portfolio Case Study:</strong> Metrics displayed are simulated demonstration benchmarks recorded under staging test conditions to illustrate performance capabilities.
+                    <strong>Conceptual Portfolio Case Study:</strong> Metrics displayed are demonstration benchmarks recorded under controlled staging environments to illustrate performance capabilities.
                   </p>
                 </div>
               </div>
 
               {/* Technologies Applied */}
-              <div className="bg-white border border-slate-200/90 rounded-sm p-6 sm:p-7 shadow-sm">
-                <span className="font-ui text-xs font-bold uppercase tracking-wider text-navy block mb-4 border-b border-slate-100 pb-3">
+              <div className="bg-white border border-slate-200/90 rounded-sm p-6 shadow-sm">
+                <span className="font-ui text-xs font-bold uppercase tracking-wider text-navy block mb-3 border-b border-slate-100 pb-2.5">
                   Technology Stack
                 </span>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5">
                   {project.techStack.map((tech, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1 bg-surface-bg rounded-sm font-ui text-xs font-medium text-navy border border-slate-200"
+                      className="px-2.5 py-1 bg-surface-bg rounded-sm font-ui text-xs font-medium text-navy border border-slate-200"
                     >
                       {tech}
                     </span>
@@ -289,12 +289,12 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
               </div>
 
               {/* Sidebar Action CTA */}
-              <div className="bg-powder-soft/50 border border-powder/50 rounded-sm p-6">
-                <h4 className="font-display text-xl font-bold text-navy mb-2">
-                  Need similar capabilities?
+              <div className="bg-powder-soft/50 border border-powder/50 rounded-sm p-5">
+                <h4 className="font-display text-lg font-bold text-navy mb-1.5">
+                  Require Similar Architecture?
                 </h4>
-                <p className="font-sans text-xs text-ink-body leading-relaxed mb-5">
-                  Let’s schedule a 30-minute discovery session to assess your technical requirements.
+                <p className="font-sans text-xs text-ink-body leading-relaxed mb-4">
+                  Schedule a preliminary discovery review with our senior engineering squad.
                 </p>
                 <Button
                   href="/contact"
@@ -312,8 +312,8 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
       </section>
 
       {/* NEXT PROJECT NAVIGATION BAR */}
-      <section className="py-12 bg-white border-y border-slate-200/70">
-        <div className="max-w-site mx-auto px-5 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <section className="py-10 bg-white border-y border-slate-200/70">
+        <div className="max-w-site mx-auto px-5 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <Link
             href="/work"
             className="font-ui text-xs font-semibold uppercase tracking-wider text-ink-muted hover:text-navy transition-colors"
@@ -323,17 +323,17 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
 
           <Link
             href={`/work/${nextProject.slug}`}
-            className="group flex items-center gap-4 text-right"
+            className="group flex items-center gap-3 text-right"
           >
             <div>
-              <span className="font-ui text-[11px] font-bold uppercase tracking-wider text-navy block">
+              <span className="font-ui text-[10px] font-bold uppercase tracking-wider text-navy block">
                 Next Case Study
               </span>
-              <span className="font-display text-xl font-bold text-navy group-hover:text-navy-deep transition-colors">
+              <span className="font-display text-lg font-bold text-navy group-hover:text-navy-deep transition-colors">
                 {nextProject.title} — {nextProject.industry}
               </span>
             </div>
-            <div className="p-3 rounded-full bg-powder-soft text-navy group-hover:bg-sunflower group-hover:text-navy transition-colors">
+            <div className="p-2.5 rounded-full bg-powder-soft text-navy group-hover:bg-sunflower group-hover:text-navy transition-colors">
               <ArrowRight className="w-4 h-4 stroke-[2.2]" />
             </div>
           </Link>

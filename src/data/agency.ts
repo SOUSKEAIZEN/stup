@@ -1,8 +1,10 @@
 export const agencyConfig = {
   name: 'STUP Studio',
-  tagline: 'Independent Digital Studio & Technology Consultancy',
+  tagline: 'Independent Digital Studio & Software Consultancy',
   legalName: 'STUP Digital Technologies Private Limited',
-  foundingYear: 2021,
+  foundingYear: 2024,
+  positioning:
+    'An independent digital software studio partnering with founders and ambitious businesses to engineer bespoke web applications, responsive digital platforms, and disciplined design systems.',
   email: 'hello@stupstudio.com',
   careersEmail: 'careers@stupstudio.com',
   phone: '+91 (080) 4920-8800',
@@ -17,36 +19,37 @@ export const agencyConfig = {
     instagram: 'https://instagram.com/stupstudio',
     dribbble: 'https://dribbble.com/stupstudio',
   },
-  stats: [
-    { value: '48+', label: 'Delivered Products' },
-    { value: '99.4%', label: 'On-Time Launch Rate' },
-    { value: '4.9/5', label: 'Client Collaboration Score' },
-    { value: '< 1.2s', label: 'Average Core Web Vital LCP' },
+  // Authentic technical standards rather than fabricated vanity metrics
+  standards: [
+    { label: 'Engineering Core', value: 'TypeScript 5 Strict' },
+    { label: 'Rendering Architecture', value: 'Next.js 14 App Router' },
+    { label: 'Accessibility & Vitals', value: 'WCAG AA & Sub-1s LCP' },
+    { label: 'Code & IP Ownership', value: '100% Client Owned' },
   ],
   differentiators: [
     {
       title: 'Thoughtful Design',
-      description: 'We prioritize restraint, editorial balance and deliberate typography over fleeting micro-trends. Every curve, margin and layout decision serves real user comprehension.',
+      description: 'Restraint, editorial balance and deliberate typography over fleeting micro-trends. Every curve, margin and layout decision serves real user comprehension.',
     },
     {
       title: 'Reliable Engineering',
-      description: 'TypeScript, modular architecture, and modern build pipelines guarantee robust applications that withstand real production traffic and maintain zero technical debt.',
+      description: 'Type-safe TypeScript pipelines and modular architecture. We build robust systems designed for clean maintainability without technical debt.',
     },
     {
       title: 'Scalable Architecture',
-      description: 'Designed from day one to grow with your business—clean separation of concerns, optimized databases, and elastic cloud infrastructure.',
+      description: 'Clean separation of concerns, normalized database schemas, and edge caching strategies that accommodate real growth gracefully.',
     },
     {
-      title: 'Clear Communication',
-      description: 'Direct collaboration with senior engineers and designers. Weekly milestone demos, transparent asynchronous updates, and zero agency bureaucratic overhead.',
+      title: 'Direct Senior Collaboration',
+      description: 'You work directly with senior designers and engineers. Weekly milestone walkthroughs and transparent asynchronous updates with zero agency bureaucracy.',
     },
     {
-      title: 'Performance-Focused Execution',
-      description: 'Relentless focus on sub-second load times, accessible semantic markup, and stellar Core Web Vitals to maximize search visibility and organic conversion.',
+      title: 'Performance Focus',
+      description: 'Sub-second page loads, semantic HTML5, and Core Web Vitals optimization to maximize search discoverability and conversion.',
     },
     {
-      title: 'Long-Term Technical Support',
-      description: 'We do not abandon products post-launch. Proactive security audits, dependency updates, uptime monitoring, and ongoing optimization ensure peace of mind.',
+      title: 'Post-Launch Stewardship',
+      description: 'Comprehensive warranty support, dependency updates, and optional technical retainers to ensure your product remains secure and current.',
     },
   ],
   processSteps: [
@@ -55,28 +58,28 @@ export const agencyConfig = {
       name: 'Discover',
       tagline: 'Understand the business, audience and objectives',
       description:
-        'We immerse ourselves in your domain, interview stakeholders, audit existing systems, analyze competitive landscapes, and define concrete metrics of success.',
+        'We review domain requirements, target user journeys, technical constraints, and define measurable functional specifications.',
     },
     {
       step: '02',
       name: 'Strategize',
       tagline: 'Plan the experience, architecture and creative direction',
       description:
-        'We craft information architecture, user journeys, low-fidelity wireframes, technical specifications, and mood boards that align business vision with technical viability.',
+        'We map out information architecture, design tokens, responsive wireframes, and backend schema specifications.',
     },
     {
       step: '03',
       name: 'Design & Build',
       tagline: 'Create the product through design and development',
       description:
-        'Parallel sprints in high-fidelity design systems and type-safe frontend/backend engineering. You receive weekly interactive preview links and live milestone demonstrations.',
+        'Parallel sprints in high-fidelity interface design and type-safe Next.js frontend/backend implementation with continuous preview deployments.',
     },
     {
       step: '04',
       name: 'Deliver & Improve',
       tagline: 'Launch, optimize and continuously improve',
       description:
-        'Rigorous cross-device quality assurance, SEO auditing, automated deployment pipelines, analytics instrumentation, and handover training for your internal teams.',
+        'Cross-device quality assurance, SEO metadata verification, automated production deployment, and complete source-code handover.',
     },
   ],
 };

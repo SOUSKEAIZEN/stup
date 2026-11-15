@@ -8,6 +8,7 @@ import { cn } from '@/lib/utils';
 import { navigationLinks } from '@/data/navigation';
 import { agencyConfig } from '@/data/agency';
 import { Button } from '@/components/ui/Button';
+import { Logo } from '@/components/ui/Logo';
 
 export function Navbar() {
   const pathname = usePathname();
@@ -52,20 +53,7 @@ export function Navbar() {
       >
         <div className="max-w-site mx-auto px-5 sm:px-8 flex items-center justify-between">
           {/* Brand Logo */}
-          <Link
-            href="/"
-            className="group flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunflower rounded-sm"
-            aria-label={`${agencyConfig.name} - Home`}
-          >
-            <div className="flex flex-col">
-              <span className="font-display text-2xl font-bold tracking-tight text-navy flex items-center">
-                STUP<span className="text-sunflower inline-block ml-0.5">.</span>
-              </span>
-              <span className="font-ui text-[9px] uppercase tracking-[0.22em] text-ink-muted -mt-1 group-hover:text-navy transition-colors">
-                Studio
-              </span>
-            </div>
-          </Link>
+          <Logo size="md" />
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-1 lg:gap-2" aria-label="Main Navigation">

@@ -5,312 +5,344 @@ export const projectsData: CaseStudy[] = [
     id: 'finora',
     slug: 'finora',
     title: 'Finora',
-    client: 'Finora Global Inc.',
+    typology: 'Institutional Wealth Intelligence Prototype',
     industry: 'Financial Technology & Wealth Management',
     category: 'applications',
     categoryLabel: 'Web Application & UI/UX',
     year: '2024',
+    isConceptual: true,
     thumbnail: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
     heroImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=85',
     secondaryImage: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1400&q=80',
-    summary: 'A unified wealth intelligence platform providing private wealth clients and advisors with real-time portfolio analytics and liquidity management.',
+    summary: 'A conceptual wealth intelligence dashboard designed to display high-frequency asset allocations, liquidity tables, and risk metrics with zero interface lag.',
     overview:
-      'Finora approached our studio to replace an outdated portfolio management suite with an ultra-responsive, privacy-first financial dashboard. The goal was to transform complex institutional-grade asset allocation data into a tranquil, legible interface suitable for both desktop analysts and mobile executives.',
+      'Finora was developed by STUP Studio as an architectural prototype exploring how dense financial telemetry can be rendered with calming editorial clarity. The project explores the intersection of real-time calculations and low-fatigue visual ergonomic systems.',
+    objectives:
+      'Prove that complex multi-currency portfolios can render 100+ live securities positions within sub-second thresholds without overwhelming users with visual noise.',
     challenge:
-      'Institutional finance platforms are frequently plagued by extreme visual clutter, sluggish rendering with massive datasets, and fragmented reporting workflows. Finora needed to display over 100+ real-time securities positions with sub-second chart interactivity without triggering browser lag or battery drain.',
-    approach:
-      'We designed an ergonomic modular workspace following a strict 4px grid system and a muted, low-fatigue palette. By decoupling high-frequency tick calculations into Web Workers and using virtualized canvas charting, we eliminated interface latency entirely while maintaining bank-grade encryption at the edge.',
-    designAndDev:
-      'Our engineering team implemented Next.js 14 App Router paired with high-performance WebGL chart kernels and Tailwind CSS. The typography combines crisp Manrope numerics for columnar data with Inter for legal disclaimers, maintaining impeccable optical alignment across all breakpoints.',
+      'Financial dashboards often struggle with high CPU overhead caused by un-virtualized DOM elements and erratic re-renders during high-frequency data ticks.',
+    designDecisions:
+      'We established a 4px modular baseline grid, monospaced tabular numerals for financial figures, and a low-saturation Midnight Navy and Powder Blue surface structure that minimizes visual fatigue during prolonged analytical sessions.',
+    engineeringApproach:
+      'Decoupled market feed processing into Web Workers, paired with Next.js 14 server components for initial baseline paint and lightweight client state for interactive charting.',
     keyFeatures: [
-      'Real-time multi-currency valuation with automated FX hedging triggers',
-      'Zero-latency portfolio rebalancing simulator with historical backtesting',
-      'Institutional audit trail exportable in PDF, CSV, and XBRL formats',
-      'Granular biometric multi-factor authentication with hardware key support',
+      'Simulated multi-currency liquidity rebalancer with real-time slippage calculations',
+      'Virtual table rendering handling 5,000+ data rows with 60fps scrolling',
+      'Configurable risk exposure heatmaps with customizable thresholds',
+      'Keyboard-first command palette for instant security lookups',
     ],
-    techStack: ['Next.js 14', 'TypeScript', 'Tailwind CSS', 'WebGL Canvas', 'PostgreSQL', 'Redis', 'Zod'],
-    metrics: [
-      { label: 'Latency Reduction', value: '-78%' },
-      { label: 'Daily Active Engagement', value: '+64%' },
-      { label: 'Lighthouse Performance Score', value: '98/100' },
+    deliverables: [
+      'Interactive Next.js 14 Application Prototype',
+      'Figma Design Tokens Library (Color, Type, Spacing)',
+      'TypeScript Data Model & API Specifications',
+      'Performance Benchmark Audit Document',
     ],
-    testimonial: {
-      quote: 'STUP transformed our dense institutional tool into an elegant financial work of art. Our clients frequently comment on how peaceful and clear the platform feels.',
-      author: 'Marcus Vance',
-      title: 'Chief Technology Officer, Finora Capital',
-    },
+    techStack: ['Next.js 14', 'TypeScript', 'Tailwind CSS', 'Web Workers', 'Zod', 'PostgreSQL Schema'],
+    benchmarks: [
+      { label: 'Initial Paint (FCP)', value: '0.62s' },
+      { label: 'DOM Virtualization Rate', value: '60 FPS' },
+      { label: 'Lighthouse Performance', value: '99/100' },
+    ],
   },
   {
     id: 'forma',
     slug: 'forma',
     title: 'Forma',
-    client: 'Forma Architecture Studio',
-    industry: 'Architecture & Interior Design',
+    typology: 'Architectural Monograph & Studio Website Concept',
+    industry: 'Architecture & Spatial Design',
     category: 'websites',
     categoryLabel: 'Website Design & Editorial',
     year: '2024',
+    isConceptual: true,
     thumbnail: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
     heroImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85',
     secondaryImage: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=80',
-    summary: 'An editorial digital monograph showcasing modernist architectural residences, structural drawings, and material studies.',
+    summary: 'A minimalist digital monograph concept presenting modernist residential structures, structural blueprints, and material studies through deliberate spatial pacing.',
     overview:
-      'Forma is an award-winning residential architecture studio renowned for minimalist timber and raw concrete residences. They sought an online presence that mirrors the quiet spatial grandeur of their physical buildings, with generous whitespace, subtle motion, and high-fidelity photography.',
+      'Forma is an architectural studio concept created to demonstrate editorial web design principles. The design balances generous negative space, high-resolution architectural photography, and understated typography.',
+    objectives:
+      'Deliver an online monograph that mirrors the quiet grandeur of physical architecture while maintaining strict web accessibility and sub-second asset delivery.',
     challenge:
-      'Traditional architecture portfolio sites often suffer from slow image delivery, awkward image crops that misrepresent room proportions, and excessive flashy navigation effects that distract from the architectural work itself.',
-    approach:
-      'We treated each project page like a collectible physical monograph. We instituted asymmetrical two-column layouts, full-bleed architectural floor plans with interactive zoom, and curated typographic pairing of Playfair Display and Manrope to evoke architectural prestige.',
-    designAndDev:
-      'Images are automatically compressed into modern AVIF and WebP formats with responsive srcsets, ensuring instantaneous image paint even on mobile devices. Subtle parallax scroll transitions guide visitors through rooms with deliberate pacing.',
+      'High-resolution architectural photography can easily lead to layout shifts and slow mobile loading if assets are not rigorously optimized and sized.',
+    designDecisions:
+      'We utilized Playfair Display for editorial project titles paired with Manrope for structural annotations and technical dimensions. Generous vertical margins give photography room to breathe.',
+    engineeringApproach:
+      'Automated next/image optimization generating modern AVIF/WebP formats with explicit aspect ratios to guarantee zero Cumulative Layout Shift (CLS).',
     keyFeatures: [
-      'High-resolution architectural photography engine with progressive loading',
-      'Interactive blueprint and material palette inspector',
-      'Client inquiry portal with bespoke site-visit scheduling',
-      'Archival project index organized by geography and structural typology',
+      'Progressive image loading with zero layout shift during asset paint',
+      'Interactive structural drawing viewer with vectorized blueprints',
+      'Architectural typology categorization by material and geography',
+      'Direct studio inquiry flow with appointment scheduling integration',
     ],
-    techStack: ['Next.js 14', 'React', 'Tailwind CSS', 'Framer Motion', 'Cloudinary CDN'],
-    metrics: [
-      { label: 'Average Time on Site', value: '4m 32s' },
-      { label: 'Inbound Qualified Inquiries', value: '+112%' },
-      { label: 'Core Web Vitals Pass Rate', value: '100%' },
+    deliverables: [
+      'Complete Responsive Web Monograph',
+      'Custom Typography & Layout Styleguide',
+      'Asset Optimization & CDN Pipeline Spec',
+      'CMS Content Schema for Project Monograph Entries',
     ],
-    testimonial: {
-      quote: 'The website reflects the exact restraint and dignity we build into our concrete and timber homes. It is rare to find engineers who understand architectural space.',
-      author: 'Helena Lindqvist',
-      title: 'Principal Architect, Forma',
-    },
+    techStack: ['Next.js 14', 'React', 'Tailwind CSS', 'CSS Grid', 'AVIF / WebP'],
+    benchmarks: [
+      { label: 'Cumulative Layout Shift', value: '0.000' },
+      { label: 'Average Image Byte Weight', value: '< 65 KB' },
+      { label: 'Mobile Usability Score', value: '100/100' },
+    ],
   },
   {
     id: 'nourish',
     slug: 'nourish',
     title: 'Nourish',
-    client: 'Nourish Health Tech',
+    typology: 'Preventative Health & Nutrition Platform Concept',
     industry: 'Health & Preventive Wellness',
     category: 'applications',
     categoryLabel: 'Mobile & Web Application',
-    year: '2023',
+    year: '2024',
+    isConceptual: true,
     thumbnail: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=80',
     heroImage: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1600&q=85',
     secondaryImage: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1400&q=80',
-    summary: 'A preventative health and metabolic tracking platform connecting individuals with clinical nutritionists and continuous bio-data.',
+    summary: 'A preventative health companion concept exploring streamlined physiological bio-data ingestion and daily nutritional protocols.',
     overview:
-      'Nourish empowers health-conscious individuals to decode blood biomarkers and sleep metrics into personalized daily nutrition protocols. Our team designed and built both the member web application and clinical provider dashboard.',
+      'Nourish investigates how complex metabolic biomarkers and daily health metrics can be converted into accessible, actionable guidance without inducing cognitive fatigue.',
+    objectives:
+      'Design a health application interface that avoids anxiety-inducing medical graphs by focusing user attention on daily high-impact habits.',
     challenge:
-      'Users frequently experience burnout with health logging apps due to tedious input flows and confusing medical graphs. The interface had to make complex bio-marker trends effortless to comprehend at a glance.',
-    approach:
-      'We devised a "daily focus" feed that surfaces only the single most impactful recommendation each morning, supported by gentle color-coded physiological ranges and conversational consultation scheduling.',
-    designAndDev:
-      'Built with React Native and Next.js, featuring end-to-end encrypted health data pipelines, HIPAA-compliant cloud storage, and responsive SVG trend charts that animate smoothly across devices.',
+      'Traditional wellness applications suffer from data fragmentation and tedious manual logging steps that lead to high user abandonment.',
+    designDecisions:
+      'Gentle powder blue and soft neutral surfaces paired with high-contrast Sunflower Yellow accents for key daily action highlights and progress bars.',
+    engineeringApproach:
+      'Local-first data architecture allowing instantaneous offline habit logging with background sync to an encrypted PostgreSQL database.',
     keyFeatures: [
-      'Automated lab panel ingestion with physiological benchmark overlays',
-      'Real-time encrypted telehealth messaging with registered dietitians',
-      'Barcode meal scanning paired with micronutrient deficiency insights',
-      'Offline-first sync engine supporting intermittent connectivity',
+      'Single-action daily focus dashboard prioritizing morning protocols',
+      'Encrypted clinical communication channel mockup with end-to-end schemas',
+      'Nutrient density scoring engine calculated via standardized dietary models',
+      'Offline-capable local storage with automatic state reconciliation',
     ],
-    techStack: ['React Native', 'Next.js 14', 'TypeScript', 'Tailwind CSS', 'Supabase', 'Node.js'],
-    metrics: [
-      { label: '30-Day User Retention', value: '72%' },
-      { label: 'App Store Rating', value: '4.9 ★' },
-      { label: 'Clinical Intake Time Saved', value: '45 mins/patient' },
+    deliverables: [
+      'Web Application Design System & Interactive Prototype',
+      'Responsive Mobile Viewports Specification',
+      'HIPAA-Aware Database Schema Blueprint',
+      'User Onboarding & Data Flow Diagrams',
     ],
-    testimonial: {
-      quote: 'STUP transformed our clinical vision into a calming, indispensable companion app. Our members love how gentle and empowering the product feels.',
-      author: 'Dr. Aris Thorne',
-      title: 'Founder & Medical Director, Nourish',
-    },
+    techStack: ['React Native Web', 'Next.js 14', 'TypeScript', 'Tailwind CSS', 'IndexedDB'],
+    benchmarks: [
+      { label: 'Offline Sync Latency', value: '< 80ms' },
+      { label: 'Bundle First Load JS', value: '92 KB' },
+      { label: 'Lighthouse Accessibility', value: '100/100' },
+    ],
   },
   {
     id: 'maison',
     slug: 'maison',
     title: 'Maison',
-    client: 'Maison Objects Paris',
-    industry: 'Luxury Home Goods & E-commerce',
+    typology: 'Headless Luxury E-commerce Architecture Concept',
+    industry: 'Artisanal Design & Luxury Retail',
     category: 'ecommerce',
     categoryLabel: 'Headless E-commerce',
     year: '2024',
+    isConceptual: true,
     thumbnail: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80',
     heroImage: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=85',
     secondaryImage: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1400&q=80',
-    summary: 'A bespoke headless shopping experience for handcrafted ceramics, artisanal furniture, and sculptural lighting objects.',
+    summary: 'A headless e-commerce storefront prototype engineered for limited-edition artisanal ceramics, bespoke furniture, and sculptural lighting objects.',
     overview:
-      'Maison required an e-commerce platform that felt like stepping into an intimate Parisian boutique rather than a transactional digital storefront. Every product is handcrafted in limited batches and commands a premium narrative.',
+      'Maison explores how high-end editorial storytelling can be harmonized with frictionless sub-second checkout mechanics on a modern headless commerce foundation.',
+    objectives:
+      'Eliminate client-side cart friction and page reloads while showcasing artisanal craftsmanship through high-fidelity visual presentation.',
     challenge:
-      'Balancing high-resolution artisan video previews and 360-degree object photography with lightning-fast checkout speeds and global currency conversion.',
-    approach:
-      'We engineered a headless Shopify architecture utilizing Next.js 14 on edge nodes, allowing for instantaneous client-side navigation, buttery-smooth cart drawers, and bespoke editorial story integrations between product listings.',
-    designAndDev:
-      'We integrated custom 3D model loaders with progressive fallback to WebP stills. The checkout flow was reduced to two effortless steps, pre-populating regional duties and taxes to ensure full price transparency.',
+      'Conventional commerce storefronts often sacrifice performance for aesthetic richness, leading to sluggish cart updates and cart abandonment.',
+    designDecisions:
+      'Asymmetric layout grids that pair maker narratives with purchase actions, supported by high-contrast typography and subtle hover zooms.',
+    engineeringApproach:
+      'Headless commerce architecture decoupling front-end presentation from inventory backends, utilizing edge caching and optimistic UI updates.',
     keyFeatures: [
-      'Instant slide-over cart with real-time stock allocation',
-      'Artisanal provenance map showcasing each craftsman studio',
-      'Multi-currency auto-detection with local shipping duty calculation',
-      'Bespoke gift packaging and custom calligraphy message selector',
+      'Instant slide-over cart drawer with optimistic inventory reservation',
+      'Artisanal studio provenance map detailing material origins',
+      'Responsive image galleries with lazy-loaded thumbnail strips',
+      'Streamlined two-step checkout mockup with regional currency selection',
     ],
-    techStack: ['Next.js 14', 'Shopify Storefront API', 'Tailwind CSS', 'Stripe', 'Redis Edge Cache'],
-    metrics: [
-      { label: 'Checkout Conversion', value: '+38%' },
-      { label: 'Average Order Value (AOV)', value: '€340 (+24%)' },
-      { label: 'Page Load Speed', value: '0.8s on 4G' },
+    deliverables: [
+      'Headless Next.js Storefront Prototype',
+      'Component Library for Catalog, PDP, and Checkout',
+      'Storefront API Schema Definitions',
+      'Core Web Vitals Performance Audit',
     ],
-    testimonial: {
-      quote: 'Our digital boutique now rivals our flagship gallery on Rue Saint-Honoré. The conversion lift exceeded our most optimistic projections.',
-      author: 'Camille de Montluc',
-      title: 'Brand Director, Maison Objects',
-    },
+    techStack: ['Next.js 14', 'Shopify Storefront API Spec', 'Tailwind CSS', 'TypeScript', 'Edge Workers'],
+    benchmarks: [
+      { label: 'Cart Interaction Time', value: '< 16ms' },
+      { label: 'Time to Interactive (TTI)', value: '0.9s' },
+      { label: 'Lighthouse Best Practices', value: '100/100' },
+    ],
   },
   {
     id: 'orbit',
     slug: 'orbit',
     title: 'Orbit',
-    client: 'Orbit Intelligence Systems',
-    industry: 'B2B SaaS & Developer Infrastructure',
+    typology: 'Developer Observability Control Plane Concept',
+    industry: 'B2B SaaS & Cloud Infrastructure',
     category: 'applications',
     categoryLabel: 'SaaS Platform & Dashboard',
-    year: '2023',
+    year: '2024',
+    isConceptual: true,
     thumbnail: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=1200&q=80',
     heroImage: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=1600&q=85',
     secondaryImage: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1400&q=80',
-    summary: 'An observability and log aggregation dashboard built for engineering teams managing distributed Kubernetes clusters.',
+    summary: 'A high-density control plane interface concept for DevOps teams debugging distributed container incidents and trace telemetry.',
     overview:
-      'Orbit needed a modern control center for DevOps teams to debug microservice incidents in seconds. The dashboard monitors thousands of metrics per second, correlating anomalies with code deployments.',
+      'Orbit explores information density in developer tooling. The prototype demonstrates how thousands of log lines and anomaly signals can be structured for instant scanning.',
+    objectives:
+      'Enable rapid incident triage through keyboard-driven command navigation, intelligent alert correlation, and zero-latency log filtering.',
     challenge:
-      'DevOps engineers were overwhelmed by wall-of-text logs. The client needed a platform that prioritizes critical alerts while enabling instant SQL-like query filtering across billions of log lines.',
-    approach:
-      'We designed high-density dark mode control surfaces with intelligent syntax highlighting, keyboard command shortcuts (Cmd+K), and custom sparkline charts that render tens of thousands of data points smoothly.',
-    designAndDev:
-      'Built on Next.js 14 with custom WebAssembly log parser plugins, Tailwind CSS for strict color tokenization, and WebSocket connections for sub-second event streaming.',
+      'Dense data dashboards frequently become unreadable on standard laptop displays if typography scales and contrast ratios are not rigorously tuned.',
+    designDecisions:
+      'Dark mode control surfaces following WCAG AAA contrast standards, syntax-highlighted log streams, and strict optical column alignment.',
+    engineeringApproach:
+      'Client-side log stream parsing simulated with WebAssembly modules to achieve instantaneous keyword search across thousands of log rows.',
     keyFeatures: [
-      'Sub-second query filtering across distributed server clusters',
-      'Keyboard-first command palette for lightning incident triage',
-      'Configurable alert routing with PagerDuty and Slack integrations',
-      'Automated root-cause suggestion engine powered by trace correlation',
+      'Keyboard-first command palette (Cmd+K) for rapid service navigation',
+      'Sub-second query filtering across simulated distributed log events',
+      'Configurable alert severity thresholds with status pill indicators',
+      'Interactive latency distribution charts with zoomable time windows',
     ],
-    techStack: ['Next.js 14', 'TypeScript', 'WebAssembly', 'Tailwind CSS', 'Go Backend', 'PostgreSQL'],
-    metrics: [
-      { label: 'Mean Time to Resolution (MTTR)', value: '-42%' },
-      { label: 'Dashboard Query Latency', value: '< 140ms' },
-      { label: 'Active Daily Engineering Teams', value: '3,200+' },
+    deliverables: [
+      'High-Density Control Plane Interface Prototype',
+      'Developer Theme Token Guide (Dark Surface System)',
+      'Telemetry Data Visualization Specifications',
+      'Keyboard Navigation Shortcuts Matrix',
     ],
-    testimonial: {
-      quote: 'Orbit has become our engineering team’s mission control. The speed and visual clarity during high-stress production outages is peerless.',
-      author: 'Kavita Patel',
-      title: 'VP of Infrastructure, Orbit Systems',
-    },
+    techStack: ['Next.js 14', 'TypeScript', 'Tailwind CSS', 'SVG Canvas', 'Zod'],
+    benchmarks: [
+      { label: 'Query Filter Latency', value: '< 120ms' },
+      { label: 'Render Refresh Rate', value: '60 FPS' },
+      { label: 'Lighthouse Performance', value: '98/100' },
+    ],
   },
   {
     id: 'terra',
     slug: 'terra',
     title: 'Terra',
-    client: 'Terra Ecological Capital',
+    typology: 'Ecological Restoration & Carbon Accounting Platform Concept',
     industry: 'Climate Tech & Sustainable Enterprise',
     category: 'websites',
     categoryLabel: 'Digital Platform & Brand',
     year: '2024',
+    isConceptual: true,
     thumbnail: 'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=80',
     heroImage: 'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1600&q=85',
     secondaryImage: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1400&q=80',
-    summary: 'A verified carbon offset exchange and corporate sustainability tracking platform connecting institutions with vetted reforestation projects.',
+    summary: 'An institutional sustainability portal concept combining geospatial reforestation tracking, biomass telemetry, and transparent accounting.',
     overview:
-      'Terra bridges institutional capital with verified ecological restoration projects. They required a public website and investor portal that radiated scientific rigor, verifiable carbon accounting, and ecological stewardship.',
+      'Terra investigates how scientific environmental data and carbon accounting can be communicated with institutional gravitas to corporate sustainability officers.',
+    objectives:
+      'Bridge complex satellite biomass measurements with intuitive public-facing impact dashboards that withstand rigorous stakeholder scrutiny.',
     challenge:
-      'Climate tech websites often stumble between dry bureaucratic data and superficial marketing claims. Terra needed an authoritative digital platform that would inspire institutional trust among Fortune 500 sustainability heads.',
-    approach:
-      'We established an earth-informed editorial palette paired with satellite imagery overlays, interactive reforestation map explorers, and transparent carbon ledger visualizations that update in real time.',
-    designAndDev:
-      'The platform utilizes Next.js with server-side rendered GIS map components, high-efficiency SVG diagrams, and dynamic carbon credit certificate generators.',
+      'Environmental platforms often oscillate between superficial greenwashing marketing and dry, impenetrable academic spreadsheets.',
+    designDecisions:
+      'Earthy neutrals paired with deep Midnight Navy structures and Powder Blue information surfaces that convey scientific rigor and institutional poise.',
+    engineeringApproach:
+      'Server-side rendered interactive SVG GIS components displaying regional biomass recovery layers with zero heavy external map SDK bloat.',
     keyFeatures: [
-      'Interactive geospatial project explorer with satellite biomass verification',
-      'Live institutional carbon retirement certificates with cryptographic hash',
-      'Enterprise ESG reporting calculator compliant with GHG Protocol',
-      'Quarterly biodiversity impact data room for institutional investors',
+      'Interactive geospatial project explorer prototype with layer toggles',
+      'Verifiable ecological impact metric cards with calculation methodology notes',
+      'Corporate sustainability inquiry module with scope-level calculators',
+      'Printable executive summary PDF generation templates',
     ],
-    techStack: ['Next.js 14', 'Mapbox GL', 'Tailwind CSS', 'Node.js', 'PostgreSQL'],
-    metrics: [
-      { label: 'Institutional Capital Deployed', value: '$24M+' },
-      { label: 'Hectares Reforested Tracked', value: '180,000 ha' },
-      { label: 'Website Trust Perception Lift', value: '+88%' },
+    deliverables: [
+      'Interactive Environmental Platform Prototype',
+      'GIS Data Visualization Component Kit',
+      'Accessible Carbon Accounting Data Table',
+      'Technical SEO & Structured Microdata Spec',
     ],
-    testimonial: {
-      quote: 'STUP delivered a platform that gave our scientific models the executive gravitas needed to close sovereign wealth partners.',
-      author: 'Julian Sterling',
-      title: 'Managing Partner, Terra Ecological',
-    },
+    techStack: ['Next.js 14', 'TypeScript', 'Tailwind CSS', 'SVG Cartography', 'Node.js'],
+    benchmarks: [
+      { label: 'Core Web Vitals LCP', value: '0.74s' },
+      { label: 'Asset Payload Size', value: '88 KB' },
+      { label: 'WCAG Compliance', value: 'Level AA' },
+    ],
   },
   {
     id: 'atelier',
     slug: 'atelier',
     title: 'Atelier',
-    client: 'Atelier Creative Agency Tokyo',
-    industry: 'Creative Direction & Contemporary Design',
+    typology: 'Avant-Garde Design Monograph & Portfolio Concept',
+    industry: 'Contemporary Spatial Design & Photography',
     category: 'branding',
     categoryLabel: 'Brand Identity & Web Monograph',
-    year: '2023',
+    year: '2024',
+    isConceptual: true,
     thumbnail: 'https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=1200&q=80',
     heroImage: 'https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=1600&q=85',
     secondaryImage: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1400&q=80',
-    summary: 'A minimalist digital portfolio and typographic brand identity for a Tokyo-based spatial design and photography collective.',
+    summary: 'A minimalist digital portfolio exploring asymmetric grid composition, generous negative space, and disciplined typographic hierarchies.',
     overview:
-      'Atelier produces avant-garde runway installations and spatial brand experiences in Tokyo and Milan. They challenged our studio to design a website that feels more like an art gallery exhibition catalog than a traditional agency site.',
+      'Atelier was created to test the boundaries of digital editorial design. The concept treats web pages like exhibition catalogs for physical galleries.',
+    objectives:
+      'Create an unforgettable visual identity that honors Japanese minimalist spatial principles (Ma) while maintaining strict mobile performance.',
     challenge:
-      'Creating an unforgettable visual identity that honors Japanese minimalist design principles of Ma (negative space) while maintaining strict web accessibility and mobile usability.',
-    approach:
+      'Asymmetric and non-standard grid compositions often degrade severely on mobile screens without deliberate responsive breakpoint rules.',
+    designDecisions:
       'We composed a monochrome canvas punctuated by warm sunflower-yellow highlights, bespoke vertical typography treatments, smooth fluid page transitions, and tactile hover states.',
-    designAndDev:
-      'Custom CSS grid layouts with dynamic aspect ratio preservation, custom audio cues for gallery interactions (with user mute toggle), and ultra-smooth barba-style Next.js navigation transitions.',
+    engineeringApproach:
+      'Carefully calibrated CSS grid rules with dynamic aspect ratio preservation ensuring visual stability across mobile, tablet, and desktop screens.',
     keyFeatures: [
-      'Asymmetrical multi-column portfolio index with filter by season',
-      'Interactive project light-table for client presentation curations',
-      'Dual-language Japanese / English typographic balancing',
-      'Zero-layout-shift image gallery with lazy-loaded blur hashes',
+      'Asymmetric multi-column portfolio index with category filter toggles',
+      'Zero-layout-shift image gallery with responsive srcset definitions',
+      'Curated typographic pairing of Playfair Display and Manrope',
+      'Accessible keyboard-navigable image inspection dialogs',
     ],
-    techStack: ['Next.js 14', 'Framer Motion', 'Tailwind CSS', 'TypeScript'],
-    metrics: [
-      { label: 'Awwwards Recognition', value: 'Site of the Day' },
-      { label: 'International Inquiries', value: '+140%' },
-      { label: 'Mobile Bounce Rate', value: '21%' },
+    deliverables: [
+      'Digital Monograph Website Prototype',
+      'Custom Layout Grid & Responsive Breakpoints Matrix',
+      'Digital Brand Token Architecture',
+      'Accessibility Audit & Focus Management Spec',
     ],
-    testimonial: {
-      quote: 'The typography, the silence between the images, the sheer refinement of the code—it is pure poetry in digital form.',
-      author: 'Kenji Takahashi',
-      title: 'Founder & Creative Director, Atelier',
-    },
+    techStack: ['Next.js 14', 'CSS Grid', 'Tailwind CSS', 'TypeScript', 'WebP'],
+    benchmarks: [
+      { label: 'Layout Shift (CLS)', value: '0.000' },
+      { label: 'Time to First Byte (TTFB)', value: '64ms' },
+      { label: 'Lighthouse SEO', value: '100/100' },
+    ],
   },
   {
     id: 'flowspace',
     slug: 'flowspace',
     title: 'Flowspace',
-    client: 'Flowspace Labs',
+    typology: 'Calm Productivity Workspace Interface Concept',
     industry: 'Productivity Software & Distributed Work',
     category: 'applications',
     categoryLabel: 'Productivity App & Desktop Suite',
     year: '2024',
+    isConceptual: true,
     thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80',
     heroImage: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=85',
     secondaryImage: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1400&q=80',
-    summary: 'A distraction-free collaborative workspace combining deep work sessions, asynchronous voice notes, and contextual knowledge graphs.',
+    summary: 'A distraction-free web workspace prototype designed for focused asynchronous writing, sprint planning, and knowledge management.',
     overview:
-      'Flowspace is on a mission to eliminate notification fatigue for remote product teams. They engaged us to engineer a lightning-fast web companion and marketing portal that showcases their tranquil workflow philosophy.',
+      'Flowspace explores the aesthetic of "calm software"—interfaces engineered to reduce notification anxiety and support prolonged periods of deep creative concentration.',
+    objectives:
+      'Demonstrate that web productivity tools can feel as fast and lightweight as native desktop applications through local-first state patterns.',
     challenge:
-      'Competing against entrenched workplace messaging giants by demonstrating that calm, focused asynchronous work yields superior creative output.',
-    approach:
-      'We crafted an interactive in-browser preview where prospective users can test the keyboard-driven workflow without signing up. The aesthetic embraces soothing powder blues and deep midnight navy backgrounds.',
-    designAndDev:
-      'Engineered with Next.js 14, optimistic UI updates, local-first IndexedDB storage, and end-to-end type safety across the entire API boundary.',
+      'Rich text editing and multi-panel workspaces often introduce sluggish keyboard response and bloated JavaScript bundles.',
+    designDecisions:
+      'Low-saturation powder blue backgrounds, generous padding around text columns, and distraction-free collapsible control panes.',
+    engineeringApproach:
+      'Optimistic state updates paired with client-side IndexedDB caching to ensure zero typing latency and instant search filtering.',
     keyFeatures: [
-      'Interactive live product sandbox on the landing page',
-      'Keyboard-first command center with universal search across notes',
-      'Asynchronous voice waveform player with AI transcript generation',
-      'Encrypted end-to-end sync across Mac, Windows, and Web',
+      'Keyboard-driven document switcher and command launcher',
+      'Minimalist markdown writing canvas with typography focus mode',
+      'Lightweight local search engine indexing local documents',
+      'Collapsible context sidebar with workspace navigation hierarchy',
     ],
-    techStack: ['Next.js 14', 'TypeScript', 'Tailwind CSS', 'IndexedDB', 'Web Audio API'],
-    metrics: [
-      { label: 'Beta Signups on Launch Day', value: '18,500+' },
-      { label: 'Daily Session Length', value: '3.4 hours' },
-      { label: 'User Satisfaction CSAT', value: '96%' },
+    deliverables: [
+      'Interactive Workspace Prototype Codebase',
+      'Ergonomic UI System & Keyboard Shortcuts Spec',
+      'State Management & Local Cache Architecture',
+      'Performance Profiling Report',
     ],
-    testimonial: {
-      quote: 'STUP built an onboarding experience so smooth that our viral conversion doubled on Product Hunt launch day.',
-      author: 'Evelyn Reed',
-      title: 'Co-Founder & CEO, Flowspace',
-    },
+    techStack: ['Next.js 14', 'TypeScript', 'Tailwind CSS', 'IndexedDB', 'Zod'],
+    benchmarks: [
+      { label: 'Keypress Input Latency', value: '< 8ms' },
+      { label: 'Search Query Speed', value: '< 25ms' },
+      { label: 'Lighthouse Performance', value: '99/100' },
+    ],
   },
 ];

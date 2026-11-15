@@ -18,25 +18,25 @@ export default function PlansPage() {
   return (
     <div className="flex flex-col pt-28 sm:pt-36">
       {/* HERO SECTION */}
-      <section className="pb-16 sm:pb-20 border-b border-slate-200/70">
+      <section className="pb-12 sm:pb-14 border-b border-slate-200/70">
         <div className="max-w-site mx-auto px-5 sm:px-8">
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy mb-3">
               <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
               PREDICTABLE INVESTMENT
             </span>
-            <h1 className="font-display text-4xl sm:text-6xl lg:text-[68px] leading-[1.08] tracking-[-0.025em] text-navy font-bold text-balance">
+            <h1 className="font-display text-4xl sm:text-5xl lg:text-[62px] leading-[1.1] tracking-[-0.025em] text-navy font-bold text-balance">
               Transparent packages tailored to your scale.
             </h1>
-            <p className="mt-6 font-sans text-lg sm:text-xl text-ink-body leading-relaxed text-balance">
+            <p className="mt-4 font-sans text-base sm:text-lg text-ink-body leading-relaxed text-balance">
               Clear deliverables, fixed pricing, and zero agency markups. Every plan is engineered with Next.js 14, responsive typography, and complete intellectual property ownership.
             </p>
 
             {/* Clarification banner */}
-            <div className="mt-8 p-4 bg-powder-soft/60 border border-powder/60 rounded-sm flex items-center gap-3 max-w-2xl">
+            <div className="mt-6 p-3.5 bg-powder-soft/60 border border-powder/60 rounded-sm flex items-center gap-2.5 max-w-2xl">
               <span className="w-2 h-2 rounded-full bg-sunflower shrink-0" />
               <p className="font-sans text-xs text-navy leading-relaxed">
-                <strong>Investment Structure:</strong> All quoted package rates are one-time project investments tied to milestone deliverables. Ongoing maintenance retainers are optional and billed monthly.
+                <strong>Investment Structure:</strong> Quoted package rates are fixed one-time milestone investments. Cloud hosting fees and optional monthly maintenance retainers are detailed below.
               </p>
             </div>
           </div>
@@ -44,9 +44,9 @@ export default function PlansPage() {
       </section>
 
       {/* PRICING CARDS GRID */}
-      <section className="py-20 bg-surface-bg">
+      <section className="py-14 sm:py-18 bg-surface-bg">
         <div className="max-w-site mx-auto px-5 sm:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {pricingPlans.map((plan) => (
               <PricingCard key={plan.id} plan={plan} />
             ))}
@@ -61,9 +61,9 @@ export default function PlansPage() {
       </section>
 
       {/* DETAILED FEATURE COMPARISON TABLE */}
-      <section className="py-20 bg-white border-y border-slate-200/70">
+      <section className="py-14 sm:py-18 bg-white border-y border-slate-200/70">
         <div className="max-w-site mx-auto px-5 sm:px-8">
-          <div className="mb-14">
+          <div className="mb-10">
             <SectionHeading
               eyebrow="DETAILED AUDIT"
               title="Compare all package capabilities side-by-side."
@@ -129,14 +129,14 @@ export default function PlansPage() {
       </section>
 
       {/* PRICING FAQS */}
-      <section className="py-20 bg-surface-bg">
+      <section className="py-14 sm:py-18 bg-surface-bg">
         <div className="max-w-site mx-auto px-5 sm:px-8">
           <div className="max-w-3xl mx-auto">
             <SectionHeading
               eyebrow="PRICING TRANSPARENCY"
               title="Frequently asked questions about billing and scope."
               align="center"
-              className="mb-12 text-center"
+              className="mb-10 text-center"
             />
             <Accordion items={pricingFaqs} />
           </div>

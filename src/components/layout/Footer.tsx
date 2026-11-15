@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ArrowUpRight, Github, Linkedin, Twitter, Dribbble } from 'lucide-react';
 import { agencyConfig } from '@/data/agency';
 import { navigationLinks, footerServices, footerCompany } from '@/data/navigation';
+import { Logo } from '@/components/ui/Logo';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -25,14 +26,7 @@ export function Footer() {
           {/* Agency Brand & Mission Column */}
           <div className="lg:col-span-4 flex flex-col justify-between">
             <div>
-              <Link href="/" className="inline-block group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunflower rounded-sm">
-                <span className="font-display text-3xl font-bold tracking-tight text-white flex items-center">
-                  STUP<span className="text-sunflower inline-block ml-0.5">.</span>
-                </span>
-                <span className="font-ui text-[10px] uppercase tracking-[0.24em] text-powder block -mt-1">
-                  Studio
-                </span>
-              </Link>
+              <Logo isDark={true} size="lg" />
               <p className="font-sans text-sm text-powder/80 mt-5 leading-relaxed max-w-sm">
                 Independent digital studio and technology consultancy. We design, engineer and scale bespoke digital products, web platforms, and mobile experiences for ambitious organizations worldwide.
               </p>

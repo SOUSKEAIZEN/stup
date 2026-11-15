@@ -18,17 +18,17 @@ export default function ContactPage() {
   return (
     <div className="flex flex-col pt-28 sm:pt-36">
       {/* HERO SECTION */}
-      <section className="pb-12 sm:pb-16 border-b border-slate-200/70">
+      <section className="pb-10 sm:pb-12 border-b border-slate-200/70">
         <div className="max-w-site mx-auto px-5 sm:px-8">
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy mb-3">
+            <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy mb-2.5">
               <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
               START A CONVERSATION
             </span>
-            <h1 className="font-display text-4xl sm:text-6xl lg:text-[68px] leading-[1.08] tracking-[-0.025em] text-navy font-bold text-balance">
+            <h1 className="font-display text-4xl sm:text-5xl lg:text-[62px] leading-[1.1] tracking-[-0.025em] text-navy font-bold text-balance">
               Let&apos;s build something meaningful.
             </h1>
-            <p className="mt-6 font-sans text-lg sm:text-xl text-ink-body leading-relaxed text-balance">
+            <p className="mt-4 font-sans text-base sm:text-lg text-ink-body leading-relaxed text-balance">
               Tell us about your project, and let&apos;s explore how we can bring your idea to life. We review all submissions thoroughly and reply with actionable technical feedback.
             </p>
           </div>
@@ -36,7 +36,7 @@ export default function ContactPage() {
       </section>
 
       {/* MAIN CONTACT SECTION: FORM + STUDIO DETAILS */}
-      <section className="py-16 sm:py-24 bg-surface-bg">
+      <section className="py-12 sm:py-18 bg-surface-bg">
         <div className="max-w-site mx-auto px-5 sm:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* Left Column: Interactive Form */}

@@ -16,30 +16,28 @@ export interface CaseStudy {
   id: string;
   slug: string;
   title: string;
-  client: string;
+  typology: string; // e.g. "Fintech Interface Prototype"
   industry: string;
   category: ProjectCategory;
   categoryLabel: string;
   year: string;
+  isConceptual: true;
   heroImage: string;
   thumbnail: string;
   secondaryImage: string;
   summary: string;
   overview: string;
+  objectives: string;
   challenge: string;
-  approach: string;
-  designAndDev: string;
+  designDecisions: string;
+  engineeringApproach: string;
   keyFeatures: string[];
+  deliverables: string[];
   techStack: string[];
-  metrics: {
+  benchmarks: {
     label: string;
     value: string;
   }[];
-  testimonial?: {
-    quote: string;
-    author: string;
-    title: string;
-  };
 }
 
 export interface PricingPlan {
@@ -51,8 +49,11 @@ export interface PricingPlan {
   billingPeriod: string;
   targetAudience: string;
   description: string;
+  pageScope: string;
   features: string[];
-  notIncluded?: string[];
+  deliverables: string[];
+  exclusions: string[];
+  maintenanceNote: string;
   ctaLabel: string;
   popular?: boolean;
 }

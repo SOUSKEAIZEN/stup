@@ -52,21 +52,21 @@ export default function ServicesPage() {
   return (
     <div className="flex flex-col pt-28 sm:pt-36">
       {/* HERO SECTION */}
-      <section className="pb-16 sm:pb-24 border-b border-slate-200/70">
+      <section className="pb-12 sm:pb-16 border-b border-slate-200/70">
         <div className="max-w-site mx-auto px-5 sm:px-8">
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy mb-3">
               <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
               END-TO-END CAPABILITIES
             </span>
-            <h1 className="font-display text-4xl sm:text-6xl lg:text-[68px] leading-[1.08] tracking-[-0.025em] text-navy font-bold text-balance">
+            <h1 className="font-display text-4xl sm:text-5xl lg:text-[62px] leading-[1.1] tracking-[-0.025em] text-navy font-bold text-balance">
               Digital services designed around your next big move.
             </h1>
-            <p className="mt-6 font-sans text-lg sm:text-xl text-ink-body leading-relaxed text-balance">
+            <p className="mt-4 font-sans text-base sm:text-lg text-ink-body leading-relaxed text-balance">
               From first concept to final product, we bring strategy, design and engineering together. We partner with leaders to craft digital ecosystems that scale gracefully.
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-6 flex flex-wrap gap-3">
               <Button
                 href="/contact"
                 variant="sunflower"
@@ -81,6 +81,7 @@ export default function ServicesPage() {
                 variant="secondary"
                 size="md"
                 icon={<ArrowRight className="w-4 h-4" />}
+                className="text-xs"
               >
                 View Case Studies
               </Button>
@@ -91,9 +92,9 @@ export default function ServicesPage() {
 
       {/* QUICK CATEGORY JUMP NAV */}
       <section className="bg-white border-b border-slate-200/70 sticky top-[65px] z-30 shadow-xs">
-        <div className="max-w-site mx-auto px-5 sm:px-8 overflow-x-auto py-3">
+        <div className="max-w-site mx-auto px-5 sm:px-8 overflow-x-auto py-2.5">
           <div className="flex items-center gap-6 min-w-max text-xs font-ui font-semibold uppercase tracking-wider text-ink-muted">
-            <span className="text-navy font-bold">Jump to Section:</span>
+            <span className="text-navy font-bold">Jump to Domain:</span>
             {serviceCategories.map((cat) => (
               <a
                 key={cat.id}
@@ -108,7 +109,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CATEGORY SECTIONS */}
-      <div className="space-y-24 py-20">
+      <div className="space-y-16 py-14 sm:py-20">
         {serviceCategories.map((category) => (
           <section
             key={category.id}
@@ -116,19 +117,19 @@ export default function ServicesPage() {
             className="scroll-mt-32 max-w-site mx-auto px-5 sm:px-8"
           >
             {/* Category Header */}
-            <div className="border-b border-slate-200 pb-8 mb-12">
-              <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.25em] text-navy block mb-2">
+            <div className="border-b border-slate-200 pb-5 mb-8">
+              <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.25em] text-navy block mb-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
                 {category.eyebrow}
               </span>
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-end">
                 <div className="lg:col-span-6">
-                  <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy">
+                  <h2 className="font-display text-2xl sm:text-3xl font-bold text-navy">
                     {category.title}
                   </h2>
                 </div>
                 <div className="lg:col-span-6">
-                  <p className="font-sans text-base text-ink-body leading-relaxed">
+                  <p className="font-sans text-sm text-ink-body leading-relaxed">
                     {category.description}
                   </p>
                 </div>
@@ -136,41 +137,41 @@ export default function ServicesPage() {
             </div>
 
             {/* Service Detailed Cards */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
               {category.items.map((service) => {
                 const IconComponent = iconMap[service.iconName] || Globe;
 
                 return (
                   <div
                     key={service.id}
-                    className="bg-white border border-slate-200/90 rounded-sm p-8 flex flex-col justify-between transition-all duration-300 hover:border-sunflower/80 hover:shadow-card group"
+                    className="bg-white border border-slate-200/90 rounded-sm p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:border-sunflower/80 hover:shadow-card group"
                   >
                     <div>
                       {/* Icon */}
-                      <div className="w-12 h-12 rounded-sm bg-powder-soft flex items-center justify-center text-navy mb-6 group-hover:bg-navy group-hover:text-sunflower transition-colors">
-                        <IconComponent className="w-6 h-6 stroke-[1.75]" />
+                      <div className="w-10 h-10 rounded-sm bg-powder-soft flex items-center justify-center text-navy mb-4 group-hover:bg-navy group-hover:text-sunflower transition-colors">
+                        <IconComponent className="w-5 h-5 stroke-[1.75]" />
                       </div>
 
-                      <h3 className="font-display text-2xl font-bold text-navy group-hover:text-navy-deep transition-colors">
+                      <h3 className="font-display text-xl font-bold text-navy group-hover:text-navy-deep transition-colors">
                         {service.title}
                       </h3>
 
-                      <p className="font-sans text-sm text-ink-body mt-4 leading-relaxed">
+                      <p className="font-sans text-xs sm:text-sm text-ink-body mt-2.5 leading-relaxed">
                         {service.fullDescription}
                       </p>
 
                       {/* Deliverables List */}
-                      <div className="mt-6 pt-6 border-t border-slate-100">
-                        <span className="font-ui text-xs font-semibold uppercase tracking-wider text-ink-muted block mb-3">
-                          Typical Deliverables
+                      <div className="mt-5 pt-4 border-t border-slate-100">
+                        <span className="font-ui text-[11px] font-bold uppercase tracking-wider text-navy block mb-2">
+                          Standard Deliverables
                         </span>
-                        <ul className="space-y-2 text-xs font-sans text-ink-body">
+                        <ul className="space-y-1.5 text-xs font-sans text-ink-body">
                           {service.deliverables.map((item, dIdx) => (
                             <li key={dIdx} className="flex items-center gap-2">
                               <span className="p-0.5 rounded-full bg-sunflower/25 text-navy shrink-0">
                                 <Check className="w-3 h-3 stroke-[2.5]" />
                               </span>
-                              <span>{item}</span>
+                              <span className="leading-snug">{item}</span>
                             </li>
                           ))}
                         </ul>
@@ -178,8 +179,8 @@ export default function ServicesPage() {
                     </div>
 
                     {/* Tech Stacks & Action */}
-                    <div className="mt-8 pt-6 border-t border-slate-100">
-                      <div className="flex flex-wrap gap-1.5 mb-4">
+                    <div className="mt-6 pt-4 border-t border-slate-100">
+                      <div className="flex flex-wrap gap-1.5 mb-3">
                         {service.technologies.map((tech, tIdx) => (
                           <span
                             key={tIdx}
@@ -207,30 +208,30 @@ export default function ServicesPage() {
       </div>
 
       {/* WORKING PROCESS SECTION */}
-      <section className="py-20 bg-white border-t border-slate-200/70">
+      <section className="py-14 sm:py-20 bg-white border-t border-slate-200/70">
         <div className="max-w-site mx-auto px-5 sm:px-8">
           <SectionHeading
             eyebrow="EXECUTION CADENCE"
             title="How we work alongside your team."
             description="Our engagement model emphasizes continuous feedback loops, complete code ownership, and transparent engineering velocity."
-            className="mb-14"
+            className="mb-10"
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {agencyConfig.processSteps.map((step) => (
               <div
                 key={step.step}
-                className="p-7 rounded-sm bg-surface-bg border border-slate-200/80 flex flex-col justify-between"
+                className="p-6 rounded-sm bg-surface-bg border border-slate-200/80 flex flex-col justify-between"
               >
                 <div>
-                  <span className="font-mono text-xs font-bold text-navy block mb-3 flex items-center gap-1.5">
+                  <span className="font-mono text-xs font-bold text-navy block mb-2 flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
                     STAGE {step.step}
                   </span>
-                  <h3 className="font-display text-xl font-bold text-navy mb-2">
+                  <h3 className="font-display text-lg font-bold text-navy mb-1.5">
                     {step.name}
                   </h3>
-                  <p className="font-sans text-xs sm:text-sm text-ink-body leading-relaxed mt-2">
+                  <p className="font-sans text-xs text-ink-body leading-relaxed mt-1">
                     {step.description}
                   </p>
                 </div>
@@ -241,14 +242,14 @@ export default function ServicesPage() {
       </section>
 
       {/* FREQUENTLY ASKED QUESTIONS */}
-      <section className="py-20 bg-surface-bg border-t border-slate-200/70">
+      <section className="py-14 sm:py-20 bg-surface-bg border-t border-slate-200/70">
         <div className="max-w-site mx-auto px-5 sm:px-8">
           <div className="max-w-3xl mx-auto">
             <SectionHeading
               eyebrow="COMMON QUESTIONS"
               title="Frequently asked questions about our services."
               align="center"
-              className="mb-12 text-center"
+              className="mb-10 text-center"
             />
             <Accordion items={generalFaqs} />
           </div>
