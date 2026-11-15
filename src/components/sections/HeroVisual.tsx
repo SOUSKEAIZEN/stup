@@ -1,74 +1,97 @@
 import React from 'react';
-import Image from 'next/image';
+import { Layers, Terminal, Sparkles, Code2, Cpu } from 'lucide-react';
 
 export function HeroVisual() {
   return (
     <div className="relative w-full max-w-lg lg:max-w-none mx-auto select-none">
-      {/* Sophisticated Navy-to-Powder-Blue gradient card frame */}
-      <div className="relative rounded-md p-3 sm:p-4 bg-gradient-to-br from-navy via-navy-deep to-[#1c2c4e] border border-powder/20 shadow-card overflow-hidden">
-        {/* Subtle interior glow */}
+      {/* 60% Powder Blue & Soft Surface Architectural Canvas Frame */}
+      <div className="relative rounded-md p-4 sm:p-5 bg-gradient-to-br from-powder-soft via-white to-powder/20 border border-powder/70 shadow-card overflow-hidden">
+        {/* Subtle ambient lighting */}
         <div
-          className="absolute -top-16 -right-16 w-48 h-48 bg-powder/15 rounded-full blur-2xl pointer-events-none"
+          className="absolute -top-12 -right-12 w-48 h-48 bg-powder/30 rounded-full blur-2xl pointer-events-none"
           aria-hidden="true"
         />
         <div
-          className="absolute -bottom-16 -left-16 w-40 h-40 bg-sunflower/10 rounded-full blur-2xl pointer-events-none"
+          className="absolute -bottom-10 -left-10 w-36 h-36 bg-sunflower/15 rounded-full blur-2xl pointer-events-none"
           aria-hidden="true"
         />
 
-        {/* Primary Desktop Website Mockup Frame */}
-        <div className="relative bg-white rounded-sm overflow-hidden border border-slate-200/90 shadow-sm">
-          {/* Minimalist Browser Chrome */}
-          <div className="bg-surface-bg border-b border-slate-200/80 px-3 py-1.5 flex items-center justify-between">
-            <div className="flex items-center gap-1">
-              <span className="w-2 h-2 rounded-full bg-slate-300" />
-              <span className="w-2 h-2 rounded-full bg-slate-300" />
-              <span className="w-2 h-2 rounded-full bg-slate-300" />
+        {/* Studio System Specimen Header */}
+        <div className="flex items-center justify-between pb-3 mb-3 border-b border-powder/50 text-[11px] font-ui">
+          <div className="flex items-center gap-1.5 text-navy font-semibold">
+            <span className="w-2 h-2 rounded-full bg-sunflower" />
+            <span>STUP / ARCHITECTURAL CANVAS</span>
+          </div>
+          <span className="text-ink-muted font-mono text-[10px]">v2.4 · 60fps</span>
+        </div>
+
+        {/* Main Interface Composition Layer (Editorial Wireframe & Layout Grid) */}
+        <div className="bg-white rounded-sm border border-slate-200/90 p-4 shadow-xs">
+          {/* Top Bar Specimen */}
+          <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div className="flex items-center gap-2">
+              <span className="font-display text-sm font-bold text-navy">Playfair Display</span>
+              <span className="text-[10px] font-mono text-ink-muted">48px / 1.14</span>
             </div>
-            <div className="px-2.5 py-0.5 bg-white border border-slate-200/70 rounded-xs text-[10px] font-ui text-ink-muted">
-              stupstudio.com/work/preview
-            </div>
-            <div className="w-2 h-2 rounded-full bg-sunflower" />
+            <span className="px-2 py-0.5 rounded-xs bg-powder-soft text-[10px] font-ui font-semibold text-navy">
+              Editorial Type
+            </span>
           </div>
 
-          {/* Desktop Web Preview Image */}
-          <div className="relative aspect-[16/10] w-full bg-slate-100 overflow-hidden">
-            <Image
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80"
-              alt="Digital Interface Preview"
-              fill
-              priority
-              sizes="(max-width: 1024px) 100vw, 550px"
-              className="object-cover"
-            />
+          {/* Grid Specimen Rows */}
+          <div className="mt-3.5 space-y-2.5">
+            <div className="grid grid-cols-12 gap-2 text-[10px] font-mono text-ink-muted">
+              <div className="col-span-8 p-2.5 rounded-xs bg-surface-bg border border-slate-100 flex items-center justify-between">
+                <span className="text-navy font-medium">Layout Grid Core</span>
+                <span className="text-[9px] text-ink-muted">12-col / fluid</span>
+              </div>
+              <div className="col-span-4 p-2.5 rounded-xs bg-powder-soft/50 border border-powder/30 flex items-center justify-center text-navy font-semibold">
+                30% Navy
+              </div>
+            </div>
+
+            <div className="grid grid-cols-12 gap-2 text-[10px] font-mono">
+              <div className="col-span-4 p-2 rounded-xs bg-powder-soft border border-powder/40 flex items-center justify-center text-navy font-semibold text-[10px]">
+                60% Powder
+              </div>
+              <div className="col-span-8 p-2 rounded-xs bg-surface-bg border border-slate-100 flex items-center justify-between px-3">
+                <span className="text-navy text-[11px] font-sans font-medium">Accessible WCAG AA</span>
+                <span className="text-sunflower font-bold">10% Accent</span>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Secondary Overlapping Mobile Showcase Frame */}
-        <div className="absolute -bottom-2 right-4 sm:right-6 w-32 sm:w-36 bg-white rounded-sm overflow-hidden border-2 border-navy-deep shadow-float">
-          {/* Mobile Phone Top Bar */}
-          <div className="bg-navy px-2 py-1 flex items-center justify-between">
-            <div className="w-6 h-1 rounded-full bg-powder/40 mx-auto" />
+        {/* Overlapping 30% Midnight Navy Code Specimen Card */}
+        <div className="mt-3.5 bg-navy rounded-sm p-3.5 sm:p-4 text-white border border-navy-deep shadow-float relative z-10">
+          <div className="flex items-center justify-between pb-2 mb-2 border-b border-navy-deep text-[11px] font-mono text-powder/80">
+            <div className="flex items-center gap-1.5">
+              <Code2 className="w-3.5 h-3.5 text-sunflower" />
+              <span>studio-engine.ts</span>
+            </div>
+            <span className="text-[10px] text-powder/60">Strict TypeScript</span>
           </div>
-          {/* Mobile Preview Image */}
-          <div className="relative aspect-[9/16] w-full bg-slate-100 overflow-hidden">
-            <Image
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=80"
-              alt="Mobile Responsive Interface Preview"
-              fill
-              sizes="150px"
-              className="object-cover"
-            />
-          </div>
-        </div>
 
-        {/* Bottom Studio Capability Pill */}
-        <div className="mt-3 pt-2.5 border-t border-navy-light/60 flex items-center justify-between text-[11px] font-ui text-powder/80">
-          <div className="flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
-            <span className="text-white font-medium">Bespoke Digital Platforms</span>
+          <div className="font-mono text-xs text-powder/90 space-y-1 leading-relaxed">
+            <p>
+              <span className="text-sunflower">const</span> studio = {'{'}
+            </p>
+            <p className="pl-3 text-slate-300">
+              stack: <span className="text-powder">&apos;Next.js 14 & React 18&apos;</span>,
+            </p>
+            <p className="pl-3 text-slate-300">
+              styling: <span className="text-powder">&apos;Tailwind & Design Tokens&apos;</span>,
+            </p>
+            <p className="pl-3 text-slate-300">
+              delivery: <span className="text-sunflower">&apos;Zero-bloat & Type-safe&apos;</span>,
+            </p>
+            <p>{'}'};</p>
           </div>
-          <span className="text-powder/60 text-[10px]">Responsive Web & Mobile</span>
+
+          <div className="mt-3 pt-2 border-t border-navy-deep/80 flex items-center justify-between text-[10px] font-ui text-powder/70">
+            <span>Clean Architecture</span>
+            <span className="text-sunflower font-semibold">100% Client Ownership</span>
+          </div>
         </div>
       </div>
     </div>

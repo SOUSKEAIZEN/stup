@@ -66,9 +66,15 @@ export function ProjectCard({ project, priority = false, className }: ProjectCar
           <p className="font-sans text-xs sm:text-sm text-ink-body mt-2.5 line-clamp-2 leading-relaxed">
             {project.summary}
           </p>
+
+          {/* Delivered Capabilities */}
+          <div className="mt-3 pt-2.5 border-t border-slate-100/80 flex items-center gap-1.5 text-[11px] font-ui text-ink-muted">
+            <span className="font-semibold text-navy">Delivered:</span>
+            <span className="truncate">{project.deliverables.slice(0, 2).join(' · ')}</span>
+          </div>
         </div>
 
-        {/* Action Link */}
+        {/* Action Link & Technologies */}
         <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
           <div className="flex flex-wrap gap-1.5">
             {project.techStack.slice(0, 3).map((tech, i) => (

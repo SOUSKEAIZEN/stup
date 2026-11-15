@@ -19,46 +19,46 @@ export const agencyConfig = {
   ],
   differentiators: [
     {
-      title: 'Thoughtful Design',
-      description: 'Restrained, editorial typography and uncluttered layouts focused on clarity and brand distinction.',
+      title: 'Clear Communication',
+      description: 'Direct progress updates and straightforward technical guidance from senior practitioners throughout the engagement.',
     },
     {
-      title: 'Reliable Engineering',
-      description: 'Clean Next.js and TypeScript codebases designed to load quickly and remain easy to maintain.',
+      title: 'Maintainable Development',
+      description: 'Clean Next.js and strict TypeScript codebases designed to load quickly, scale reliably, and remain easy to maintain.',
     },
     {
-      title: 'Transparent Scope',
-      description: 'Clear milestone agreements, defined deliverables, and transparent pricing without unexpected add-ons.',
+      title: 'Responsive Design',
+      description: 'Disciplined editorial typography, fluid layout grids, and WCAG AA accessible contrast engineered for all devices.',
     },
     {
-      title: 'Direct Communication',
-      description: 'Regular progress updates and straightforward technical guidance throughout the project lifecycle.',
+      title: 'Organized Handover',
+      description: 'Complete source repository ownership, structured documentation, and zero proprietary agency lock-in.',
     },
   ],
   processSteps: [
     {
       step: '01',
-      name: 'Discover',
+      name: 'Discovery',
       tagline: 'Define objectives and requirements',
       description: 'Review project scope, target audience, and required functionality to establish clear deliverables.',
     },
     {
       step: '02',
-      name: 'Design',
-      tagline: 'Craft interface layouts and typography',
-      description: 'Create responsive visual wireframes, color systems, and interactive prototypes for review.',
+      name: 'Planning',
+      tagline: 'Architect timelines and wireframes',
+      description: 'Map information architecture, establish milestone timelines, and define technical specifications.',
     },
     {
       step: '03',
-      name: 'Build',
-      tagline: 'Develop and integrate clean code',
-      description: 'Construct the website using modern Next.js and Tailwind with strict attention to responsiveness.',
+      name: 'Design & Development',
+      tagline: 'Craft interface layouts and code',
+      description: 'Engineer responsive interfaces and type-safe Next.js code with strict attention to performance and craft.',
     },
     {
       step: '04',
-      name: 'Launch',
+      name: 'Delivery',
       tagline: 'Verify, test, and hand over',
-      description: 'Conduct cross-device testing, configure domain DNS, and deliver the complete codebase.',
+      description: 'Conduct cross-device testing, configure domain deployment, and provide clean codebase handover.',
     },
   ],
 };

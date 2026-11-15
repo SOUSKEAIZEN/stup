@@ -19,18 +19,14 @@ import {
   Cpu,
   LucideIcon,
 } from 'lucide-react';
-import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Button } from '@/components/ui/Button';
-import { Accordion } from '@/components/ui/Accordion';
 import { FinalCTA } from '@/components/sections/FinalCTA';
 import { serviceCategories } from '@/data/services';
-import { agencyConfig } from '@/data/agency';
-import { generalFaqs } from '@/data/faqs';
 
 export const metadata: Metadata = {
   title: 'Digital Services & Technical Capabilities',
   description:
-    'Comprehensive design, web development, mobile applications, and cloud architecture services delivered by senior engineers and designers.',
+    'Comprehensive design, web development, mobile applications, and technology growth services delivered by senior engineers and designers.',
 };
 
 const iconMap: Record<string, LucideIcon> = {
@@ -52,45 +48,24 @@ export default function ServicesPage() {
   return (
     <div className="flex flex-col">
       {/* HERO SECTION */}
-      <section className="pt-8 sm:pt-12 pb-8 sm:pb-10 border-b border-slate-200/70 bg-gradient-to-b from-powder-soft/40 to-surface-bg">
+      <section className="pt-8 sm:pt-12 pb-8 sm:pb-10 border-b border-slate-200/60 bg-gradient-to-b from-powder-soft/50 via-white to-surface-bg">
         <div className="max-w-site mx-auto px-4 sm:px-6">
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy mb-2.5">
               <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
-              END-TO-END CAPABILITIES
+              SERVICE CATALOGUE
             </span>
             <h1 className="font-display text-3xl sm:text-4xl lg:text-[46px] leading-[1.14] tracking-[-0.025em] text-navy font-bold text-balance">
-              Digital services designed around your next big move.
+              Digital capabilities engineered for business outcomes.
             </h1>
             <p className="mt-3 font-sans text-sm sm:text-base text-ink-body leading-relaxed text-balance">
-              From first concept to final product, we bring strategy, design and engineering together. We partner with leaders to craft digital ecosystems that scale gracefully.
+              Explore our four specialized domains: Design &amp; Creative, Web Development, Application Development, and Technology &amp; Growth. Every engagement includes clear deliverables, defined scopes, and full client code ownership.
             </p>
 
-            <div className="mt-5 flex flex-wrap gap-3">
-              <Button
-                href="/contact"
-                variant="sunflower"
-                size="md"
-                icon={<ArrowUpRight className="w-4 h-4 stroke-[2.2]" />}
-                className="tracking-wider uppercase font-bold text-xs text-navy shadow-xs"
-              >
-                Inquire About a Service
-              </Button>
-              <Button
-                href="/work"
-                variant="secondary"
-                size="md"
-                icon={<ArrowRight className="w-4 h-4" />}
-                className="text-xs"
-              >
-                View Case Studies
-              </Button>
-            </div>
-
-            {/* In-page Domain Filter Jump Pills (Non-sticky, clean flow) */}
-            <div className="mt-7 pt-5 border-t border-slate-200/70 flex flex-wrap items-center gap-2">
+            {/* In-page Domain Navigation Chips */}
+            <div className="mt-6 pt-5 border-t border-slate-200/70 flex flex-wrap items-center gap-2">
               <span className="font-ui text-xs font-bold uppercase tracking-wider text-navy mr-1">
-                Explore Domains:
+                Jump to Domain:
               </span>
               {serviceCategories.map((cat) => (
                 <a
@@ -106,7 +81,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* CATEGORY SECTIONS */}
+      {/* FOUR SERVICE CATEGORIES */}
       <div className="space-y-12 py-10 sm:py-14 bg-surface-bg">
         {serviceCategories.map((category) => (
           <section
@@ -145,7 +120,7 @@ export default function ServicesPage() {
                     className="bg-white border border-slate-200/90 rounded-sm p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:border-sunflower/80 hover:shadow-card group"
                   >
                     <div>
-                      {/* Icon */}
+                      {/* Icon & Title */}
                       <div className="w-10 h-10 rounded-sm bg-powder-soft flex items-center justify-center text-navy mb-4 group-hover:bg-navy group-hover:text-sunflower transition-colors">
                         <IconComponent className="w-5 h-5 stroke-[1.75]" />
                       </div>
@@ -154,14 +129,20 @@ export default function ServicesPage() {
                         {service.title}
                       </h3>
 
-                      <p className="font-sans text-xs sm:text-sm text-ink-body mt-2.5 leading-relaxed">
-                        {service.fullDescription}
-                      </p>
+                      {/* What it includes */}
+                      <div className="mt-3">
+                        <span className="font-ui text-[10px] font-bold uppercase tracking-wider text-ink-muted block mb-1">
+                          What it includes
+                        </span>
+                        <p className="font-sans text-xs sm:text-sm text-ink-body leading-relaxed">
+                          {service.fullDescription}
+                        </p>
+                      </div>
 
-                      {/* Deliverables List */}
+                      {/* What the client receives */}
                       <div className="mt-5 pt-4 border-t border-slate-100">
                         <span className="font-ui text-[11px] font-bold uppercase tracking-wider text-navy block mb-2">
-                          Standard Deliverables
+                          What client receives
                         </span>
                         <ul className="space-y-1.5 text-xs font-sans text-ink-body">
                           {service.deliverables.map((item, dIdx) => (
@@ -176,13 +157,16 @@ export default function ServicesPage() {
                       </div>
                     </div>
 
-                    {/* Tech Stacks & Action */}
+                    {/* Relevant Technologies & Inquire Action */}
                     <div className="mt-6 pt-4 border-t border-slate-100">
-                      <div className="flex flex-wrap gap-1.5 mb-3">
+                      <span className="font-ui text-[10px] font-bold uppercase tracking-wider text-ink-muted block mb-2">
+                        Relevant Technologies
+                      </span>
+                      <div className="flex flex-wrap gap-1.5 mb-4">
                         {service.technologies.map((tech, tIdx) => (
                           <span
                             key={tIdx}
-                            className="px-2 py-0.5 rounded-sm bg-surface-bg text-ink-muted font-ui text-[11px]"
+                            className="px-2 py-0.5 rounded-sm bg-surface-bg text-ink-muted font-ui text-[11px] border border-slate-100"
                           >
                             {tech}
                           </span>
@@ -191,9 +175,9 @@ export default function ServicesPage() {
 
                       <Link
                         href={`/contact?service=${encodeURIComponent(service.title)}`}
-                        className="inline-flex items-center gap-1.5 font-ui text-xs font-semibold uppercase tracking-wider text-navy group-hover:text-sunflower-dark transition-colors"
+                        className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-wider text-navy group-hover:text-sunflower-dark transition-colors"
                       >
-                        <span>Start With This Service</span>
+                        <span>Inquire About This Service</span>
                         <ArrowUpRight className="w-3.5 h-3.5" />
                       </Link>
                     </div>
@@ -205,59 +189,10 @@ export default function ServicesPage() {
         ))}
       </div>
 
-      {/* WORKING PROCESS SECTION */}
-      <section className="py-12 sm:py-16 bg-white border-t border-slate-200/70">
-        <div className="max-w-site mx-auto px-4 sm:px-6">
-          <SectionHeading
-            eyebrow="EXECUTION CADENCE"
-            title="How we work alongside your team."
-            description="Our engagement model emphasizes continuous feedback loops, complete code ownership, and transparent engineering velocity."
-            className="mb-8"
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {agencyConfig.processSteps.map((step) => (
-              <div
-                key={step.step}
-                className="p-5 rounded-sm bg-surface-bg border border-slate-200/80 flex flex-col justify-between"
-              >
-                <div>
-                  <span className="font-mono text-xs font-bold text-navy block mb-2 flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
-                    STAGE {step.step}
-                  </span>
-                  <h3 className="font-display text-base font-bold text-navy mb-1">
-                    {step.name}
-                  </h3>
-                  <p className="font-sans text-xs text-ink-body leading-relaxed mt-1">
-                    {step.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FREQUENTLY ASKED QUESTIONS */}
-      <section className="py-12 sm:py-16 bg-surface-bg border-t border-slate-200/70">
-        <div className="max-w-site mx-auto px-4 sm:px-6">
-          <div className="max-w-3xl mx-auto">
-            <SectionHeading
-              eyebrow="COMMON QUESTIONS"
-              title="Frequently asked questions about our services."
-              align="center"
-              className="mb-8 text-center"
-            />
-            <Accordion items={generalFaqs} />
-          </div>
-        </div>
-      </section>
-
-      {/* FINAL CTA */}
+      {/* COMPACT CONTACT CTA (No repeated process, no FAQs) */}
       <FinalCTA
-        title="Ready to engineer your next digital platform?"
-        subtitle="Speak directly with our senior engineers and design leads. We provide honest technical assessments and actionable scopes."
+        title="Ready to discuss your service requirements?"
+        subtitle="Schedule an introductory consultation with our senior engineering and design leads. We provide fixed milestone estimates and actionable scopes."
       />
     </div>
   );

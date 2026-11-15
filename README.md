@@ -19,9 +19,9 @@
 The visual identity is designed with restraint, generous whitespace, and disciplined editorial typography, deliberately avoiding generic AI-generated templates.
 
 ### 2.1. The 60–30–10 Colour Hierarchy
-- **60% Primary Surface**: Midnight Navy (`#101A32`) and Deep Navy (`#182643`), paired with clean crisp neutrals (`#F7F8FA`, `#FFFFFF`).
-- **30% Secondary Elements**: Powder Blue (`#B9D0E8`) and Soft Powder (`#E8EFF7`) used across cards, badges, subtle borders, and structural framing.
-- **10% Accent Energy**: Sunflower Yellow (`#F5C542`) and Deep Sunflower (`#EAB52B`) reserved strictly for high-priority CTAs, interactive hover states, active indicators, and status badges. High-contrast Midnight Navy text is paired with yellow surfaces for flawless WCAG AAA/AA readability.
+- **60% Primary Surface**: Powder Blue (`#B9D0E8`) and soft light surfaces (`#E8EFF7`, `#F7F8FA`, `#FFFFFF`) used across backgrounds, cards, and structural surfaces.
+- **30% Secondary Elements**: Midnight Navy (`#101A32`) and Deep Navy (`#182643`) for high-contrast typography, dark specimen cards, and deep section accents.
+- **10% Accent Energy**: Sunflower Yellow (`#F5C542`) and Deep Sunflower (`#EAB52B`) reserved strictly for high-priority CTAs, interactive hover states, active navigation indicators, and status badges. High-contrast Midnight Navy text is paired with yellow surfaces for flawless WCAG AAA/AA readability.
 
 ### 2.2. The Three-Font Typographic Hierarchy
 1. **Display Typography — Playfair Display**:
@@ -37,12 +37,12 @@ The visual identity is designed with restraint, generous whitespace, and discipl
 
 | Route | Page | Purpose & Key Features |
 |---|---|---|
-| `/` | **Landing Page** | High-impact hero, interactive preview composition, studio philosophy & metrics, services overview grid, selected case studies, 4-step agency approach, differentiators, and final CTA. |
-| `/services` | **Services & Capabilities** | Categorized into 4 domains: Design & Creative, Web Development, Application Development, and Technology & Growth. Features deliverables, tech stacks, and FAQs. |
-| `/work` | **Portfolio & Case Studies** | Filterable by project category (All, Websites, Applications, UI/UX, E-commerce, Branding). Features 8 realistic demonstration case studies. |
-| `/work/[slug]` | **Case Study Details** | Dynamic detail routes (`/work/finora`, `/work/forma`, `/work/nourish`, etc.) detailing client background, technical bottlenecks, architectural approaches, feature breakdowns, and conceptual performance benchmarks. |
-| `/plans` | **Plans & Pricing** | 4 transparent introductory tiers: Essential (₹4,999), Starter (₹9,999), Professional (₹14,999, recommended), and Business Plus (₹24,999). Complete comparison table and pricing FAQs. |
-| `/contact` | **Contact & Inquiries** | Type-safe inquiry form with React Hook Form + Zod validation, budget/service selectors, direct email/phone/address placeholders, expected response times, and mutual NDA notice. |
+| `/` | **Agency Overview** | High-impact hero with custom architectural visual, studio positioning statement, 4 core capability pillars linking to Services, 4-step working approach (Discovery, Planning, Design & Development, Delivery), Why STUP principles, and compact contact invitation. (Dedicated portfolio remains exclusively on `/work`). |
+| `/services` | **Service Catalogue** | Organized into 4 domains: Design and Creative, Web Development, Application Development, and Technology and Growth. Features detailed breakdowns of what is included, client deliverables, relevant technologies, and direct inquiry actions. |
+| `/work` | **Portfolio & Case Studies** | Dedicated solely to demonstrating work. Filterable by project category (All, Websites, Applications, UI/UX, E-commerce, Branding) featuring 8 realistic demonstration case studies. |
+| `/work/[slug]` | **Case Study Details** | Dynamic detail routes (`/work/finora`, `/work/forma`, `/work/nourish`, etc.) detailing client background, technical bottlenecks, architectural approaches, feature breakdowns, and controlled benchmark simulations. |
+| `/plans` | **Plans & Pricing** | 4 transparent introductory tiers: Essential (₹4,999), Starter (₹9,999), Professional (₹14,999, recommended), and Business Plus (₹24,999). Complete comparison table and scope explanations. |
+| `/contact` | **Direct Inquiries** | Focused, type-safe inquiry form with React Hook Form + Zod validation, budget/service selectors, direct email and repository links. |
 | `/sitemap.xml` | **Dynamic XML Sitemap** | Programmatic search engine index mapping all static and dynamic case study routes. |
 | `/robots.txt` | **Robots Configuration** | Search crawler instructions and sitemap link. |
 

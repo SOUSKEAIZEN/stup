@@ -89,29 +89,23 @@ export function Footer() {
           {/* Contact Details Column */}
           <div className="lg:col-span-3">
             <h4 className="font-ui text-[11px] font-bold uppercase tracking-[0.18em] text-powder mb-3">
-              Inquiries
+              Direct Contact
             </h4>
-            <div className="space-y-2 font-sans text-xs text-slate-300">
+            <div className="space-y-2.5 font-sans text-xs text-slate-300">
               <div>
                 <span className="text-[10px] font-ui uppercase tracking-wider text-powder block">
                   Project Inquiries
                 </span>
                 <a
                   href={`mailto:${agencyConfig.email}`}
-                  className="hover:text-sunflower transition-colors underline decoration-powder/30 underline-offset-2 text-sm text-white"
+                  className="hover:text-sunflower transition-colors underline decoration-powder/30 underline-offset-2 text-sm text-white font-medium"
                 >
                   {agencyConfig.email}
                 </a>
               </div>
-              <div className="pt-2">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-1.5 text-xs font-ui font-semibold uppercase tracking-wider text-sunflower hover:text-sunflower-light transition-colors"
-                >
-                  <span>Start a Project</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
+              <p className="text-[11px] text-powder/70 leading-relaxed pt-1">
+                Transparent scope-limited packages with direct senior technical collaboration.
+              </p>
             </div>
           </div>
         </div>

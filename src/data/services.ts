@@ -165,34 +165,34 @@ export const servicesData: ServiceItem[] = [
 export const serviceCategories: ServiceCategory[] = [
   {
     id: 'design',
-    title: 'Design & Creative',
-    eyebrow: 'CATEGORY A',
+    title: 'Design and Creative',
+    eyebrow: 'DOMAIN 01',
     description:
-      'We craft thoughtful visual identities and intuitive interfaces that balance timeless editorial restraint with modern ergonomic clarity.',
+      'Human-centered digital interfaces, bespoke brand identities, and design token libraries engineered for cognitive clarity and distinction.',
     items: servicesData.filter((s) => s.category === 'design'),
   },
   {
     id: 'web',
-    title: 'Web Engineering & Platforms',
-    eyebrow: 'CATEGORY B',
+    title: 'Web Development',
+    eyebrow: 'DOMAIN 02',
     description:
-      'Robust web applications, bespoke business platforms, and headless commerce engines engineered with type-safe modern standards.',
+      'High-performance Next.js 14 App Router applications, custom web platforms, and headless e-commerce storefronts built for scale.',
     items: servicesData.filter((s) => s.category === 'web'),
   },
   {
     id: 'apps',
-    title: 'Application Development & Architecture',
-    eyebrow: 'CATEGORY C',
+    title: 'Application Development',
+    eyebrow: 'DOMAIN 03',
     description:
-      'End-to-end mobile applications, administrative control planes, and resilient API backends built for high concurrency.',
+      'Cross-platform mobile applications, operational control dashboards, and secure relational database architectures.',
     items: servicesData.filter((s) => s.category === 'apps'),
   },
   {
     id: 'tech',
-    title: 'Technology, Performance & Growth',
-    eyebrow: 'CATEGORY D',
+    title: 'Technology and Growth',
+    eyebrow: 'DOMAIN 04',
     description:
-      'Sub-second Core Web Vitals optimization, technical SEO engineering, cloud infrastructure, and dependable ongoing maintenance.',
+      'Core Web Vitals speed optimization, technical SEO engineering, cloud infrastructure deployment, and steady software maintenance.',
     items: servicesData.filter((s) => s.category === 'tech'),
   },
 ];
