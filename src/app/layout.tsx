@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
-import { BackToTop } from '@/components/ui/BackToTop';
 import { agencyConfig } from '@/data/agency';
 
 export const metadata: Metadata = {
@@ -61,7 +60,6 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />
-        <BackToTop />
       </body>
     </html>
   );
