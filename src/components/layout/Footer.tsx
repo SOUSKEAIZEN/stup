@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowUpRight, Github } from 'lucide-react';
 import { agencyConfig } from '@/data/agency';
 import { navigationLinks, footerServices } from '@/data/navigation';
 import { Logo } from '@/components/ui/Logo';
@@ -31,20 +30,9 @@ export function Footer() {
                 {agencyConfig.positioning}
               </p>
             </div>
-
-            {/* Social Links — Only real configured destinations */}
-            <div className="mt-5 flex items-center gap-2">
-              {agencyConfig.social.github && (
-                <a
-                  href={agencyConfig.social.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-sm bg-navy-deep text-powder hover:text-navy hover:bg-sunflower transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunflower"
-                  aria-label="GitHub Repository"
-                >
-                  <Github className="w-4 h-4" />
-                </a>
-              )}
+            
+            <div className="mt-5 text-[11px] font-ui text-powder/60">
+              <span>Boutique Digital Design &amp; Software Studio</span>
             </div>
           </div>
 

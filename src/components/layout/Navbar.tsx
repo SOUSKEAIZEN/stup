@@ -45,15 +45,15 @@ export function Navbar() {
           <div
             className={cn(
               'flex items-center justify-between px-5 sm:px-7 py-2.5 sm:py-3 rounded-full transition-all duration-300',
-              'bg-white/85 backdrop-blur-md border border-slate-200/80 shadow-[0_4px_24px_-4px_rgba(16,26,50,0.08)]',
-              scrolled && 'bg-white/95 shadow-[0_8px_30px_-6px_rgba(16,26,50,0.12)] border-powder/60'
+              'bg-white/75 backdrop-blur-md border border-slate-200/60 shadow-[0_4px_20px_-4px_rgba(16,26,50,0.06)]',
+              scrolled && 'bg-white/92 backdrop-blur-lg border-powder/50 shadow-[0_8px_30px_-6px_rgba(16,26,50,0.1)]'
             )}
           >
             {/* Brand Wordmark Logo */}
             <Logo isDark={false} />
 
             {/* Desktop Navigation: Home | Services | Work | Plans | Contact */}
-            <nav className="hidden md:flex items-center gap-1 sm:gap-1.5" aria-label="Main Navigation">
+            <nav className="hidden md:flex items-center gap-1 sm:gap-2" aria-label="Main Navigation">
               {navigationLinks.map((link) => {
                 const isActive =
                   link.href === '/' ? pathname === '/' : pathname.startsWith(link.href);
@@ -63,16 +63,16 @@ export function Navbar() {
                     key={link.href}
                     href={link.href}
                     className={cn(
-                      'relative px-4 py-1.5 rounded-full font-ui text-[13px] font-medium transition-all duration-200 flex items-center gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunflower',
+                      'relative px-3 sm:px-3.5 py-1.5 font-ui text-[13px] transition-colors duration-200 flex items-center gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunflower rounded-full',
                       isActive
-                        ? 'text-navy font-semibold bg-powder-soft/90 shadow-2xs'
-                        : 'text-ink-body hover:text-navy hover:bg-powder-soft/40'
+                        ? 'text-navy font-semibold'
+                        : 'text-ink-muted hover:text-navy font-medium'
                     )}
                   >
                     <span>{link.name}</span>
                     {isActive && (
                       <span
-                        className="w-1.5 h-1.5 rounded-full bg-sunflower shrink-0"
+                        className="w-1.5 h-1.5 rounded-full bg-sunflower shrink-0 shadow-[0_0_6px_rgba(245,197,66,0.5)]"
                         aria-hidden="true"
                       />
                     )}
@@ -137,10 +137,10 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  'flex items-center justify-between px-4 py-2.5 rounded-full font-ui text-sm font-medium transition-colors',
+                  'flex items-center justify-between px-4 py-2.5 rounded-lg font-ui text-sm transition-colors',
                   isActive
-                    ? 'text-navy font-bold bg-sunflower/20'
-                    : 'text-ink-body hover:text-navy hover:bg-powder-soft/50'
+                    ? 'text-navy font-bold'
+                    : 'text-ink-body hover:text-navy hover:bg-slate-50'
                 )}
               >
                 <span>{link.name}</span>

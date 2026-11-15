@@ -73,11 +73,11 @@ ${data.projectDescription}`
   };
 
   return (
-    <div className="bg-white border border-slate-200/90 rounded-sm p-6 sm:p-9 shadow-card">
+    <div className="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-6 sm:p-8 shadow-[0_16px_40px_-12px_rgba(16,26,50,0.08)]">
       {submissionStatus === 'staged' && stagedData ? (
-        <div className="py-6 flex flex-col items-start space-y-6">
+        <div className="py-4 flex flex-col items-start space-y-5">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-sm bg-sunflower/20 text-navy flex items-center justify-center border border-sunflower/50">
+            <div className="w-12 h-12 rounded-xl bg-sunflower/20 text-navy flex items-center justify-center border border-sunflower/50 shadow-xs">
               <CheckCircle2 className="w-6 h-6 text-navy stroke-[2.2]" />
             </div>
             <div>
@@ -85,26 +85,23 @@ ${data.projectDescription}`
                 Validation Passed
               </span>
               <h3 className="font-display text-2xl font-bold text-navy">
-                Inquiry Staged for Dispatch
+                Inquiry Ready for Dispatch
               </h3>
             </div>
           </div>
 
-          {/* Transparent Backend Explanation */}
-          <div className="p-4 rounded-sm bg-surface-bg border border-slate-200 text-xs font-sans text-ink-body space-y-2 w-full">
+          {/* Staged Notice */}
+          <div className="p-4 rounded-xl bg-surface-bg border border-slate-200 text-xs font-sans text-ink-body space-y-1.5 w-full">
             <p className="font-semibold font-ui text-navy">
-              Notice: Backend API Integration
+              Notice: Direct Studio Transmission
             </p>
             <p className="leading-relaxed">
-              Your inquiry has successfully passed all field validations. In this development deployment, live SMTP or API dispatch (e.g. Resend, SendGrid) is not active.
-            </p>
-            <p className="leading-relaxed text-ink-muted">
-              To send this exact message directly to our studio inbox, use the instant mail client action below.
+              Your inquiry has successfully passed all field validations. In this development deployment, you can dispatch directly to our studio inbox with one click.
             </p>
           </div>
 
           {/* Staged Summary Preview */}
-          <div className="w-full bg-powder-soft/40 p-4 rounded-sm border border-powder/50 text-xs font-sans space-y-1.5">
+          <div className="w-full bg-powder-soft/50 p-4 rounded-xl border border-powder/60 text-xs font-sans space-y-1.5">
             <div>
               <span className="font-bold text-navy">Sender:</span> {stagedData.fullName} ({stagedData.email})
             </div>
@@ -120,7 +117,7 @@ ${data.projectDescription}`
           <div className="flex flex-col sm:flex-row items-center gap-3 w-full pt-2">
             <a
               href={generateMailtoUrl(stagedData)}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-sm bg-sunflower text-navy font-ui text-xs font-bold uppercase tracking-wider hover:bg-sunflower-deep shadow-xs transition-colors"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-sunflower text-navy font-ui text-xs font-bold uppercase tracking-wider hover:bg-sunflower-deep shadow-xs transition-colors"
             >
               <Mail className="w-4 h-4 stroke-[2.2]" />
               <span>Open in Email Client</span>
@@ -132,7 +129,7 @@ ${data.projectDescription}`
                 setSubmissionStatus('idle');
                 reset(stagedData);
               }}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-3 rounded-sm border border-slate-200 text-navy font-ui text-xs font-semibold hover:bg-slate-50 transition-colors"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg border border-slate-200 text-navy font-ui text-xs font-semibold hover:bg-slate-50 transition-colors"
             >
               <RotateCcw className="w-3.5 h-3.5" />
               <span>Modify Details</span>
@@ -140,10 +137,10 @@ ${data.projectDescription}`
           </div>
         </div>
       ) : (
-        <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-5">
+        <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-4 sm:space-y-5">
           {submissionStatus === 'error' && errorMessage && (
             <div
-              className="p-4 rounded-sm bg-red-50 border border-red-200 text-red-800 text-sm flex items-start gap-3"
+              className="p-4 rounded-lg bg-red-50 border border-red-200 text-red-800 text-sm flex items-start gap-3"
               role="alert"
             >
               <AlertCircle className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
@@ -155,7 +152,7 @@ ${data.projectDescription}`
           )}
 
           {/* Row 1: Full Name & Email */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
             <div>
               <label
                 htmlFor="fullName"
@@ -170,10 +167,10 @@ ${data.projectDescription}`
                 disabled={submissionStatus === 'submitting'}
                 {...register('fullName')}
                 className={cn(
-                  'w-full px-3.5 py-2.5 rounded-sm border bg-surface-bg font-sans text-sm text-navy placeholder:text-slate-400 focus:bg-white focus:outline-none focus:ring-2 transition-all',
+                  'w-full h-11 px-3.5 rounded-lg border bg-surface-bg font-sans text-sm text-navy placeholder:text-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sunflower/50 transition-all',
                   errors.fullName
                     ? 'border-red-400 focus:ring-red-400'
-                    : 'border-slate-200 focus:border-navy focus:ring-navy/20'
+                    : 'border-slate-200 focus:border-navy'
                 )}
                 aria-invalid={errors.fullName ? 'true' : 'false'}
               />
@@ -196,10 +193,10 @@ ${data.projectDescription}`
                 disabled={submissionStatus === 'submitting'}
                 {...register('email')}
                 className={cn(
-                  'w-full px-3.5 py-2.5 rounded-sm border bg-surface-bg font-sans text-sm text-navy placeholder:text-slate-400 focus:bg-white focus:outline-none focus:ring-2 transition-all',
+                  'w-full h-11 px-3.5 rounded-lg border bg-surface-bg font-sans text-sm text-navy placeholder:text-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sunflower/50 transition-all',
                   errors.email
                     ? 'border-red-400 focus:ring-red-400'
-                    : 'border-slate-200 focus:border-navy focus:ring-navy/20'
+                    : 'border-slate-200 focus:border-navy'
                 )}
                 aria-invalid={errors.email ? 'true' : 'false'}
               />
@@ -210,7 +207,7 @@ ${data.projectDescription}`
           </div>
 
           {/* Row 2: Company Name (Optional) & Service Required */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
             <div>
               <label
                 htmlFor="companyName"
@@ -225,7 +222,7 @@ ${data.projectDescription}`
                 placeholder="Acme Systems"
                 disabled={submissionStatus === 'submitting'}
                 {...register('companyName')}
-                className="w-full px-3.5 py-2.5 rounded-sm border border-slate-200 bg-surface-bg font-sans text-sm text-navy placeholder:text-slate-400 focus:bg-white focus:border-navy focus:outline-none focus:ring-2 focus:ring-navy/20 transition-all"
+                className="w-full h-11 px-3.5 rounded-lg border border-slate-200 bg-surface-bg font-sans text-sm text-navy placeholder:text-slate-400 focus:bg-white focus:border-navy focus:outline-none focus:ring-2 focus:ring-sunflower/50 transition-all"
               />
             </div>
 
@@ -242,7 +239,7 @@ ${data.projectDescription}`
                   disabled={submissionStatus === 'submitting'}
                   {...register('serviceRequired')}
                   className={cn(
-                    'w-full px-3.5 py-2.5 pr-9 rounded-sm border bg-surface-bg font-sans text-sm text-navy focus:bg-white focus:outline-none focus:ring-2 focus:ring-sunflower/40 transition-all appearance-none cursor-pointer',
+                    'w-full h-11 px-3.5 pr-9 rounded-lg border bg-surface-bg font-sans text-sm text-navy focus:bg-white focus:outline-none focus:ring-2 focus:ring-sunflower/50 transition-all appearance-none cursor-pointer',
                     errors.serviceRequired
                       ? 'border-red-400 focus:ring-red-400'
                       : 'border-slate-200 focus:border-navy'
@@ -267,7 +264,7 @@ ${data.projectDescription}`
           </div>
 
           {/* Row 3: Estimated Budget & Project Timeline */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
             <div>
               <label
                 htmlFor="estimatedBudget"
@@ -281,7 +278,7 @@ ${data.projectDescription}`
                   disabled={submissionStatus === 'submitting'}
                   {...register('estimatedBudget')}
                   className={cn(
-                    'w-full px-3.5 py-2.5 pr-9 rounded-sm border bg-surface-bg font-sans text-sm text-navy focus:bg-white focus:outline-none focus:ring-2 focus:ring-sunflower/40 transition-all appearance-none cursor-pointer',
+                    'w-full h-11 px-3.5 pr-9 rounded-lg border bg-surface-bg font-sans text-sm text-navy focus:bg-white focus:outline-none focus:ring-2 focus:ring-sunflower/50 transition-all appearance-none cursor-pointer',
                     errors.estimatedBudget
                       ? 'border-red-400 focus:ring-red-400'
                       : 'border-slate-200 focus:border-navy'
@@ -317,7 +314,7 @@ ${data.projectDescription}`
                   disabled={submissionStatus === 'submitting'}
                   {...register('projectTimeline')}
                   className={cn(
-                    'w-full px-3.5 py-2.5 pr-9 rounded-sm border bg-surface-bg font-sans text-sm text-navy focus:bg-white focus:outline-none focus:ring-2 focus:ring-sunflower/40 transition-all appearance-none cursor-pointer',
+                    'w-full h-11 px-3.5 pr-9 rounded-lg border bg-surface-bg font-sans text-sm text-navy focus:bg-white focus:outline-none focus:ring-2 focus:ring-sunflower/50 transition-all appearance-none cursor-pointer',
                     errors.projectTimeline
                       ? 'border-red-400 focus:ring-red-400'
                       : 'border-slate-200 focus:border-navy'
@@ -347,7 +344,7 @@ ${data.projectDescription}`
               htmlFor="projectDescription"
               className="block font-ui text-[11px] font-bold uppercase tracking-wider text-navy mb-1.5"
             >
-              Project Overview & Objectives <span className="text-sunflower-dark font-bold">*</span>
+              Project Overview &amp; Objectives <span className="text-sunflower-dark font-bold">*</span>
             </label>
             <textarea
               id="projectDescription"
@@ -356,10 +353,10 @@ ${data.projectDescription}`
               disabled={submissionStatus === 'submitting'}
               {...register('projectDescription')}
               className={cn(
-                'w-full px-3.5 py-2.5 rounded-sm border bg-surface-bg font-sans text-sm text-navy placeholder:text-slate-400 focus:bg-white focus:outline-none focus:ring-2 transition-all resize-y',
+                'w-full p-3.5 rounded-lg border bg-surface-bg font-sans text-sm text-navy placeholder:text-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sunflower/50 transition-all resize-y min-h-[110px]',
                 errors.projectDescription
                   ? 'border-red-400 focus:ring-red-400'
-                  : 'border-slate-200 focus:border-navy focus:ring-navy/20'
+                  : 'border-slate-200 focus:border-navy'
               )}
               aria-invalid={errors.projectDescription ? 'true' : 'false'}
             />
@@ -384,9 +381,9 @@ ${data.projectDescription}`
                   <ArrowRight className="w-4 h-4 stroke-[2.2] text-navy" />
                 )
               }
-              className="w-full sm:w-auto tracking-wider uppercase font-bold text-xs text-navy"
+              className="w-full sm:w-auto tracking-wider uppercase font-bold text-xs text-navy shadow-xs"
             >
-              {submissionStatus === 'submitting' ? 'Validating...' : 'Stage Project Inquiry'}
+              {submissionStatus === 'submitting' ? 'Validating...' : 'Submit Project Inquiry'}
             </Button>
 
             <span className="font-sans text-[11px] text-ink-muted">

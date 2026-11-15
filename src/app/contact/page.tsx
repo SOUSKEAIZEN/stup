@@ -1,141 +1,123 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import { Mail, Clock, Github } from 'lucide-react';
+import { Mail, Clock, ArrowRight, CheckCircle2, ShieldCheck, Sparkles } from 'lucide-react';
 import { ContactFormWrapper } from '@/components/forms/ContactFormWrapper';
 import { agencyConfig } from '@/data/agency';
 
 export const metadata: Metadata = {
-  title: "Let's Build Something Meaningful — Contact",
+  title: 'Contact Studio — Start a Project Consultation',
   description:
-    'Start a project consultation with STUP Studio. Tell us about your objectives, budget, and timeline.',
+    'Initiate a digital design and software consultation with STUP Studio. Fixed milestone scopes, senior technical collaboration, and rapid response.',
 };
 
 export default function ContactPage() {
-  return (
-    <div className="flex flex-col">
-      {/* HERO SECTION */}
-      <section className="pt-8 sm:pt-12 pb-8 sm:pb-10 border-b border-slate-200/60 bg-gradient-to-b from-powder-soft/50 via-white to-surface-bg">
-        <div className="max-w-site mx-auto px-4 sm:px-6">
-          <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy mb-2.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
-              PROJECT INQUIRIES
-            </span>
-            <h1 className="font-display text-3xl sm:text-4xl lg:text-[46px] leading-[1.12] tracking-[-0.025em] text-navy font-bold text-balance">
-              Let&apos;s build something meaningful.
-            </h1>
-            <p className="mt-3 font-sans text-sm sm:text-base text-ink-body leading-relaxed text-balance">
-              Tell us about your project objectives, target timeline, and budget. We review all submissions thoroughly and reply with structured next steps.
-            </p>
-          </div>
-        </div>
-      </section>
+  const steps = [
+    {
+      num: '01',
+      title: 'Inquiry & Scope Review',
+      desc: 'We review your requirements and technical goals within 24–48 business hours.',
+    },
+    {
+      num: '02',
+      title: 'Architecture & Milestone Spec',
+      desc: 'We outline an architectural blueprint with fixed deliverables and timeline.',
+    },
+    {
+      num: '03',
+      title: 'Direct Sprint Kickoff',
+      desc: 'Work begins with direct senior engineer and designer collaboration.',
+    },
+  ];
 
-      {/* MAIN CONTACT SECTION: FORM + STUDIO DETAILS */}
-      <section className="py-10 sm:py-14 bg-surface-bg">
+  return (
+    <div className="flex flex-col bg-surface-bg">
+      {/* COHESIVE SPLIT-LAYOUT CONTACT SECTION */}
+      <section className="pt-8 sm:pt-12 pb-14 sm:pb-20 border-b border-slate-200/60 bg-gradient-to-b from-powder-soft/50 via-white to-surface-bg">
         <div className="max-w-site mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
-            {/* Left Column: Interactive Form (Primary Focus) */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+            
+            {/* LEFT SECTION: Editorial Narrative, Direct Contact & Visual Timeline */}
+            <div className="lg:col-span-5 flex flex-col justify-between space-y-8">
+              <div>
+                <span className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-[0.2em] text-navy mb-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
+                  PROJECT CONSULTATION
+                </span>
+                
+                <h1 className="font-display text-3xl sm:text-4xl lg:text-[46px] leading-[1.12] tracking-[-0.025em] text-navy font-bold text-balance">
+                  Let&apos;s build something enduring.
+                </h1>
+
+                <p className="mt-3.5 font-sans text-sm sm:text-base text-ink-body leading-relaxed text-balance">
+                  Whether launching a new digital product, designing an editorial web platform, or engineering bespoke software, we collaborate from first principles with full source code ownership.
+                </p>
+
+                {/* Brand Graphic / Studio Seal */}
+                <div className="mt-6 p-4 rounded-xl bg-gradient-to-br from-powder-soft/80 to-white border border-powder/60 shadow-2xs flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-navy flex items-center justify-center text-sunflower shrink-0 shadow-xs">
+                    <Sparkles className="w-6 h-6 stroke-[1.8]" />
+                  </div>
+                  <div>
+                    <span className="font-ui text-xs font-bold text-navy block">
+                      Direct Senior Collaboration
+                    </span>
+                    <span className="font-sans text-[11px] text-ink-muted leading-snug block mt-0.5">
+                      No intermediary account managers. You work directly with technical leads.
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Direct Communication Channels */}
+              <div className="space-y-4 pt-2 border-t border-slate-200/70">
+                <div>
+                  <span className="font-ui text-[10px] font-bold uppercase tracking-wider text-ink-muted block mb-1">
+                    Direct Studio Email
+                  </span>
+                  <a
+                    href={`mailto:${agencyConfig.email}`}
+                    className="font-ui text-lg sm:text-xl font-bold text-navy hover:text-navy-deep transition-colors underline decoration-sunflower decoration-2 underline-offset-4"
+                  >
+                    {agencyConfig.email}
+                  </a>
+                </div>
+
+                <div className="flex items-center gap-2 text-xs font-sans text-ink-body">
+                  <Clock className="w-4 h-4 text-navy shrink-0" />
+                  <span>Standard response cadence: 24–48 business hours</span>
+                </div>
+              </div>
+
+              {/* Compact Visual 3-Step Inquiry Timeline */}
+              <div className="pt-4 border-t border-slate-200/70">
+                <span className="font-ui text-[11px] font-bold uppercase tracking-wider text-navy block mb-4">
+                  Consultation Cadence
+                </span>
+                
+                <div className="relative pl-6 space-y-5 before:absolute before:left-2 before:top-2 before:bottom-2 before:w-[1.5px] before:bg-powder">
+                  {steps.map((step) => (
+                    <div key={step.num} className="relative">
+                      <span className="absolute -left-6 top-0.5 w-4 h-4 rounded-full bg-sunflower text-navy font-ui text-[9px] font-extrabold flex items-center justify-center shadow-2xs ring-4 ring-white">
+                        {step.num.replace('0', '')}
+                      </span>
+                      <h4 className="font-ui text-xs font-bold text-navy">
+                        {step.title}
+                      </h4>
+                      <p className="font-sans text-[11px] text-ink-muted mt-0.5 leading-relaxed">
+                        {step.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+            </div>
+
+            {/* RIGHT SECTION: Clean, Elegant Project Inquiry Form */}
             <div className="lg:col-span-7">
               <ContactFormWrapper />
             </div>
 
-            {/* Right Column: Studio Information & Direct Channels */}
-            <div className="lg:col-span-5 space-y-5">
-              {/* Studio Info Card */}
-              <div className="bg-white border border-slate-200/90 rounded-sm p-6 shadow-sm">
-                <span className="inline-flex items-center gap-2 font-ui text-xs font-bold uppercase tracking-wider text-navy block mb-4 border-b border-slate-100 pb-2.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-sunflower" />
-                  <span>Direct Communication</span>
-                </span>
-
-                <div className="space-y-4 font-sans text-xs">
-                  {/* Email */}
-                  <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-sm bg-sunflower/20 text-navy flex items-center justify-center shrink-0 border border-sunflower/40">
-                      <Mail className="w-3.5 h-3.5 text-navy stroke-[2.2]" />
-                    </div>
-                    <div>
-                      <span className="font-ui text-[10px] font-bold uppercase tracking-wider text-ink-muted block">
-                        Project Inquiries
-                      </span>
-                      <a
-                        href={`mailto:${agencyConfig.email}`}
-                        className="font-medium text-navy hover:text-navy-deep transition-colors underline decoration-slate-300 underline-offset-2 text-sm"
-                      >
-                        {agencyConfig.email}
-                      </a>
-                    </div>
-                  </div>
-
-                  {/* Consultation Model */}
-                  <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-sm bg-sunflower/20 text-navy flex items-center justify-center shrink-0 border border-sunflower/40">
-                      <Clock className="w-3.5 h-3.5 text-navy stroke-[2.2]" />
-                    </div>
-                    <div>
-                      <span className="font-ui text-[10px] font-bold uppercase tracking-wider text-ink-muted block">
-                        Project Consultation
-                      </span>
-                      <p className="font-medium text-navy">
-                        Fixed milestone scopes and delivery schedules
-                      </p>
-                      <p className="text-[11px] text-ink-muted mt-0.5">
-                        Direct collaboration with lead developers and designers
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Studio Repository */}
-                {agencyConfig.social.github && (
-                  <div className="mt-6 pt-4 border-t border-slate-100">
-                    <span className="font-ui text-[10px] font-bold uppercase tracking-wider text-ink-muted block mb-2.5">
-                      Open Source &amp; Repository
-                    </span>
-                    <div className="flex items-center gap-2">
-                      <a
-                        href={agencyConfig.social.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-3 py-1.5 rounded-sm bg-surface-bg text-navy hover:bg-sunflower transition-all text-xs font-ui font-semibold border border-slate-200"
-                        aria-label="GitHub Repository"
-                      >
-                        <Github className="w-3.5 h-3.5" />
-                        <span>View Repository</span>
-                      </a>
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              {/* Consultation Cadence Micro-Card */}
-              <div className="bg-powder-soft/50 border border-powder/60 rounded-sm p-6 text-xs font-sans">
-                <span className="font-ui text-[11px] font-bold uppercase tracking-wider text-navy block mb-3">
-                  What Happens Next?
-                </span>
-                <ol className="space-y-2.5 text-ink-body">
-                  <li className="flex items-start gap-2">
-                    <span className="w-4 h-4 rounded-full bg-sunflower text-navy font-ui text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">
-                      1
-                    </span>
-                    <span><strong>Review:</strong> We review your project scope and feasibility within 24–48 business hours.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-4 h-4 rounded-full bg-sunflower text-navy font-ui text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">
-                      2
-                    </span>
-                    <span><strong>Scope Architecture:</strong> We produce a structured milestone outline with fixed deliverables.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-4 h-4 rounded-full bg-sunflower text-navy font-ui text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">
-                      3
-                    </span>
-                    <span><strong>Kickoff:</strong> Work begins immediately following milestone agreement.</span>
-                  </li>
-                </ol>
-              </div>
-            </div>
           </div>
         </div>
       </section>

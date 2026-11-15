@@ -158,17 +158,17 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {capabilityPillars.map((pillar) => {
               const Icon = pillar.icon;
               return (
                 <div
                   key={pillar.id}
-                  className="bg-white border border-slate-200/90 rounded-sm p-5 sm:p-6 flex flex-col justify-between transition-all hover:border-sunflower/80 hover:shadow-subtle"
+                  className="bg-white border border-slate-200/90 rounded-2xl p-6 flex flex-col justify-between transition-all hover:border-sunflower/80 hover:shadow-subtle"
                 >
                   <div>
-                    <div className="w-9 h-9 rounded-sm bg-powder-soft text-navy flex items-center justify-center mb-4">
-                      <Icon className="w-4 h-4 stroke-[2]" />
+                    <div className="w-10 h-10 rounded-xl bg-powder-soft text-navy flex items-center justify-center mb-4">
+                      <Icon className="w-5 h-5 stroke-[1.8]" />
                     </div>
                     <h3 className="font-display text-lg font-bold text-navy mb-2">
                       {pillar.title}
@@ -206,11 +206,11 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
             {agencyConfig.processSteps.map((step) => (
               <div
                 key={step.step}
-                className="bg-surface-bg border border-slate-200/80 rounded-sm p-5 flex flex-col justify-between"
+                className="bg-surface-bg border border-slate-200/80 rounded-2xl p-6 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-2">
@@ -256,9 +256,9 @@ export default function HomePage() {
               {agencyConfig.differentiators.map((diff, idx) => (
                 <div
                   key={idx}
-                  className="p-4 rounded-sm bg-white border border-slate-200/90 shadow-2xs"
+                  className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs"
                 >
-                  <h3 className="font-ui text-xs sm:text-sm font-bold text-navy mb-1 flex items-center gap-1.5">
+                  <h3 className="font-ui text-xs sm:text-sm font-bold text-navy mb-1.5 flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-sunflower shrink-0" />
                     <span>{diff.title}</span>
                   </h3>

@@ -44,14 +44,14 @@ export default function PlansPage() {
           </div>
 
           {/* Custom Scope Callout */}
-          <div className="mt-7 p-4 bg-white border border-slate-200/90 rounded-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs font-sans text-ink-body shadow-2xs">
+          <div className="mt-8 p-5 bg-white border border-slate-200/90 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs font-sans text-ink-body shadow-sm">
             <div>
               <span className="font-bold font-ui text-navy block text-sm">Need custom e-commerce or a complex web application?</span>
               <p className="text-ink-muted mt-0.5">Relational databases, client portals, and bespoke payment gateways are scoped separately.</p>
             </div>
             <Link
               href="/contact?plan=custom"
-              className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-wider text-navy hover:text-navy-deep px-3.5 py-2 rounded-sm bg-sunflower shadow-xs shrink-0"
+              className="inline-flex items-center gap-1.5 font-ui text-xs font-bold uppercase tracking-wider text-navy hover:text-navy-deep px-4 py-2.5 rounded-lg bg-sunflower shadow-xs shrink-0 transition-colors"
             >
               <span>Request Custom Estimate</span>
               <ArrowUpRight className="w-3.5 h-3.5 stroke-[2.2]" />
@@ -71,7 +71,7 @@ export default function PlansPage() {
             />
           </div>
 
-          <div className="overflow-x-auto border border-slate-200 rounded-sm shadow-2xs">
+          <div className="overflow-x-auto border border-slate-200 rounded-xl shadow-2xs">
             <table className="w-full text-left border-collapse min-w-[680px]">
               <thead>
                 <tr className="bg-navy text-white">
